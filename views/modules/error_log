@@ -1,0 +1,4 @@
+[28-Mar-2020 02:44:29 UTC] PHP Deprecated:  Non-static method Articulo::enviarEmail() should not be called statically in /home/pisuena/public_html/views/modules/ajax.php on line 12
+[28-Mar-2020 02:50:49 UTC] PHP Deprecated:  Non-static method Articulo::enviarEmail() should not be called statically in /home/pisuena/public_html/views/modules/ajax.php on line 12
+[30-Mar-2020 03:06:43 UTC] PHP Deprecated:  Non-static method Articulo::enviarEmail() should not be called statically in /home/pisuena/public_html/views/modules/ajax.php on line 12
+[30-Mar-2020 18:20:15 UTC] PHP Deprecated:  Non-static method Articulo::enviarEmail() should not be called statically in /home/pisuena/public_html/views/modules/ajax.php on line 12

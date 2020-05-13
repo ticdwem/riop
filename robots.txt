@@ -1,0 +1,8 @@
+# Grupo 1
+User-agent: *
+
+# Grupo 2
+User-agent: *
+Allow: /
+
+Sitemap: http://www.riopisuena.com.mx/sitemap.xml
