@@ -45,7 +45,7 @@ include "views/modules/header.php";
       <div style="height:100%">  
         <div class="row check-all">
           <div class="card bus-check card-body col-lg-4">
-            <p class="text-center">MARCA</p>
+            <p class="text-center">LINEA</p>
             <div class="row" id="Dvlinea">
               <?php
                 $ln = new LineaSublinea();
