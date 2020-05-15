@@ -8,6 +8,7 @@ class Productos
 	private $VDPersonal;
 	public  $tabla1;
 	public  $tabla2;
+	private $where;
 
 	public function mostrarProductos($datos){
 		require_once "vendor/autoload.php";
@@ -15,8 +16,8 @@ class Productos
 
 		$dato = $this->VDato = $datos;
 		$tbl1 = $this->tabla1 = 'productos';
+		$whereComplemett = $this->where = "";
 
-		$where = "";
 		if(strlen($dato)>1){
 			$validar = new Validacion();
 			$veamos = $validar->pregmatchletras($dato);
@@ -24,12 +25,15 @@ class Productos
 				echo "DATOS INCORRECTOS, PRUEBA UNA VEZ MAS";
 				die();
 			}else{
-				$where = " WHERE nombreProducto LIKE '%{$veamos}%'";
+				$whereComplemett = $this->where = " WHERE nombreProducto LIKE '%{$veamos}%'";
+				//$where = " WHERE nombreProducto LIKE '%{$veamos}%'";
 			}
 		}
 		
 		$am = new ModeloBase();
-		$todosUs = $am->conseguirTodos($tbl1,$where);
+		$am->setWhere($whereComplemett);
+		$todosUs = $am->conseguirTodos($tbl1);
+
 		$numero_elementos_pagina = 16;
 
 		$numElementos =count($todosUs);
@@ -44,14 +48,15 @@ class Productos
 		$page = $pagination->get_page();
 
 		$pagTion = new ProductosModels();
-		$empiezaAqui = (($page-1)*$numero_elementos_pagina);
-		$todpPagination = $pagTion->conseguirTodosPagination($tbl1,$empiezaAqui,$numero_elementos_pagina,$where);
+		$pagTion->setelementos(($page-1)*$numero_elementos_pagina);
+		$pagTion->setWhere($whereComplemett);
+		$todpPagination = $pagTion->conseguirTodosPagination($tbl1,$numero_elementos_pagina);
 		if($numElementos != 0 ){
 			foreach ($todpPagination as $mostrar) {				
 			?> 
 	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
 	         <div class="card h-100">
-	            <a href="?p=taladro"><img class="card-img-top" src="http://www.riopisuena.com.mx/images/logo1.png" alt="">
+	            <a href="?p=taladro"><img class="card-img-top" src="<?php echo $mostrar["fotoProdcuto"]; ?>" alt="">
 	             <div class="card-body">
 	              <h4 class="card-title">
 	              	<?php echo $mostrar["nombreProducto"]; ?>
@@ -90,6 +95,7 @@ class Productos
 		}
 
 		$am = new ProductosModels();
+		$am->setnomsb($valTF);
 		$personalizado = $am->getTodos($tbl1,$tbl2,$valTF);
 		$numero_elementos_pagina = 16;
 
@@ -113,7 +119,7 @@ class Productos
 			?> 
 	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
 	         <div class="card h-100">
-	            <a href="?p=taladro"><img class="card-img-top" src="http://www.riopisuena.com.mx/images/logo1.png" alt="">
+	            <a href="?p=taladro"><img class="card-img-top" src='<?php echo $mostrar["fotoProdcuto"]; ?>' alt="">
 	             <div class="card-body">
 	              <h4 class="card-title">
 	              	<?php echo $mostrar["nombreProducto"]; ?>

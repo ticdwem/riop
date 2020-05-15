@@ -6,16 +6,22 @@
   */
  class ModeloBase extends Conexion
  {
- 	public $db;
+	 public $db;
+	 public $where;
+
  	public function __construct()
  	{
  		$this->db = Conexion::conectar();
- 	}
+	}
+	 
+	function setWhere($wComplemet){
+		$this->where = $wComplemet;
+	 }
 
-	public function conseguirTodos($tabla,$where){
- 		$selectAll = "select * from  $tabla $where";
+	public function conseguirTodos($tabla){
+ 		$selectAll = "select * from  $tabla {$this->where}";
  		$all = $this->db->prepare($selectAll);
- 		$all->execute();
+		$all->execute();
  		return $all->fetchAll();
  		$all->close();
  	}
