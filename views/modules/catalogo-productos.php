@@ -90,6 +90,7 @@ include "views/modules/header.php";
             </div>
           </div>
         </div>
+        <div class="row">
         <?php
         $dato = "";
         if(isset($_GET["buscar"])) {
@@ -105,6 +106,9 @@ include "views/modules/header.php";
            $m->mostrarProductos($dato);
         }
         ?>
+        </div>
+
+
         </div>
       </div>
         
