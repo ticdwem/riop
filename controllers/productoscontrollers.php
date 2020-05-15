@@ -27,6 +27,7 @@ class Productos
 				$where = " WHERE nombreProducto LIKE '%{$veamos}%'";
 			}
 		}
+		
 		$am = new ModeloBase();
 		$todosUs = $am->conseguirTodos($tbl1,$where);
 		$numero_elementos_pagina = 16;
