@@ -26,7 +26,6 @@ class Productos
 				die();
 			}else{
 				$whereComplemett = $this->where = " WHERE nombreProducto LIKE '%{$veamos}%'";
-				//$where = " WHERE nombreProducto LIKE '%{$veamos}%'";
 			}
 		}
 		
