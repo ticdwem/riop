@@ -5,7 +5,7 @@ include "views/modules/header.php";
   <div class="card border-0 shadow my-5"> 
     <div class="card-body p-5">
       <div class="row">
-         <!--<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
              <ol class="carousel-indicators">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -30,7 +30,7 @@ include "views/modules/header.php";
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="sr-only">Next</span>
                 </a>
-              </div>-->
+              </div>
         <form action="<?php echo htmlspecialchars('catalogo-productos');?>" method="get" id="frmFormSerarching">
           <div class="input-group bus-bar input-group-lg">
             <input type="text" class="form-control" id="buscarInput" placeholder="Busqueda de producto" aria-label="" name="buscar" aria-describedby="button-addon2" autocomplete="off">
