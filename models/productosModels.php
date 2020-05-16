@@ -56,7 +56,7 @@
 					WHERE tbl2.nombreSublinea = :ns
 					ORDER BY tbl2.nombreSublinea asc";
 		$paginationInner = $this->db->prepare($innerPAg);
-		$paginationInner->bindParam(':ns',$this->getNomsb(),PDO::PARAM_STR);
+		$paginationInner->bindParam(':ns',$this->nomsb,PDO::PARAM_STR);
 		$paginationInner->execute();
 		return $paginationInner->fetchAll();
 		$paginationInner->close();
