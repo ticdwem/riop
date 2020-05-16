@@ -7,29 +7,41 @@
  class ProductosModels extends Conexion
  {
 	 public $db;
-	 public $inicioPag;
-	 protected $nomsb;
+	 private $inicioPag;
+	 private $nomsb;
 	 private $whereCTP;
 
- 	public function __construct()
+	 public function __construct()
  	{
  		$this->db = Conexion::conectar();
 	 }
-	 
-	function setelementos($numRows){
-		$this->inicioPag = $numRows;
+
+	function getInicioPag() {
+		return $this->inicioPag;
 	}
 
-	function setnomsb($nomSublinea){
-		$this->nomsb = $nomSublinea;
+	function getNomsb() {
+		return $this->nomsb;
 	}
 
-	function setWhere($where){
-		$this->whereCTP = $where;
+	function getWhereCTP() {
+		return $this->whereCTP;
+	}
+
+	function setInicioPag($inicioPag) {
+		$this->inicioPag = $inicioPag;
+	}	
+
+	function setNomsb($nomsb) {
+		$this->nomsb = $nomsb;
+	}	
+
+	function setWhereCTP($whereCTP) {
+		$this->whereCTP = $whereCTP;
 	}
 
 	public function conseguirTodosPagination($tabla,$numElementospg){
- 		$selectPagination = "select * from $tabla {$this->whereCTP} LIMIT {$this->inicioPag},$numElementospg";
+ 		$selectPagination = "select * from $tabla {$this->getWhereCTP()} LIMIT {$this->getInicioPag()},$numElementospg";
  		$pagination = $this->db->prepare($selectPagination);
  		$pagination->execute();
  		return $pagination->fetchAll();
@@ -44,7 +56,7 @@
 					WHERE tbl2.nombreSublinea = :ns
 					ORDER BY tbl2.nombreSublinea asc";
 		$paginationInner = $this->db->prepare($innerPAg);
-		$paginationInner->bindParam(':ns',$this->nomsb,PDO::PARAM_STR);
+		$paginationInner->bindParam(':ns',$this->getNomsb(),PDO::PARAM_STR);
 		$paginationInner->execute();
 		return $paginationInner->fetchAll();
 		$paginationInner->close();

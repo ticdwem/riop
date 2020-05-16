@@ -48,8 +48,8 @@ class Productos
 		$page = $pagination->get_page();
 
 		$pagTion = new ProductosModels();
-		$pagTion->setelementos(($page-1)*$numero_elementos_pagina);
-		$pagTion->setWhere($whereComplemett);
+		$pagTion->setInicioPag(($page-1)*$numero_elementos_pagina);
+		$pagTion->setWhereCTP($whereComplemett);
 		$todpPagination = $pagTion->conseguirTodosPagination($tbl1,$numero_elementos_pagina);
 		if($numElementos != 0 ){
 			foreach ($todpPagination as $mostrar) {				

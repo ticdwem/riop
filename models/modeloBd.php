@@ -14,12 +14,16 @@
  		$this->db = Conexion::conectar();
 	}
 	 
+	function getWhere(){
+		return $this->where;
+	}
+
 	function setWhere($wComplemet){
 		$this->where = $wComplemet;
 	 }
 
 	public function conseguirTodos($tabla){
- 		$selectAll = "select * from  $tabla {$this->where}";
+ 		$selectAll = "select * from  $tabla {$this->getWhere()}";
  		$all = $this->db->prepare($selectAll);
 		$all->execute();
  		return $all->fetchAll();
