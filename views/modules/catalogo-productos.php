@@ -2,6 +2,7 @@
 include "views/modules/header.php";
 ?>
 <div class="container">  
+<h1>PRUEBA DE SINCRONIZACION</h1>
   <div class="card border-0 shadow my-5"> 
     <div class="card-body p-5">
       <div class="row">
