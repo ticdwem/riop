@@ -1,6 +1,6 @@
 <?php 
 /**
- * 
+ * mike trujillo
  */
 class Productos
 {
@@ -9,6 +9,7 @@ class Productos
 	public  $tabla1;
 	public  $tabla2;
 	private $where;
+	public $mira;
 
 	public function mostrarProductos($datos){
 		require_once "vendor/autoload.php";
