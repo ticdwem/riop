@@ -56,7 +56,7 @@ include "views/modules/header.php";
             </div>
           </div>
           <div class="card bus-check card-body col-lg-4">
-            <p class="text-center">SUBLINEA GRTACIAS MEN</p>
+            <p class="text-center">SUBLINEA GRTACIAS MEN SALUDOS PLEASE</p>
             <div class="row" id="Sublinea">
             </div>
             <button type="button" class="btn btn-outline-success" id="btnBuscarPreciso" style="display: none;">BUSCAR</button>
