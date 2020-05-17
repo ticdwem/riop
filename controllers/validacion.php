@@ -5,6 +5,19 @@
  */
 class Validacion
 {
+
+	public static function guionEnTexto($texto){
+		$trim = trim($texto);
+		$cambio = str_replace(" ","-",$trim);
+		
+		return $cambio;
+	}
+
+	public static function inversaGuionT($texto){
+		$trim = trim($texto);
+		$cambio = str_replace("-"," ",$trim);
+		
+		return $cambio;	}
 	
 	public function pregmatchletras($valor1){
 		$vacio = self::emptySpace($valor1);
@@ -57,7 +70,7 @@ class Validacion
 	public function valornumerico($numero){
 		if($numero != "")
 		{
-			if (preg_match("/^[0-9a-zA-Z\/\s]+$/", $numero)) {
+			if (preg_match("/^[0-9a-zA-Z\/\-s]+$/", $numero)) {
 				return $numero;
 			} else {
 				return -1;

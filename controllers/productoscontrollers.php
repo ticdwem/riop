@@ -56,9 +56,10 @@ class Productos
 			?> 
 	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
 	         <div class="card h-100">
-	            <a href="?p=taladro"><img class="card-img-top" src="<?php echo $mostrar["fotoProdcuto"]; ?>" alt="">
+	            <a href="producto/<?php echo $mostrar["codigoProducto"]?>"><img class="card-img-top" src="<?php echo $mostrar["fotoProdcuto"]; ?>" alt="">
 	             <div class="card-body">
 	              <h4 class="card-title">
+	              	<?php //echo Validacion::guionEnTexto($mostrar["nombreProducto"]); ?>
 	              	<?php echo $mostrar["nombreProducto"]; ?>
 	              </h4>
 	              <p class="card-text">MODELO: <?php echo $mostrar["modeloProducto"]; ?></p>
@@ -81,7 +82,7 @@ class Productos
 
 	public function mostrarPersonalizado($bPer){
 		require_once "vendor/autoload.php";
-		require_once 'models/modeloBd.php';
+		require_once "models/productosModels.php";
 
 		$VDPersonal = $this->VDato = $bPer;
 		$tbl1 = $this->tabla1='sublinea';
@@ -119,7 +120,7 @@ class Productos
 			?> 
 	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
 	         <div class="card h-100">
-	            <a href="?p=taladro"><img class="card-img-top" src='<?php echo $mostrar["fotoProdcuto"]; ?>' alt="">
+	            <a href="producto/<?php echo $mostrar["codigoProducto"];?>"><img class="card-img-top" src='<?php echo $mostrar["fotoProdcuto"]; ?>' alt="">
 	             <div class="card-body">
 	              <h4 class="card-title">
 	              	<?php echo $mostrar["nombreProducto"]; ?>
@@ -142,6 +143,39 @@ class Productos
 		echo '<p class="">ENCONTRADOS '.$numElementos.' RESULTADOS | PAGINA '.$paginas. ' DE '.ceil($paginasTotales).'</p>';
 
 		
+	}
+
+	public function mostrarProducto($nombre){
+		require_once 'models/modeloBd.php';
+		$productoName = $this->VDPersonal = $nombre;
+		$whereComplemett;
+
+		if(strlen($productoName)>1){
+			$validar = new Validacion();
+			$veamos = $validar->valornumerico($productoName);
+			if($veamos == '0'){
+				echo "DATOS INCORRECTOS, PRUEBA UNA VEZ MAS";
+				die();
+			}else{
+				$whereComplemett = $this->where = " WHERE codigoProducto = '{$veamos}'";
+			}
+		}
+
+		$producto = new ModeloBase();
+		$producto ->setWhere($whereComplemett);
+		$mostrarP = $producto->conseguirTodos('productos');
+		?> 
+        <div class="card mt-4">
+          <img class="card-img-top img-fluid" src="<?php echo $mostrarP[0]["fotoProdcuto"] ?>" alt="">
+          <div class="card-body">
+            <h3 class="card-title"><?php echo $mostrarP[0]["nombreProducto"];?></h3>
+            <button class="btn btn-success">AGEGAR A MI CATÁLOGO</button>
+            <p class="card-text"><?php echo $mostrarP[0]["descripcionProducto"];?></p>
+            <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+            4.0 stars
+          </div>
+        </div>
+		<?php
 	}
 }
 

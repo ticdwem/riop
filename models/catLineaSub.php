@@ -26,7 +26,7 @@
  	}
 
  	public function getPersonalizado($tabla,$tabla2,$nomSulinea,$page,$numeElements){
- 		$innerPAg = "SELECT * FROM sublinea as tbl2 
+ 		$innerPAg = "SELECT tbl1.codigoProducto,tbl1.nombreProducto,tbl1.modeloProducto,tbl1.fotoProdcuto FROM sublinea as tbl2 
 							INNER JOIN productos as tbl1 
 							ON tbl2.idSublinea = tbl1.idSublineaProducto
 							WHERE tbl2.nombreSublinea = :ns

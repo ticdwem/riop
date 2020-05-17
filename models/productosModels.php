@@ -43,7 +43,7 @@
 	public function conseguirTodosPagination($tabla,$numElementospg){
  		$selectPagination = "select * from $tabla {$this->getWhereCTP()} LIMIT {$this->getInicioPag()},$numElementospg";
  		$pagination = $this->db->prepare($selectPagination);
- 		$pagination->execute();
+		 $pagination->execute();
  		return $pagination->fetchAll();
  		$pagination->close();
  	}
