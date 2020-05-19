@@ -1,5 +1,6 @@
 @import url('demo.css');
 @import url('animate.css');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 /* ESTILOS DE LA VISTA CATALOGO  */
 
 .bus-bar{
@@ -10,17 +11,35 @@
 }
 .bus-check{
 	/* padding-top: 35%; */
+	font-family: 'Fredoka One',	cursive;
+	font-size:14px;
 	text-align: left;
 	width: 18rem;
 	margin-right: 25px;
+	border-radius: 5%;
+	-webkit-box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
+	box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
 }
+
 .bus-check3{
+	font-family: 'Fredoka One', cursive;
+	font-size:14px;
 	text-align: center;
 	width: 18rem;
+	border-radius: 5%;
+	-webkit-box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
+	box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
 	/*margin-right: 25px;*/
 }
 .srch-prod{
-		padding-top: 4%;
+		padding-top: 4%;	
+}
+.crd-prod{
+	-webkit-box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
+	box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
 }
 .mi-slider {
 	position: relative;
@@ -47,7 +66,6 @@
 .mi-slider ul.mi-current {
 	pointer-events: auto;
 }
-
 .mi-slider ul li {
 	display: inline-block;
 	padding: 20px;

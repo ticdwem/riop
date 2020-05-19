@@ -41,7 +41,7 @@ include "views/modules/header.php";
             <div class="errorInput"></div>
             <div class="input-group-append">
              <!-- <button class="btn btn-outline-danger" type="button" id="btn_buscar"><i class="fa fa-search" aria-hidden="true"></i></button>-->
-             <input type="submit" class="btn btn-outline-danger" id="btn_buscar" value="BUSCAR">
+           <!--   <input type="submit" class="btn btn-outline-danger" id="btn_buscar" value="BUSCAR"> -->
             </div>
           </div>
         </form>
@@ -49,7 +49,7 @@ include "views/modules/header.php";
       </div>
         <div class="row check-all">
           <div class="card bus-check card-body col-lg-4">
-            <p class="text-center">LINEA</p>
+            <p class="txt-estilo text-center">LINEA</p>
             <div class="row" id="Dvlinea">
               <?php
                 $ln = new LineaSublinea();
@@ -63,7 +63,7 @@ include "views/modules/header.php";
             </div>
             <button type="button" class="btn btn-outline-success" id="btnBuscarPreciso" style="display: none;">BUSCAR</button>
           </div>
-               <div class="card bus-check3 card-body col-lg-4">
+            <div class="card bus-check3 card-body col-lg-4">
                  <p class="text-center">LINEA</p>
             <div class="row">
             <div class="form-check col-lg-6">
@@ -93,7 +93,7 @@ include "views/modules/header.php";
             </div>
           </div>
         </div>
-        <div class="row srch-prod">
+        <div class="row srch-prod crd-prod">
         <?php
         $dato = "";
         if(isset($_GET["buscar"])) {
