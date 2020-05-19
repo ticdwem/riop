@@ -34,6 +34,8 @@
       <li class="nav-item  <?php echo $pagina == 'contacto' ? 'active': '';?>">
         <a class="nav-link" href="<?php echo $especifDato;?>contacto"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Contacto  | </a>
       </li>
+     
+              
     </ul>
     </div>
     <div class="imagf" id="animacion7">

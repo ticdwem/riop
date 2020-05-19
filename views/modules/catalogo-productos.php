@@ -33,10 +33,10 @@ include "views/modules/header.php";
               </div>
       </div>     
       <div style="height:100%">  
-        <div class="row check-all">
+      <div class="row bus-bar">
         <div class="col-lg-12">
           <form class="" action="<?php echo htmlspecialchars('catalogo-productos');?>" method="get" id="frmFormSerarching">
-          <div class="input-group bus-bar input-group-lg">
+          <div class="input-group input-group-lg">
             <input type="text" class="form-control" id="buscarInput" placeholder="Busqueda de producto" aria-label="" name="buscar" aria-describedby="button-addon2" autocomplete="off">
             <div class="errorInput"></div>
             <div class="input-group-append">
@@ -46,6 +46,8 @@ include "views/modules/header.php";
           </div>
         </form>
         </div>
+      </div>
+        <div class="row check-all">
           <div class="card bus-check card-body col-lg-4">
             <p class="text-center">LINEA</p>
             <div class="row" id="Dvlinea">
@@ -53,12 +55,11 @@ include "views/modules/header.php";
                 $ln = new LineaSublinea();
                 $ln->getCategoria();
                ?>
-
             </div>
           </div>
           <div class="card bus-check card-body col-lg-4">
-            <p class="text-center">SUBLINEA GRTACIAS MEN SALUDOS PLEASE</p>
-            <div class="row" id="Sublinea">
+           <!--  <p class="text-center">SUBLINEA GRTACIAS MEN SALUDOS PLEASE</p> -->
+          <div class="row" id="Sublinea">
             </div>
             <button type="button" class="btn btn-outline-success" id="btnBuscarPreciso" style="display: none;">BUSCAR</button>
           </div>
@@ -92,7 +93,7 @@ include "views/modules/header.php";
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row srch-prod">
         <?php
         $dato = "";
         if(isset($_GET["buscar"])) {
@@ -109,15 +110,12 @@ include "views/modules/header.php";
         }
         ?>
         </div>
-
-
         </div>
       </div>
         
     </div>
   </div>
 </div>
-
 <?php
 include "views/modules/footer.php";
 ?>

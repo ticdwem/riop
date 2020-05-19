@@ -1,14 +1,15 @@
 @import url('demo.css');
 @import url('animate.css');
+/* ESTILOS DE LA VISTA CATALOGO  */
 
 .bus-bar{
-	padding-top: 2%;
+	padding-top: 4%;
 }
 .check-all{
-	padding-top: 2%;
-	/*padding-bottom: 5%;*/
+	padding-top: 3%;
 }
 .bus-check{
+	/* padding-top: 35%; */
 	text-align: left;
 	width: 18rem;
 	margin-right: 25px;
@@ -17,6 +18,9 @@
 	text-align: center;
 	width: 18rem;
 	/*margin-right: 25px;*/
+}
+.srch-prod{
+		padding-top: 4%;
 }
 .mi-slider {
 	position: relative;
