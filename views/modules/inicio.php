@@ -1,8 +1,10 @@
 <?php
 include "views/modules/header.php";
 ?>
-<!--<div class="container">-->
-	<br > 
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+	<br> 
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -16,31 +18,31 @@ include "views/modules/header.php";
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" style="width: 100px; height: 450px;" src="images/banner20.png" alt="First slide">
+      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner20.png" alt="First slide">
           <div class="carousel-caption d-none d-md-block">
    
   </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 450px;" src="images/banner30.png" alt="Second slide">
+      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner30.png" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 450px;" src="images/banner12.png" alt="Third slide">
+      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner12.png" alt="Third slide">
     </div>
        <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 450px;" src="images/banner33.png" alt="Third slide">
+      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner33.png" alt="Third slide">
     </div>
        <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 450px;" src="images/banner21.png" alt="Fourth slide">
+      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner21.png" alt="Fourth slide">
     </div>
       <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 450px;" src="images/banner22.png" alt="Fifth slide">
+      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner22.png" alt="Fifth slide">
     </div>
       <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 450px;" src="images/banner23.png" alt="Sixty slide">
+      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner23.png" alt="Sixty slide">
     </div>
       <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 450px;" src="images/banner24.png" alt="Seventy slide">
+      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner24.png" alt="Seventy slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -52,7 +54,14 @@ include "views/modules/header.php";
     <span class="sr-only">Siguiente</span>
   </a>
 </div>
-        <!--  </div>-->
+
+</div>
+<!-- <div class="col-lg-6">
+<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fferreriopisuena%2Fvideos%2F201354774131642%2F&show_text=0&width=560" width="100%" height="400" style="border:none;overflow:hidden"
+ scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+</div> -->
+</div>
+          </div>
 
 <div class="container">
  <div class="row">
@@ -173,14 +182,12 @@ include "views/modules/header.php";
            </div>-->
 		        
 		    </div>
-		    
-		    
-		    
-		    
-		    
-		    
+		     
 			<br><br>
-		      <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+   
+
+
+	  <!--     <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
 		  <ol class="carousel-indicators">
 		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 		    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -214,7 +221,7 @@ include "views/modules/header.php";
 		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
 		    <span class="sr-only">Siguiente</span>
 		  </a>
-		</div>
+		</div> -->
 		          </div><br>
 		          <!-- Load Facebook SDK for JavaScript -->
       <div id="fb-root"></div>

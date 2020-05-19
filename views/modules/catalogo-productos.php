@@ -2,11 +2,10 @@
 include "views/modules/header.php";
 ?>
 <div class="container">  
-<h1>PRUEBA DE SINCRONIZACION</h1>
   <div class="card border-0 shadow my-5"> 
     <div class="card-body p-5">
       <div class="row">
-         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
              <ol class="carousel-indicators">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -14,7 +13,7 @@ include "views/modules/header.php";
                 </ol>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img class="d-block w-100"style="width: 100px; height:350px;"  src="images/banner.png" alt="First slide">
+                    <img class="d-block w-100"style="width: 100px; height:350px;"  src="images/bann-catalogo4.png" alt="First slide">
                   </div>
                   <div class="carousel-item">
                     <img class="d-block w-100" style="width: 100px; height: 350px;"  src="images/bann-catalogo3.jpg" alt="Second slide">
@@ -32,19 +31,21 @@ include "views/modules/header.php";
                   <span class="sr-only">Next</span>
                 </a>
               </div>
-        <form action="<?php echo htmlspecialchars('catalogo-productos');?>" method="get" id="frmFormSerarching">
+      </div>     
+      <div style="height:100%">  
+        <div class="row check-all">
+        <div class="col-lg-12">
+          <form class="" action="<?php echo htmlspecialchars('catalogo-productos');?>" method="get" id="frmFormSerarching">
           <div class="input-group bus-bar input-group-lg">
             <input type="text" class="form-control" id="buscarInput" placeholder="Busqueda de producto" aria-label="" name="buscar" aria-describedby="button-addon2" autocomplete="off">
             <div class="errorInput"></div>
             <div class="input-group-append">
              <!-- <button class="btn btn-outline-danger" type="button" id="btn_buscar"><i class="fa fa-search" aria-hidden="true"></i></button>-->
-             <input type="submit" class="btn btn-outline-danger" id="btn_buscar" value="BUSCAR"><i class="fa fa-search" aria-hidden="true"></i>
+             <input type="submit" class="btn btn-outline-danger" id="btn_buscar" value="BUSCAR">
             </div>
           </div>
         </form>
-      </div>     
-      <div style="height:100%">  
-        <div class="row check-all">
+        </div>
           <div class="card bus-check card-body col-lg-4">
             <p class="text-center">LINEA</p>
             <div class="row" id="Dvlinea">
