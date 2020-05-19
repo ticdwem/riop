@@ -154,7 +154,7 @@ class Productos
 			$validar = new Validacion();
 			$veamos = $validar->valornumerico($productoName);
 			if($veamos == '0'){
-				echo "DATOS INCORRECTOS, PRUEBA UNA VEZ MAS";
+				echo "DATOS INCORRECTOS, POR FAVOR PRUEBA UNA VEZ MAS ";
 				die();
 			}
 		}
