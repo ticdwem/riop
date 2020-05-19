@@ -184,6 +184,18 @@ include "views/modules/header.php";
 		    </div>
 		     
 			<br><br>
+      <div class="container">
+  <section class="customer-logos slider">
+    <div class="slide"><img src="images/fab.png"></div>
+    <div class="slide"><img src="images/fab.png"></div>
+    <div class="slide"><img src="images/fab.png"></div>
+    <div class="slide"><img src="images/fab.png"></div>
+    <div class="slide"><img src="images/fab.png"></div>
+    <div class="slide"><img src="images/fab.png"></div>
+    <div class="slide"><img src="images/fab.png"></div>
+    <div class="slide"><img src="images/fab.png"></div>
+  </section>
+</div>
    
 
 

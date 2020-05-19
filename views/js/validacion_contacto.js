@@ -188,3 +188,4 @@ function expRegular(texto,contenido){
 		}
 
 }
+
