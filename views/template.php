@@ -22,7 +22,10 @@
   <link href="https://fonts.googleapis.com/css?family=Adamina|Roboto+Slab:100,200,300,400,500,600,700,800,900&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="<?php echo $folder; ?>views/css/style.css" />
   <link rel="stylesheet" type="text/css" href="<?php echo $folder; ?>views/css/animate.css" />
-  <!-- Custom styles for this template -->
+  <!-- SE INCLUYO ESTE CSS PARA SLIDE MARCAS 19/05/2020 -->
+  <link rel="stylesheet" type="text/css" href="<?php echo $folder; ?>views/css/infinite-slider.css" />
+
+  <!-- Custom styles for this template infinite-slider-->
   <link href="<?php echo $folder; ?>views/css/full-width-pics.css" rel="stylesheet">
   
   <meta property="og:description" content="Manejamos las mejores marcas del mercado" />

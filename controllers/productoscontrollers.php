@@ -118,7 +118,7 @@ class Productos
 		if($numElementos != 0 ){
 			foreach ($todpPagination as $mostrar) {				
 			?> 
-	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4" >
 	         <div class="card h-100">
 	            <a href="producto/<?php echo $mostrar["codigoProducto"];?>"><img class="card-img-top" src='<?php echo $mostrar["fotoProdcuto"]; ?>' alt="">
 	             <div class="card-body">
