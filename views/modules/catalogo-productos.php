@@ -53,7 +53,6 @@ include "views/modules/header.php";
                 $ln = new LineaSublinea();
                 $ln->getCategoria();
                ?>
-
             </div>
           </div>
           <div class="card bus-check card-body col-lg-4">
