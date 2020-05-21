@@ -10,7 +10,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
     	<ul class=" navbar-nav ml-auto" >
-    		<li>	<div class="ferre" id="animacion6"> <a class="nav-link text-white " href="?p=inicio">Ferretera Rio Pisue&ntilde;a</a></div></li>
+      <li>
+            <div class="" id="animacion7">  <!--  -->
+    	<a href="inicio" class="imagelog" itemprop="logo"><img src="<?php echo $especifDato; ?>images/logo1.png" alt="logo_roipizuena"></a>
+    		</div>
+      </li>
+    		<li>	<div class="ferre" id="animacion6"> <a class="nav-link text-white " href="?p=inicio"></a></div></li>
     		</ul>
     <ul class=" navbar-nav ml-auto ">
      <li class="nav-item">
@@ -38,8 +43,8 @@
               
     </ul>
     </div>
-    <div class="imagf" id="animacion7">
+  <!--   <div class="imagf" id="animacion7">
     	<a href="inicio" class="imagelog" itemprop="logo"><img src="<?php echo $especifDato; ?>images/logo1.png" alt="logo_roipizuena"></a>
-    		</div>
+    		</div> -->
   </div>
 </nav>
