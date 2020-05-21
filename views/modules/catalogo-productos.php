@@ -35,7 +35,7 @@ include "views/modules/header.php";
       <div style="height:100%">  
       <div class="row bus-bar">
         <div class="col-lg-12">
-          <form class="" action="<?php echo htmlspecialchars('catalogo-productos');?>" method="get" id="frmFormSerarching">
+          <form class="bar-bus" action="<?php echo htmlspecialchars('catalogo-productos');?>" method="get" id="frmFormSerarching">
           <div class="input-group input-group-lg">
             <input type="text" class="form-control" id="buscarInput" placeholder="Busqueda de producto" aria-label="" name="buscar" aria-describedby="button-addon2" autocomplete="off">
             <div class="errorInput"></div>
