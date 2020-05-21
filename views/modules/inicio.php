@@ -5,7 +5,7 @@ include "views/modules/header.php";
 <div class="container">
 <div class="row">
 <div class="sec-1 col-lg-12">   
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="stil carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -18,27 +18,27 @@ include "views/modules/header.php";
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner20.png" alt="First slide">
+      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner-prueba0.jpg" alt="First slide">
           <div class="carousel-caption d-none d-md-block"> 
   </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner30.png" alt="Second slide">
+      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner-prueba1.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner12.png" alt="Third slide">
+      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner-prueba2.jpg" alt="Third slide">
     </div>
        <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner33.png" alt="Third slide">
+      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner-prueba3.jpg" alt="Third slide">
     </div>
        <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner21.png" alt="Fourth slide">
+      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner-prueba4.jpg" alt="Fourth slide">
     </div>
       <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner22.png" alt="Fifth slide">
+      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner-prueba5.jpg" alt="Fifth slide">
     </div>
       <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner23.png" alt="Sixty slide">
+      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner-prueba6.jpg" alt="Sixty slide">
     </div>
       <div class="carousel-item">
       <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner24.png" alt="Seventy slide">

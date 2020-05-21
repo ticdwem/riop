@@ -4,13 +4,42 @@
 
 
 /* sec-inicio */
+
 .navbar{
+	color: white;
 	background: -webkit-linear-gradient(left, 
 	rgba(73, 155, 234, 1) 0%, 
 	rgba(32, 124, 229, 1) 100%);
+	-webkit-box-shadow: -1px -4px 40px -10px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -1px -4px 40px -10px rgba(0, 0, 0, 0.75);
+	box-shadow: -1px -4px 40px -10px rgba(0, 0, 0, 0.75);
 }
+.nav-link{
+	color:white;	
+}
+.nav-link:hover {
+
+	color: white;
+	background:  #c0392b;
+	border-radius: 20px 20px 20px 20px;
+	-moz-border-radius: 20px 20px 20px 20px;
+	-webkit-border-radius: 20px 20px 20px 20px;
+	border: 0px solid #000000;
+	-webkit-box-shadow: 0px 9px 28px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 9px 28px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 9px 28px 0px rgba(0, 0, 0, 0.75);
+}
+/* .nav-stil{
+	background-color: red;
+} */
 .sec-1 {
-	padding-top: 7%;
+	padding-top: 7.5%;	
+}
+.stil{
+	-webkit-box-shadow: -1px -4px 49px -10px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -1px -4px 49px -10px rgba(0, 0, 0, 0.75);
+	box-shadow: -1px -4px 49px -10px rgba(0, 0, 0, 0.75);
+
 }
 
 /* .

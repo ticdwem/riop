@@ -17,13 +17,14 @@
       </li>
     		<li>	<div class="ferre" id="animacion6"> <a class="nav-link text-white " href="?p=inicio"></a></div></li>
     		</ul>
-    <ul class=" navbar-nav ml-auto ">
+    <ul class="navbar-nav ml-auto ">
      <li class="nav-item">
     	 <a class="nav-link text-white" id="animacion8" href="tel://5558500140"><i class="fa fa-phone" aria-hidden="true" itemprop="telephone"></i> Tel: (55) 58-50-01-40
-    	 </a>
+       </a>
+       <p class="text-white text-center">Servicio a Domicilio</p>
      </li>
     </ul>
-    <ul class="navbar-nav ml-auto">
+    <ul class="nav-stil navbar-nav ml-auto">
       <li class="nav-item  <?php echo $pagina == 'inicio' ? 'active': '';?>">
         <a class="nav-link" href="<?php echo $especifDato;?>inicio"><i class="fa fa-home" aria-hidden="true"></i> Inicio  |            </a>
       </li>
