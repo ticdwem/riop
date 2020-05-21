@@ -1,7 +1,9 @@
 <?php
 include "views/modules/header.php";
 ?>
-<div class="container">
+
+
+<!-- <div class="container"> -->
 <div class="row">
 <div class="sec-1 col-lg-12">   
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -52,7 +54,15 @@ include "views/modules/header.php";
     <span class="sr-only">Siguiente</span>
   </a>
 </div>
+
+
+
+<<<<<<< HEAD
+
+<!-- </div> -->
+=======
 </div>
+>>>>>>> upstream/master
 <!-- <div class="col-lg-6">
 <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fferreriopisuena%2Fvideos%2F201354774131642%2F&show_text=0&width=560" width="100%" height="400" style="border:none;overflow:hidden"
  scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
