@@ -64,25 +64,26 @@ include "views/modules/header.php";
 </div> -->
   </div>
 </div>
-<!-- 
+
 <div class="sec-2">
-<ul id="c"> 	
-		<li><p><strong>1</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
-		<li><p><strong>2</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
-		<li><p><strong>3</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
-		<li><p><strong>4</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
+<ul class="car" id="c"> 	
+		<li class="car-sec"><!-- <p class="p"><strong>1</strong></p> --><a href="www.facebook.com"><img src="images/soldadura.png" width="100%" height="125px"  >     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></a></li>
+		<li class="car-sec"><p class="p"><strong>2</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
+		<li class="car-sec"><p class="p"><strong>3</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
+		<li class="car-sec"><p class="p"><strong>4</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
 
-		<li><p><strong>5</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
-		<li><p><strong>6</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
-		<li><p><strong>7</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
-		<li><p><strong>8</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li> 
+		<li class="car-sec"><p class="p"><strong>5</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
+		<li class="car-sec"><p class="p"><strong>6</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
+		<li class="car-sec"><p class="p"><strong>7</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
+		<li class="car-sec"><p class="p"><strong>8</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li> 
 
-		<li><p><strong>9</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
-		<li><p><strong>10</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
-		<li><p><strong>11</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
-		<li><p><strong>12</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li> 
+		<li class="car-sec"><p class="p"><strong>9</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
+		<li class="car-sec"><p class="p"><strong>10</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
+		<li class="car-sec"><p class="p"><strong>11</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
+		<li class="car-sec"><p class="p"><strong>12</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li> 
 	</ul>
-    </div> -->
+    </div>
+
 <div class="sec-3">
   <section class="customer-logos slider">
     <div class="slide"><img src="images/werner-logo.png"></div>
