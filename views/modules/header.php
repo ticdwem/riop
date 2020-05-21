@@ -1,6 +1,6 @@
 <?php $especifDato = "";if(isset($_GET["n"])){$especifDato="../";}?>
     	<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" itemscope itemtype="http://schema.org/HardwareStore">
+<nav class="navbar navbar-expand-lg fixed-top" itemscope itemtype="http://schema.org/HardwareStore">
   <div class="container">
     <a class="navbar-brand" href="#">
     <img src="<?php echo $especifDato; ?>images/logo1.png" width="50" height="50"  alt="ferretera" itemprop="legalName">Ferretera Rio Pisue&ntilde;a
