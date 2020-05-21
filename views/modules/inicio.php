@@ -83,16 +83,25 @@ include "views/modules/header.php";
 		<li><p><strong>12</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li> 
 	</ul>
     </div> -->
-<div class="">
+<div class="sec-3">
   <section class="customer-logos slider">
-    <div class="slide"><img src="images/fab.png"></div>
-    <div class="slide"><img src="images/fab.png"></div>
-    <div class="slide"><img src="images/fab.png"></div>
-    <div class="slide"><img src="images/fab.png"></div>
-    <div class="slide"><img src="images/fab.png"></div>
-    <div class="slide"><img src="images/fab.png"></div>
-    <div class="slide"><img src="images/fab.png"></div>
-    <div class="slide"><img src="images/fab.png"></div>
+    <div class="slide"><img src="images/werner-logo.png"></div>
+    <div class="slide"><img src="images/anclo-logo.png"></div>
+    <div class="slide"><img src="images/austromex-logo.jpg"></div>
+    <div class="slide"><img src="images/bosch-logo.jpg"></div>
+    <div class="slide"><img src="images/cifunsa-logo.jpg"></div>
+    <div class="slide"><img src="images/deacero-logo.gif"></div>
+    <div class="slide"><img src="images/dewalt-logo.png"></div>
+    <div class="slide"><img src="images/escalumex-logo.jpg"></div>
+    <div class="slide"><img src="images/fanal-logo.jpg"></div>
+    <div class="slide"><img src="images/fandeli-logo.jpg"></div>
+    <div class="slide"><img src="images/fifa.png"></div>
+    <div class="slide"><img src="images/fischer-logo.png"></div>
+    <div class="slide"><img src="images/helvex.jpg"></div>
+    <div class="slide"><img src="images/henkel-logo.png"></div>
+    <div class="slide"><img src="images/intec-logo.jpg"></div>
+    <div class="slide"><img src="images/truper-logo.png"></div>
+    <div class="slide"><img src="images/3m-logo.png"></div>
   </section>
 </div>
               </div>
