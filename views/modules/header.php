@@ -19,9 +19,10 @@
     		</ul>
     <ul class="navbar-nav ml-auto ">
      <li class="nav-item">
-    	 <a class="nav-link text-white" id="animacion8" href="tel://5558500140"><i class="fa fa-phone" aria-hidden="true" itemprop="telephone"></i> Tel: (55) 58-50-01-40
+    	 <a class="nav-link text-white text-center" id="animacion8" href="tel://5558500140"><i class="fa fa-phone" aria-hidden="true" itemprop="telephone"></i> Tel: (55) 58-50-01-40
        </a>
        <p class="text-white text-center">Servicio a Domicilio</p>
+       
      </li>
     </ul>
     <ul class="nav-stil navbar-nav ml-auto">

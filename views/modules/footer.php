@@ -91,7 +91,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"  crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.6/src/jquery.ez-plus.js"></script>
-    <script src="https://kit.fontawesome.com/6a5999581d.js" crossorigin="anonymous"></script>
+		<script src="views/js/parallax.js"></script>
+
+	<script src="https://kit.fontawesome.com/6a5999581d.js" crossorigin="anonymous"></script>
 	<!-- SE INCLUYO SCRIPT PARA SLIDE DE MARCAS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 
@@ -103,6 +105,31 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-158337767-1');
+</script>
+
+<script>
+$(document).ready(function () {
+	$('.herramientas-logos').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 1000,
+		arrows: false,
+		dots: false,
+		pauseOnHover: false,
+		responsive: [{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 4
+			}
+		}, {
+			breakpoint: 520,
+			settings: {
+				slidesToShow: 3
+			}
+		}]
+	});
+});
 </script>
 <!-- SE INCLUYO SCRIPT PARA SLIDE DE MARCAS -->
 <script>
