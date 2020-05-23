@@ -156,19 +156,40 @@ class Productos
 			if($veamos == '0'){
 				echo "DATOS INCORRECTOS, PRUEBA UNA VEZ MAS";
 				die();
-			}else{
-				$whereComplemett = $this->where = " WHERE codigoProducto = '{$veamos}'";
 			}
 		}
 
-		$producto = new ModeloBase();
-		$producto ->setWhere($whereComplemett);
-		$mostrarP = $producto->conseguirTodos('productos');
+		$productoO = new CatLineaSub();
+		$productoO ->setTabla1('productos');
+		$productoO-> setTabla2('marca');
+		$productoO-> setTabla3('sublinea');
+		$mostrarP = $productoO->getProductSpecifict($veamos);
 		?> 
         <div class="card mt-4">
           <img class="card-img-top img-fluid" src="<?php echo $mostrarP[0]["fotoProdcuto"] ?>" alt="">
           <div class="card-body">
             <h3 class="card-title"><?php echo $mostrarP[0]["nombreProducto"];?></h3>
+			
+			<div class="form-group row">
+				<label for="">MODELO:</label>
+				<p class="card-text"><?=$mostrarP[0]["modeloProducto"]?></p>			
+			</div>
+			<div class="form-group row">
+				<label for="">MARCA:</label>
+				<p class="card-text"><?=$mostrarP[0]["nombreMarca"]?></p>
+			</div>
+			<div class="form-group row">
+				<label for="">SKU:</label>
+				<p class="card-text"><?=$mostrarP[0]["skuProducto"]?></p>
+			</div>
+			<div class="form-group row">
+				<label for="">UNIDAD:</label>
+				<p class="card-text"><?=$mostrarP[0]["unidadBaseProducto"]?></p>
+			</div>
+			<div class="form-group row">
+				<label for="">SUBLINEA:</label>
+				<p class="card-text"><?=$mostrarP[0]["nombreSublinea"]?></p>
+			</div>
             <button class="btn btn-success">AGEGAR A MI CATÁLOGO</button>
             <p class="card-text"><?php echo $mostrarP[0]["descripcionProducto"];?></p>
             <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
@@ -176,6 +197,7 @@ class Productos
           </div>
         </div>
 		<?php
+
 	}
 }
 

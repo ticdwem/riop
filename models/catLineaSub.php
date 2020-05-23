@@ -37,6 +37,24 @@
  		$paginationInner->execute();
  		return $paginationInner->fetchAll();
  		$paginationInner->close();
- 	}
+	 }
+	 
+	 public function getProductSpecifict($productoName){
+		$innerPAg = "SELECT p.codigoProducto,p.nombreProducto,p.descripcionProducto,p.modeloProducto,
+							p.skuProducto,p.unidadBaseProducto,p.fotoProdcuto,mr.nombreMarca,mr.fotoMarca,
+							sb.nombreSublinea 
+					FROM ".$this->getTabla1()." p
+					INNER JOIN ".$this->getTabla2()." mr
+					ON p.idMarcaProdcuto = mr.idMarca
+					INNER JOIN ".$this->getTabla3()." sb
+					ON p.idSublineaProducto = sb.idSublinea
+					WHERE p.codigoProducto = :nompr";
+		$paginationInner = $this->db->prepare($innerPAg);
+		$paginationInner->bindParam(':nompr',$productoName,PDO::PARAM_STR);
+		$paginationInner->execute();
+		return $paginationInner->fetchAll();
+		$paginationInner->close();
+	}
+
 
  }
