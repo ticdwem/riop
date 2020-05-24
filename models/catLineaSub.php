@@ -6,7 +6,7 @@
   */
  class CatLineaSub extends Conexion
  {
- 	public $db;
+	 public $db;
  	public function __construct()
  	{
  		$this->db = Conexion::conectar();
@@ -39,14 +39,14 @@
  		$paginationInner->close();
 	 }
 	 
-	 public function getProductSpecifict($productoName){
+	 public function getProductSpecifict($productoName,$tabla1,$tabla2,$tabla3){
 		$innerPAg = "SELECT p.codigoProducto,p.nombreProducto,p.descripcionProducto,p.modeloProducto,
 							p.skuProducto,p.unidadBaseProducto,p.fotoProdcuto,mr.nombreMarca,mr.fotoMarca,
 							sb.nombreSublinea 
-					FROM ".$this->getTabla1()." p
-					INNER JOIN ".$this->getTabla2()." mr
+					FROM ".$tabla1." p
+					INNER JOIN ".$tabla2." mr
 					ON p.idMarcaProdcuto = mr.idMarca
-					INNER JOIN ".$this->getTabla3()." sb
+					INNER JOIN ".$tabla3." sb
 					ON p.idSublineaProducto = sb.idSublinea
 					WHERE p.codigoProducto = :nompr";
 		$paginationInner = $this->db->prepare($innerPAg);

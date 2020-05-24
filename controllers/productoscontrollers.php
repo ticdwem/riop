@@ -160,10 +160,7 @@ class Productos
 		}
 
 		$productoO = new CatLineaSub();
-		$productoO ->setTabla1('productos');
-		$productoO-> setTabla2('marca');
-		$productoO-> setTabla3('sublinea');
-		$mostrarP = $productoO->getProductSpecifict($veamos);
+		$mostrarP = $productoO->getProductSpecifict($veamos,'productos','marca','sublinea');
 		?> 
         <div class="card mt-4">
           <img class="card-img-top img-fluid" src="<?php echo $mostrarP[0]["fotoProdcuto"] ?>" alt="">
