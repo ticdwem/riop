@@ -7,6 +7,9 @@
             <h3 class="text-white ">Gracias por tu Visita!</h3>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-3 offset-lg-3 " >
+			<a href="contacto" >
+				<img src="<?php echo $especifFooter; ?>images/whats-app-logo.png" alt="contacto" id="" width="50" height="50">
+			</a>
             <a href="https://www.facebook.com/ferreriopisuena/">
             	<img  src="<?php echo $especifFooter; ?>images/fab.png" alt="encuentranos" id="animacion9" width="50" height="50">
             </a>
@@ -16,12 +19,13 @@
 			<a href="contacto" >
 				<img src="<?php echo $especifFooter; ?>images/mail2.png" alt="contacto" id="animacion11" width="50" height="50">
 			</a>
-			
-				<img src="<?php echo $especifFooter; ?>images/rio-pisuena-envios-3.png" alt="contacto" id="animacion11" width="80" height="50">		
+				<!-- <img src="<?php echo $especifFooter; ?>images/servicio-domicilio.png" alt="contacto" id="animacion11" width="80" height="50">		 -->
         </div>
             <div class="col-sm-9 col-md-6 col-lg-3 ">
-              <h3 class="text-white">Llamanos:<br><a href="tel://58500140" class="text-primary">(55) 58-50-01-40</a></h3>
-              <h3 class="text-white">WhatsApp:<br><a href="whatsapp://send?text=Hola me puedes dar información acerca de ...&phone=+5215591996245" class="text-primary">5591996245</a></h3>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d888.464239486193!2d-99.07485676714718!3d19.317980319479883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0364188dc1ef%3A0xec3ae9996a20d6c!2sFerretera%20Rio%20Pisue%C3%B1a!5e0!3m2!1ses-419!2smx!4v1590521963603!5m2!1ses-419!2smx" 
+					width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+<!--               <h3 class="text-white">Llamanos:<br><a href="tel://58500140" class="text-primary">(55) 58-50-01-40</a></h3>
+              <h3 class="text-white">WhatsApp:<br><a href="whatsapp://send?text=Hola me puedes dar información acerca de ...&phone=+5215591996245" class="text-primary">5591996245</a></h3> -->
             </div>
             <div class="col-sm-9 col-md-6 col-lg-1 "></div>
             <div class="col-sm-12 col-md-12 col-lg-4">
@@ -37,7 +41,7 @@
 						<a href="https://www.facebook.com/ferreriopisuena/">Ferretera Rio Pisueña</a></blockquote></div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-4 text-white text-right">Av. Tláhuac No. 1552 Col. Año de Juárez C.P. 09780 Del. Iztapalapa CDMX a un lado de la estacion del metro Periferico Oriente de la línea 12 del metro-CDMX.<br>
-					 <h6 class="text-white">Correo Electronico<br><a href="contacto" class="text-primary">ventas@riopisuena.com.mx</a></h6>
+					 <h6 class="text-white">Correo Electronico<br><a href="contacto" class="text-white">ventas@riopisuena.com.mx</a></h6>
 					 <h4 class="text-white">Nuestros Horarios:</h4>
 					 <p class="text-white ">	Lunes a Viernes: 8:00 a 18:00 <br>
 					     Sabados: 8:00  a 15:00</p>
@@ -113,7 +117,7 @@ $(document).ready(function () {
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		autoplay: true,
-		autoplaySpeed: 1000,
+		autoplaySpeed: 3000,
 		arrows: false,
 		dots: false,
 		pauseOnHover: false,
@@ -138,7 +142,7 @@ $(document).ready(function () {
 		slidesToShow: 12,
 		slidesToScroll: 1,
 		autoplay: true,
-		autoplaySpeed: 1000,
+		autoplaySpeed: 75,
 		arrows: false,
 		dots: false,
 		pauseOnHover: false,

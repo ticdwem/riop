@@ -67,14 +67,14 @@ include "views/modules/header.php";
   <div class="sec-3">
   <section class="herramientas-logos slider">
     <div class="slide"><a href="https://freefrontend.com/css-parallax/"><img src="images/soldadura.png"></a><p>Soldadura</p></div>
-    <div class="slide"><img src="images/anclo-logo.png"></div>
-    <div class="slide"><img src="images/austromex-logo.jpg"></div>
-    <div class="slide"><img src="images/bosch-logo.jpg"></div>
-    <div class="slide"><img src="images/cifunsa-logo.jpg"></div>
-    <div class="slide"><img src="images/deacero-logo.gif"></div>
-    <div class="slide"><img src="images/dewalt-logo.png"></div>
-    <div class="slide"><img src="images/escalumex-logo.jpg"></div>
-    <div class="slide"><img src="images/fanal-logo.jpg"></div>
+    <div class="slide"><img src="images/4040.png"></div>
+    <div class="slide"><img src="images/reg-2.png"></div>
+    <div class="slide"><img src="images/taladro.png"></div>
+    <div class="slide"><img src="images/valvula2.png"></div>
+    <div class="slide"><img src="images/cerradura.png"></div>
+    <div class="slide"><img src="images/lijadora.png"></div>
+    <div class="slide"><img src="images/niple-galvanizado.png"></div>
+<!--     <div class="slide"><img src="images/fanal-logo.jpg"></div>
     <div class="slide"><img src="images/fandeli-logo.jpg"></div>
     <div class="slide"><img src="images/fifa.png"></div>
     <div class="slide"><img src="images/fischer-logo.png"></div>
@@ -82,7 +82,7 @@ include "views/modules/header.php";
     <div class="slide"><img src="images/henkel-logo.png"></div>
     <div class="slide"><img src="images/intec-logo.jpg"></div>
     <div class="slide"><img src="images/truper-logo.png"></div>
-    <div class="slide"><img src="images/3m-logo.png"></div>
+    <div class="slide"><img src="images/3m-logo.png"></div> -->
   </section>
 </div>
 </div>
@@ -100,7 +100,7 @@ include "views/modules/header.php";
 
 <div class="container">
 <div class="row ">
-<div class="col-lg-12 sec-2 ">
+<div class="col-lg-12 sec-2">
 <ul class="car" id="c"> 	
 		<li class="car-sec"><img src="images/3.png" width="100%" height="125px"><p class="text-center">"Siempre buscando la satisfacción del cliente"</p></li>
 		<li class="car-sec"><img src="images/servicio-domicilio.png" width="100%" height="125px"><p class="text-center">Servcicio a Domicilio A partir de $1000 de Compra</p></li>
