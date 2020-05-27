@@ -60,9 +60,6 @@ include "views/modules/header.php";
 </div> -->
   </div>
 </div>
-
-
-
 <div class="container">
   <div class="sec-3">
   <section class="herramientas-logos slider">
@@ -74,7 +71,7 @@ include "views/modules/header.php";
     <div class="slide"><img src="images/cerradura.png"></div>
     <div class="slide"><img src="images/lijadora.png"></div>
     <div class="slide"><img src="images/niple-galvanizado.png"></div>
-<!--     <div class="slide"><img src="images/fanal-logo.jpg"></div>
+<!--<div class="slide"><img src="images/fanal-logo.jpg"></div>
     <div class="slide"><img src="images/fandeli-logo.jpg"></div>
     <div class="slide"><img src="images/fifa.png"></div>
     <div class="slide"><img src="images/fischer-logo.png"></div>
@@ -89,9 +86,9 @@ include "views/modules/header.php";
 
 <section>
   <div class="parallax-window" data-parallax="scroll" data-image-src="images/bann-catalogo5.jpg">
-  <p class="texto-encima2" style="font-family: 'Dosis', sans-serif;">Ferretera Rio Pisuena se pone a tus ordenes con</p>
-  <div class="centrado2" style="font-family: 'Dosis', sans-serif;">Ventas a Industrias</div>
-  <button type="button" class="btn btn-primary boton-cursos">Me interesa</button>
+  <p class="texto-encima2">"Contamos con Ventas a Industrias"</p>
+  <!-- <div class="centrado2" style="font-family: 'Dosis', sans-serif;">Ventas a Industrias</div> -->
+  <button type="button" class="btn btn-danger boton-cursos">Me interesa</button>
 </div>
 </section>
 

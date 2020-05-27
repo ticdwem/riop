@@ -3,7 +3,6 @@ include "views/modules/header.php";
 ?>
 <br><br><br>
 <div class="container">
-			<!-- /END THE FEATURETTES -->
 			<div class="card-columns">
 					<div class="prueba card">
 						<img class="card-img-top" src="images/3.png" alt="quienes somos">
@@ -68,18 +67,14 @@ include "views/modules/header.php";
 								<p>Multi Línea:<br>
 
 									<a  id="animacion8" href="tel://5558500140"><i class="fa fa-phone" aria-hidden="true"></i> Tel: (55) 58-50-01-40
-
 									</a><br>
-
-                                    <a href="contacto" class="text-primary">ventas@riopisuena.com.mx</a>
-								
+                                    <a href="contacto" class="text-primary">ventas@riopisuena.com.mx</a>						
 									</p>
 								<p class="card-text"><small class="text-muted"></small></p>
 							</div>
 						</div>
 					</div>
 			</div><br><br><br><br>
-
 <?php
 include "views/modules/footer.php";
 ?>
