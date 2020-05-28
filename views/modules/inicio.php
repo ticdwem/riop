@@ -92,9 +92,6 @@ include "views/modules/header.php";
 </div>
 </section>
 
-
-
-
 <div class="container">
 <div class="row ">
 <div class="col-lg-12 sec-2">

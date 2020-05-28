@@ -47,8 +47,8 @@ include "views/modules/header.php";
         </form>
         </div>
       </div>
-        <div class="row check-all">
-          <div class="card bus-check card-body col-lg-4">
+        <div class="row check-all" >
+          <div class="card bus-check card-body col-lg-6">
             <p class="txt-estilo text-center">LINEA</p>
             <div class="row" id="Dvlinea">
               <?php
@@ -57,13 +57,16 @@ include "views/modules/header.php";
                ?>
             </div>
           </div>
-          <div class="card bus-check card-body col-lg-4">
-           <!--  <p class="text-center">SUBLINEA GRTACIAS MEN SALUDOS PLEASE</p> -->
+          <div class="card bus-check card-body col-lg-6">
           <div class="row" id="Sublinea">
+          <div class="d-flex align-items-center" >
+            <strong style="font-size: 20px;">Selecciona una Linea...</strong>
+            <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+          </div>
             </div>
             <button type="button" class="btn btn-outline-success" id="btnBuscarPreciso" style="display: none;">BUSCAR</button>
           </div>
-            <div class="card bus-check3 card-body col-lg-4">
+        <!--     <div class="card bus-check3 card-body col-lg-4">
                  <p class="text-center">LINEA</p>
             <div class="row">
             <div class="form-check col-lg-6">
@@ -91,7 +94,7 @@ include "views/modules/header.php";
               <label class="form-check-label" for="exampleCheck1">ELECTRICO</label>
             </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="row srch-prod crd-prod">
         <?php

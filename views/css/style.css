@@ -7,9 +7,15 @@
 
 .navbar{
 	color: white;
-	background: -webkit-linear-gradient(left, 
+	font-family: 'Fredoka One',	cursive;
+	font-size: 17px;
+
+	background: #192a56;
+	opacity: 0.9;
+	
+	/* -webkit-linear-gradient(left, 
 	rgba(73, 155, 234, 1) 0%, 
-	rgba(32, 124, 229, 1) 100%);
+	rgba(32, 124, 229, 1) 100%); */
 	-webkit-box-shadow: -1px -4px 40px -10px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: -1px -4px 40px -10px rgba(0, 0, 0, 0.75);
 	box-shadow: -1px -4px 40px -10px rgba(0, 0, 0, 0.75);
@@ -448,8 +454,11 @@ position: absolute;
 
 .imagelog img{
 
-width: 125px;
+width: 150px;
 height: 100px;
+/* -webkit-box-shadow: 2px 3px 25px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 3px 25px 0px rgba(0,0,0,0.75);
+box-shadow: 2px 3px 25px 0px rgba(0,0,0,0.75); */
 
 }
 .navbar-brand{

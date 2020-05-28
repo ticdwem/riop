@@ -30,16 +30,16 @@
         <a class="nav-link" href="<?php echo $especifDato;?>inicio"><i class="fa fa-home" aria-hidden="true"></i> Inicio         </a>
       </li>
         <li class="nav-item <?php echo $pagina == 'productos' ? 'active': '';?>">
-        <a class="cat nav-link" href="<?php echo $especifDato;?>catalogo-productos"><i class="fa fa-wrench" aria-hidden="true"></i> Catalogo Electronico </a>
+        <a class="cat nav-link" href="<?php echo $especifDato;?>catalogo-productos"><i class="fa fa-wrench" aria-hidden="true"></i> Nuestros Productos </a>
       </li>
     	<li class="nav-item <?php echo $pagina == 'conocenos' ? 'active': '';?>">
-    		<a class="nav-link" href="<?php echo $especifDato;?>conocenos"><i class="fa fa-question white" aria-hidden="true"></i> ¿Quienes Somos?   </a>
+    		<a class="nav-link" href="<?php echo $especifDato;?>conocenos"><!-- <i class="fa fa-question white" aria-hidden="true"></i>  -->¿Quienes Somos?   </a>
     	</li>
-    <li class="nav-item">
+  <!--   <li class="nav-item">
           <a href="">
             <img src="images/whats-app-logo.png" alt="contacto" id="" width="50" height="50">
           </a>
-    </li>
+    </li> -->
   <!--     <li class="nav-item <?php echo $pagina == 'encuentranos' ? 'active': '';?>">
         <a class="nav-link" href="<?php echo $especifDato;?>encuentranos"><i class="fa fa-map-marker" aria-hidden="true"></i> Encuentranos   </a>
       </li>

@@ -22,10 +22,10 @@
 				<!-- <img src="<?php echo $especifFooter; ?>images/servicio-domicilio.png" alt="contacto" id="animacion11" width="80" height="50">		 -->
         </div>
             <div class="col-sm-9 col-md-6 col-lg-3">
-		<!-- 	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3765.1812673414006!2d-99.074568!3d19.317939!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0364188dc1ef%3A0xec3ae9996a20d6c!2sFerretera%20Rio%20Pisue%C3%B1a!5e0!3m2!1ses-419!2smx!4v1590605222309!5m2!1ses-419!2smx" 
-			width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
-<h3 class="text-white">Llamanos:<br><a href="tel://58500140" class="text-primary">(55) 58-50-01-40</a></h3>
-              <h3 class="text-white">WhatsApp:<br><a href="whatsapp://send?text=Hola me puedes dar información acerca de ...&phone=+5215591996245" class="text-primary">5591996245</a></h3>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3765.1812673414006!2d-99.074568!3d19.317939!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0364188dc1ef%3A0xec3ae9996a20d6c!2sFerretera%20Rio%20Pisue%C3%B1a!5e0!3m2!1ses-419!2smx!4v1590605222309!5m2!1ses-419!2smx" 
+			width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+<!-- <h3 class="text-white">Llamanos:<br><a href="tel://58500140" class="text-primary">(55) 58-50-01-40</a></h3>
+              <h3 class="text-white">WhatsApp:<br><a href="whatsapp://send?text=Hola me puedes dar información acerca de ...&phone=+5215591996245" class="text-primary">5591996245</a></h3> -->
             </div>
             <div class="col-sm-9 col-md-6 col-lg-1 "></div>
             <div class="col-sm-12 col-md-12 col-lg-4">
