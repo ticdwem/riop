@@ -2,16 +2,15 @@
 <?php
 include "views/modules/header.php";
 ?>
-<br><br><br>
-<div class="container">
+<div class="cont-st  container">
   <div class="card">
     <div class="card-body bg-light">
-    <h3 class="text-center text-light bg-dark ">Cotizaciones, Quejas &oacute; Sugerencias</h3>
+    <h3 class="text-center text-light bg-dark ">Ventas a Industrias</h3>
   <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-2">
   <div class="form-group row ">
-    <label for="nombre" class=" col-sm-12 col-md-12 col-lg-12 col-form-label"><p class=" d-inline-block text-light bg-dark">Nombre:</p></label>
+    <label for="nombre" class=" col-sm-12 col-md-12 col-lg-12 col-form-label"><p class=" d-inline-block text-light bg-dark">Nombre de la Industria:</p></label>
     <div class="col-sm-12 col-md-12 col-lg-12">
-      <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre, Empresa o Contacto">
+      <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre de la Industria">
     </div>
     <div class="errorAlert errorNombre" style="display: none;">este campo esta vacio</div>
   </div>
@@ -37,9 +36,9 @@ include "views/modules/header.php";
     <div class="errorAlert errorDir" style="display: none;">este campo esta vacio</div>
   </div>
   <div class="form-group row">
-    <label for="mess" class="col-sm-12 col-md-12 col-lg-12 col-form-label "><p class=" d-inline-block text-light bg-dark">Mensaje</p></label>
+    <label for="mess" class="col-sm-12 col-md-12 col-lg-12 col-form-label "><p class=" d-inline-block text-light bg-dark">Escribenos tu propuesta ...</p></label>
     <div class="col-sm-12 col-md-12 col-lg-12">
-       <textarea class="form-control" id="mess" name="mess" rows="5" placeholder="Escribe tu mensaje ..."></textarea>
+       <textarea class="form-control" id="mess" name="mess" rows="5" placeholder="Escribe tu propuesta ..."></textarea>
     </div>
     <div class="errorAlert errorMensaje" style="display: none;">este campo esta vacio</div>
   </div>
@@ -56,7 +55,7 @@ include "views/modules/header.php";
 
 </div><br>
   <!-- Image Section - set the background image for the header in the line below -->
-    <div class="container">
+<!--     <div class="container">
       <br><br>
           <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -93,8 +92,28 @@ include "views/modules/header.php";
         <span class="sr-only">Siguiente</span>
       </a>
     </div>
-              </div>
-<br><br>
+              </div> -->
+<div class="sec-3">
+  <section class="customer-logos slider">
+    <div class="slide"><img src="images/werner-logo.png"></div>
+    <div class="slide"><img src="images/anclo-logo.png"></div>
+    <div class="slide"><img src="images/austromex-logo.jpg"></div>
+    <div class="slide"><img src="images/bosch-logo.jpg"></div>
+    <div class="slide"><img src="images/cifunsa-logo.jpg"></div>
+    <div class="slide"><img src="images/deacero-logo.gif"></div>
+    <div class="slide"><img src="images/dewalt-logo.png"></div>
+    <div class="slide"><img src="images/escalumex-logo.jpg"></div>
+    <div class="slide"><img src="images/fanal-logo.jpg"></div>
+    <div class="slide"><img src="images/fandeli-logo.jpg"></div>
+    <div class="slide"><img src="images/fifa.png"></div>
+    <div class="slide"><img src="images/fischer-logo.png"></div>
+    <div class="slide"><img src="images/helvex.jpg"></div>
+    <div class="slide"><img src="images/henkel-logo.png"></div>
+    <div class="slide"><img src="images/intec-logo.jpg"></div>
+    <div class="slide"><img src="images/truper-logo.png"></div>
+    <div class="slide"><img src="images/3m-logo.png"></div>
+  </section>
+</div>   
 
 
 <?php

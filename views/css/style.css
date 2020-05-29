@@ -4,7 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
 /* sec-inicio */
-
+*{
+	font-family: 'Fredoka One',	cursive;
+}
 .navbar{
 	color: white;
 	font-family: 'Fredoka One',	cursive;
@@ -23,6 +25,7 @@
 
 .cat {
 	color: white;
+	
 }
 
 .cat:hover {
@@ -50,13 +53,19 @@
 	-moz-box-shadow: 0px 9px 28px 0px rgba(0, 0, 0, 0.75);
 	box-shadow: 0px 9px 28px 0px rgba(0, 0, 0, 0.75);
 }
-
-
+.ser-dom-txt{
+	font-size: 17px;
+	margin-top: -16px;
+}
+.ser-dom-txt2 {
+	font-size: 13px;
+	margin-top: -20px;
+}
 /* .nav-stil{
 	background-color: red;
 } */
 .sec-1 {
-	padding-top: 7.5%;	
+	padding-top: 10.5%;	
 }
 .stil{
 	-webkit-box-shadow: -1px -4px 49px -10px rgba(0, 0, 0, 0.75);
@@ -69,9 +78,23 @@
 }
 
  .sec-3{
-	 padding-top: 7%;
-	 }
- 
+	 padding-top: 3%;
+	 padding-bottom: 2%;
+}
+.sec-4{
+	padding-top: 12%;
+}
+/*  
+.map {
+	padding-top: 8%;
+
+	-webkit-box-shadow: 1px 0px 27px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 1px 0px 27px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 1px 0px 27px 0px rgba(0, 0, 0, 0.75);
+} */
+.crd-serv{
+	background: #0c2461;
+}
 /* ESTILOS DE LA VISTA CATALOGO  */
 .bus-bar{
 	padding-top: 4%;
@@ -455,7 +478,7 @@ position: absolute;
 .imagelog img{
 
 width: 150px;
-height: 100px;
+height: 125px;
 /* -webkit-box-shadow: 2px 3px 25px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 2px 3px 25px 0px rgba(0,0,0,0.75);
 box-shadow: 2px 3px 25px 0px rgba(0,0,0,0.75); */
@@ -606,8 +629,11 @@ footer{
 	background-color: #0c2461;
 	/* #c0392b */
 }
-.map{
-	-webkit-box-shadow: 1px 0px 27px 0px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 1px 0px 27px 0px rgba(0, 0, 0, 0.75);
-	box-shadow: 1px 0px 27px 0px rgba(0, 0, 0, 0.75);
+
+/* SECCION CONTACTO- VENTAS INDUSTRIAS  */
+.cont-st{
+	padding-top: 6%;
+}
+.msn-fb{
+	z-index: 2;
 }

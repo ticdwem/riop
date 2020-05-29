@@ -21,8 +21,9 @@
      <li class="nav-item">
     	 <a class="nav-link text-white text-center" id="animacion8" href="tel://5558500140"><i class="fa fa-phone" aria-hidden="true" itemprop="telephone"></i> Tel: (55) 58-50-01-40
        </a>
-       <p class="text-white text-center">Servicio a Domicilio</p>
-       
+       <p class="nav-link text-white text-center"><img src="images/whats-app-logo.png" alt="contacto" id="" width="20" height="20"> <a href="" class="text-white"> 55.91.99.62.45</p></a>
+       <p class="ser-dom-txt text-white text-center">Servicio a Domicilio</p>
+        <p class="ser-dom-txt2 text-white text-center">A partir de $1,000.00 mx </p>
      </li>
     </ul>
     <ul class="nav-stil navbar-nav ml-auto">
@@ -30,11 +31,14 @@
         <a class="nav-link" href="<?php echo $especifDato;?>inicio"><i class="fa fa-home" aria-hidden="true"></i> Inicio         </a>
       </li>
         <li class="nav-item <?php echo $pagina == 'productos' ? 'active': '';?>">
-        <a class="cat nav-link" href="<?php echo $especifDato;?>catalogo-productos"><i class="fa fa-wrench" aria-hidden="true"></i> Nuestros Productos </a>
+        <a class="nav-link animated pulse infinite" href="<?php echo $especifDato;?>catalogo-productos"><i class="fa fa-wrench " aria-hidden="true"></i> Nuestros Productos </a>
       </li>
     	<li class="nav-item <?php echo $pagina == 'conocenos' ? 'active': '';?>">
     		<a class="nav-link" href="<?php echo $especifDato;?>conocenos"><!-- <i class="fa fa-question white" aria-hidden="true"></i>  -->¿Quienes Somos?   </a>
-    	</li>
+      </li>
+        <li class="nav-item  <?php echo $pagina == 'contacto' ? 'active': '';?>">
+        <a class="nav-link" href="<?php echo $especifDato;?>contacto"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Ventas a Industrias  </a>
+      </li>
   <!--   <li class="nav-item">
           <a href="">
             <img src="images/whats-app-logo.png" alt="contacto" id="" width="50" height="50">
@@ -43,9 +47,7 @@
   <!--     <li class="nav-item <?php echo $pagina == 'encuentranos' ? 'active': '';?>">
         <a class="nav-link" href="<?php echo $especifDato;?>encuentranos"><i class="fa fa-map-marker" aria-hidden="true"></i> Encuentranos   </a>
       </li>
-      <li class="nav-item  <?php echo $pagina == 'contacto' ? 'active': '';?>">
-        <a class="nav-link" href="<?php echo $especifDato;?>contacto"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Contacto  </a>
-      </li> -->
+     -->
      
               
     </ul>

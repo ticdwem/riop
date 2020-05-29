@@ -8,10 +8,10 @@
         </div>
         <div class="col-sm-12 col-md-12 col-lg-3 offset-lg-3 " >
 			<a href="" >
-				<img src="<?php echo $especifFooter; ?>images/whats-app-logo.png" alt="contacto" id="" width="50" height="50">
+				<img src="<?php echo $especifFooter; ?>images/whats-app-logo.png" alt="contacto" id="animacion14" width="50" height="50">
 			</a>
             <a href="https://www.facebook.com/ferreriopisuena/">
-            	<img  src="<?php echo $especifFooter; ?>images/fab.png" alt="encuentranos" id="animacion9" width="50" height="50">
+            	<img  src="<?php echo $especifFooter; ?>images/fab.png" alt="encuentranos" class="" id="animacion9" width="50" height="50">
             </a>
              <a href="encuentranos" >
              	<img  src="<?php echo $especifFooter; ?>images/maps.png" alt="mapa" id="animacion10" width="50" height="50">
@@ -19,26 +19,23 @@
 			<a href="contacto" >
 				<img src="<?php echo $especifFooter; ?>images/mail2.png" alt="contacto" id="animacion11" width="50" height="50">
 			</a>
-				<!-- <img src="<?php echo $especifFooter; ?>images/servicio-domicilio.png" alt="contacto" id="animacion11" width="80" height="50">		 -->
+				
         </div>
             <div class="col-sm-9 col-md-6 col-lg-3">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3765.1812673414006!2d-99.074568!3d19.317939!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0364188dc1ef%3A0xec3ae9996a20d6c!2sFerretera%20Rio%20Pisue%C3%B1a!5e0!3m2!1ses-419!2smx!4v1590605222309!5m2!1ses-419!2smx" 
-			width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v7.0"></script>
+<div class="fb-page" data-href="https://www.facebook.com/ferreriopisuena/" data-tabs="timeline" width="300" height="250px" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+<blockquote cite="https://www.facebook.com/ferreriopisuena/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ferreriopisuena/">Ferretera Rio Pisueña</a></blockquote></div>
+		<!-- 	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3765.1812673414006!2d-99.074568!3d19.317939!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0364188dc1ef%3A0xec3ae9996a20d6c!2sFerretera%20Rio%20Pisue%C3%B1a!5e0!3m2!1ses-419!2smx!4v1590605222309!5m2!1ses-419!2smx" 
+			width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
 <!-- <h3 class="text-white">Llamanos:<br><a href="tel://58500140" class="text-primary">(55) 58-50-01-40</a></h3>
               <h3 class="text-white">WhatsApp:<br><a href="whatsapp://send?text=Hola me puedes dar información acerca de ...&phone=+5215591996245" class="text-primary">5591996245</a></h3> -->
             </div>
             <div class="col-sm-9 col-md-6 col-lg-1 "></div>
-            <div class="col-sm-12 col-md-12 col-lg-4">
-         
-                
-                <p class="text-white">Contamos con servicio de distribución y entrega a toda la República Mexicana. Póngase en contacto para más información de los destinos.</p>
-                       	<div id="fb-root"></div>
-						<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v6.0"></script>
-						<div class="fb-page" data-href="https://www.facebook.com/ferreriopisuena/" 
-						data-tabs="timeline" data-width="" data-height="200px" data-small-header="true"
-						data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote 
-						cite="https://www.facebook.com/ferreriopisuena/" class="fb-xfbml-parse-ignore">
-						<a href="https://www.facebook.com/ferreriopisuena/">Ferretera Rio Pisueña</a></blockquote></div>
+            <div class="col-sm-12 col-md-12 col-lg-4 text-center">
+                	<img src="<?php echo $especifFooter; ?>images/servicio-domicilio.png"  alt="contacto" id="animacion13" width="100" height="50">	
+                <p class="text-white text-center">Contamos con servicio de distribución y entrega a toda la República Mexicana. Póngase en contacto para más información de los destinos.</p>
+                  <p class="text-white text-center"> "Siempre buscando la satisfacción del cliente"  </p>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-4 text-white text-right">Av. Tláhuac No. 1552 Col. Año de Juárez C.P. 09780 Del. Iztapalapa CDMX a un lado de la estacion del metro Periferico Oriente de la línea 12 del metro-CDMX.<br>
 					 <h6 class="text-white">Correo Electronico<br><a href="contacto" class="text-white">ventas@riopisuena.com.mx</a></h6>
@@ -47,12 +44,12 @@
 					     Sabados: 8:00  a 15:00</p>
 					 </div>
             </div>
-					<p class="text-white text-left "><a href="#">Regresar Arriba</a>
+					<p class="text-white text-left "><a href="#" class="text-white">Regresar Arriba</a>
 					<h6><p class="text-white">Creado por <a href="http://ticdwem.com/" class="text-white">TICDWEM.</a> </h6></p>
 				</div>
       <!-- /.container -->
 </footer>
-<footer class="stil-footer py-1">
+<footer class="py-1 stil-footer">
 	<div class="container">
 	<ul>	
 		<li><p class="text-white text-center" style="max-width: 100rem;">Copyright &copy; FERRETERA RIO PISUEÑA, S.A. DE C.V. |<a href="#" class="text-white" data-toggle="modal" data-target="#exampleModala">Aviso de Privacidad</a></p>
@@ -142,7 +139,7 @@ $(document).ready(function () {
 		slidesToShow: 12,
 		slidesToScroll: 1,
 		autoplay: true,
-		autoplaySpeed: 75,
+		autoplaySpeed: 200,
 		arrows: false,
 		dots: false,
 		pauseOnHover: false,

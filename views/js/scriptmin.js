@@ -48,6 +48,13 @@ $(document).ready(function(){
 		$('#animacion12').each(function() {
 				animationHover(this, 'bounceInUp');
 		});
+		$('#animacion13').each(function () {
+			animationHover(this, 'tada');
+		});
+		$('#animacion14').each(function () {
+			animationHover(this, 'tada');
+		});
+
 
 
 // check if a checkbox where cliked
