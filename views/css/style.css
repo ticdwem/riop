@@ -2,7 +2,6 @@
 @import url('animate.css');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
-
 /* sec-inicio */
 *{
 	font-family: 'Fredoka One',	cursive;
@@ -11,7 +10,6 @@
 	color: white;
 	font-family: 'Fredoka One',	cursive;
 	font-size: 17px;
-
 	background: #192a56;
 	opacity: 0.9;
 	/* -webkit-linear-gradient(left, 
@@ -49,6 +47,28 @@
 	-moz-box-shadow: 0px 9px 28px 0px rgba(0, 0, 0, 0.75);
 	box-shadow: 0px 9px 28px 0px rgba(0, 0, 0, 0.75);
 }
+.line-btn{
+	padding-top:8%;
+	/* position: relative;
+	 */
+	position: absolute;
+	/* top: 0;
+	left: 0;
+	right: 0; */
+	/* margin: 0 auto; */
+	/* width: 20px; */
+/* 	z-index: 1; */
+}
+.btn-lin{
+	color: white;
+	background:  #0c2461;
+}
+.btn-lin:hover {
+	background: #c0392b;
+	color: white;
+/* 	color: white;
+	background: #c0392b; */
+}
 .ser-dom-txt{
 	font-size: 17px;
 	margin-top: -16px;
@@ -61,18 +81,17 @@
 	background-color: red;
 } */
 .sec-1 {
-	padding-top: 10.5%;	
+	padding-top: 10.5%;
+	/*  position:relative; */
 }
 .stil{
 	-webkit-box-shadow: -1px -4px 49px -10px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: -1px -4px 49px -10px rgba(0, 0, 0, 0.75);
 	box-shadow: -1px -4px 49px -10px rgba(0, 0, 0, 0.75);
-
 }
 .sec-2{
 	padding-top: 7%;
 }
-
  .sec-3{
 	 padding-top: 3%;
 	 padding-bottom: 2%;

@@ -1,7 +1,16 @@
 <?php
 include "views/modules/header.php";
 ?>
-  
+
+<div class="line-btn btn-group-vertical">
+  <button type="button" class="btn btn-lin">ABRASIVOS</button>
+  <button type="button" class="btn btn-lin">ELECTRICO</button>
+  <button type="button" class="btn btn-lin">MATERIAL ELECTRICO</button>
+  <button type="button" class="btn btn-lin">PLOMERIA</button>
+  <button type="button" class="btn btn-lin">ALMACENAMIENTO</button>
+  <button type="button" class="btn btn-lin">HERRAMIENTA</button>
+  <button type="button" class="btn btn-lin">PINTURA</button>
+</div> 
 <div class="container">
 <div class="row">
 <div class="sec-1 col-lg-12">   
@@ -140,10 +149,6 @@ include "views/modules/header.php";
     </div>
 </div>
 </div>
-
-
-
-
 <div class="sec-4 map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3765.1812673414006!2d-99.074568!3d19.317939!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0364188dc1ef%3A0xec3ae9996a20d6c!2sFerretera%20Rio%20Pisue%C3%B1a!5e0!3m2!1ses-419!2smx!4v1590605222309!5m2!1ses-419!2smx" 
 			width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
