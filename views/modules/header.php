@@ -2,8 +2,8 @@
     	<!-- Navigation -->
 <nav class="navbar navbar-expand-lg fixed-top" itemscope itemtype="http://schema.org/HardwareStore">
   <div class="container">
-    <a class="navbar-brand" href="#">
-    <img src="<?php echo $especifDato; ?>images/logo1.png" width="50" height="50"  alt="ferretera" itemprop="legalName">Ferretera Rio Pisue&ntilde;a
+    <a class="navbar-brand text-white" href="#">
+    <img src="<?php echo $especifDato; ?>images/logo1.png" class="text-white" width="50" height="50"  alt="ferretera" itemprop="legalName">Ferretera Rio Pisue&ntilde;a
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -11,11 +11,11 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
     	<ul class=" navbar-nav ml-auto" >
       <li>
-            <div class="" id="animacion7">  <!--  -->
-    	<a href="inicio" class="imagelog" itemprop="logo"><img src="<?php echo $especifDato; ?>images/logo1.png" alt="logo_roipizuena"></a>
+        <div class="" id="animacion7"> 
+    	<a href="inicio" class="imagelog text-white" itemprop="logo"><img src="<?php echo $especifDato; ?>images/logo1.png" alt="logo_roipizuena"></a>
     		</div>
       </li>
-    		<li>	<div class="ferre" id="animacion6"> <a class="nav-link text-white " href="?p=inicio"></a></div></li>
+    		<li>	<div class="ferre" id="animacion6"> <a class="nav-link text-white" href="?p=inicio"></a></div></li>
     		</ul>
     <ul class="navbar-nav ml-auto ">
      <li class="nav-item">

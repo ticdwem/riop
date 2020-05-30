@@ -14,7 +14,6 @@
 
 	background: #192a56;
 	opacity: 0.9;
-	
 	/* -webkit-linear-gradient(left, 
 	rgba(73, 155, 234, 1) 0%, 
 	rgba(32, 124, 229, 1) 100%); */
@@ -22,12 +21,9 @@
 	-moz-box-shadow: -1px -4px 40px -10px rgba(0, 0, 0, 0.75);
 	box-shadow: -1px -4px 40px -10px rgba(0, 0, 0, 0.75);
 }
-
 .cat {
-	color: white;
-	
+	color: white;	
 }
-
 .cat:hover {
 	color: white;
 	background: #fed330;
@@ -473,27 +469,20 @@ margin-left: -35px;
 position: absolute;
 
 		}
-
-
 .imagelog img{
-
 width: 150px;
 height: 125px;
 /* -webkit-box-shadow: 2px 3px 25px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 2px 3px 25px 0px rgba(0,0,0,0.75);
 box-shadow: 2px 3px 25px 0px rgba(0,0,0,0.75); */
-
 }
 .navbar-brand{
 	display: none;
-
 		}
 @media screen and (max-width: 1200px){
-
-.imagf{
+.imagelog {
 position: none;
 display: none;
-
 	}
 }
 @media screen and (max-width: 1024px){
@@ -506,6 +495,7 @@ display: none;
 	.ferre{
 			display: none;
 			text-shadow: none;
+			color: white;
 		}
 		.prodimg{
 			width: auto;
@@ -527,7 +517,6 @@ display: none;
     cursor: pointer;
 
 }
-
 .errorAlert{
 	color:red;
 	text-transform: uppercase;
@@ -535,8 +524,6 @@ display: none;
 	left: 20px;
 	font-weight: bolder;
 }
-
-
 /* CARRUSEL DE MARCAS */
 .car {
 	position: relative;   /* absolute */
@@ -548,7 +535,6 @@ display: none;
 	margin-left: -400px;
 	margin-top: -130px; */
 }
-
 .car-sec {
 	width: 25%;
 	list-style-type: none;
@@ -598,7 +584,6 @@ strong {
 	font-size: 50px;
 	color: white;
 }
-
 .centrado2 {
 	position: absolute;
 	top: 115%;
@@ -607,7 +592,6 @@ strong {
 	font-size: 30px;
 	color: white;
 }
-
 .boton-cursos {
 	position: absolute;
 	font-family: 'Fredoka One',	cursive;
@@ -618,7 +602,6 @@ strong {
 	color: white;
 	border-radius: 10px;
 }
-
 footer{
 	background:#b33939;
 	-webkit-box-shadow: 1px 0px 27px 0px rgba(0, 0, 0, 0.75);
@@ -629,11 +612,23 @@ footer{
 	background-color: #0c2461;
 	/* #c0392b */
 }
-
 /* SECCION CONTACTO- VENTAS INDUSTRIAS  */
 .cont-st{
 	padding-top: 6%;
 }
 .msn-fb{
 	z-index: 2;
+}
+/*  SECCION ¿QUIENES SOMOS? */
+.sty-con{
+	padding-top: 7%;
+	
+}
+.crd-stil{
+-webkit-box-shadow: -1px 0px 31px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 0px 31px 0px rgba(0,0,0,0.75);
+box-shadow: -1px 0px 31px 0px rgba(0,0,0,0.75);
+}
+.slogan{
+	background: #0c2461;
 }

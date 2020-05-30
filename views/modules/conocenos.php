@@ -1,17 +1,16 @@
 <?php
 include "views/modules/header.php";
 ?>
-<br><br><br>
-<div class="container">
+<div class="container sty-con">
 			<div class="card-columns">
-					<div class="prueba card">
+					<div class="crd-stil card">
 						<img class="card-img-top" src="images/3.png" alt="quienes somos">
 							<div class="card-body" id="animacion">
 								<h4 class="card-title">¿Quienes Somos?</h4>
 								<p class="card-text text-justify">Con 25 años de experiencía, dedicada a la comercialización de todo tipo de artículos de ferretería, proporcionando el mejor y más rápido servicio a todos nuestros clientes.<br> A través de los años nos hemos consolidado como un proveedor confiable y, buscamos, de manera permanente, la completa satisfacción de nuestros clientes, ofreciendo soluciones integrales en el suministro de nuestros productos y servicios.</p>
 							</div>
 						</div>
-						<div class="card p-3">
+						<div class="crd-stil card p-3">
 							<blockquote class="blockquote mb-0 card-body " id="animacion3">
 								<p>Somos una empresa creada en 1989, con la finalidad de cubrir todas sus necesidades, para el desarrollo y mantenimiento de su empresa, en todo lo referente al ramo ferretero en general.</p>
 									<footer class="">
@@ -21,7 +20,7 @@ include "views/modules/header.php";
 									</footer>
 								</blockquote>
 							</div>
-							<div class="card">
+							<div class="crd-stil card">
 								<img class="card-img-top" src="images/4.png" alt="mision">
 								<div class="card-body" id="animacion1">
 									<h4 class="card-title">MISION</h4>
@@ -29,7 +28,7 @@ include "views/modules/header.php";
 									<p class="card-text"><small class="text-muted"></small></p>
 								</div>
 							</div>
-							<div class="card bg-primary text-white text-center p-3">
+							<div class="crd-stil slogan card text-white text-center p-3">
 								<blockquote class="blockquote mb-0" id="animacion5">
 									<p>FERRETERA RIO PISUEÑA, S. A. DE C. V. <br></p>
 									<footer class="">
@@ -39,17 +38,17 @@ include "views/modules/header.php";
 								 </footer>
 							 </blockquote>
 						 </div>
-						 <div class="card text-center">
+						 <div class="crd-stil card text-center">
 							 <div class="card-body" id="animacion2">
 								 <h4 class="card-title">VALORES</h4>
 								 <p class="card-text">Honestidad, lealtad, responsabilidad, trabajo en equipo, innovación y disciplina.</p>
 								 <p class="card-text"><small class="text-muted"></small></p>
 							 </div>
 						 </div>
-						 <div class="card">
+						 <div class="crd-stil card">
 							 <img class="card-img" src="images/1.png" alt="clientes">
 						 </div>
-						 <div class="card p-3 text-right">
+						 <div class="crd-stil card p-3 text-right">
 							 <blockquote class="blockquote mb-0 card-body">
 								 <img src="images/logo1.png" alt="clientes">
 								 <p>Siempre buscando la satisfacción del cliente</p>
@@ -60,7 +59,7 @@ include "views/modules/header.php";
 								</footer>
 							</blockquote>
 						</div>
-						<div class="card">
+						<div class="crd-stil card">
 							<div class="card-body">
 								<h4 class="card-title">Oficinas:</h4>
 								<p class="card-text">Av. Tláhuac No. 1552 Col. Año de Juárez C.P. 09780 Del. Iztapalapa CDMX a un lado de la línea 12 del metro estación Periférico Oriente.</p>
@@ -74,7 +73,8 @@ include "views/modules/header.php";
 							</div>
 						</div>
 					</div>
-			</div><br><br><br><br>
+			</div>
+
 <?php
 include "views/modules/footer.php";
 ?>
