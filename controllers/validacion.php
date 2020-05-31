@@ -27,6 +27,17 @@ class Validacion
 			return 0;			 
 		}
 	}
+
+	public function removeBOM($valor1){
+		$bom = pack("CCC", 0xEF, 0xBB, 0xBF);
+		$sinBom = str_replace($bom, '', $valor1);
+		if(preg_match("/^[a-zA-Z0-9áéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙñÑ\-s\']+$/", $sinBom)){
+			
+			return mb_strtoupper($sinBom, 'UTF-8');
+		}else{
+			return 0;			 
+		}
+	}
 	public function pregmatchletrasAcento($valor1){
 
 		$vacio = self::emptySpace($valor1);
