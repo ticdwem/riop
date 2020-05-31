@@ -72,7 +72,11 @@ include "views/modules/header.php";
 <div class="container">
   <div class="sec-3">
   <section class="herramientas-logos slider">
-    <div class="slide"><a href="https://freefrontend.com/css-parallax/"><img src="images/soldadura.png"></a><p>Soldadura</p></div>
+  <?php 
+    $randomPr = new Productos();
+    $randomPr->randomStrat();
+  ?>
+   <!-- <div class="slide"><a href="https://freefrontend.com/css-parallax/"><img src="images/soldadura.png"></a><p>Soldadura</p></div>
     <div class="slide"><img src="images/4040.png"></div>
     <div class="slide"><img src="images/reg-2.png"></div>
     <div class="slide"><img src="images/taladro.png"></div>
@@ -80,7 +84,7 @@ include "views/modules/header.php";
     <div class="slide"><img src="images/cerradura.png"></div>
     <div class="slide"><img src="images/lijadora.png"></div>
     <div class="slide"><img src="images/niple-galvanizado.png"></div>
-<!--<div class="slide"><img src="images/fanal-logo.jpg"></div>
+    <div class="slide"><img src="images/fanal-logo.jpg"></div>
     <div class="slide"><img src="images/fandeli-logo.jpg"></div>
     <div class="slide"><img src="images/fifa.png"></div>
     <div class="slide"><img src="images/fischer-logo.png"></div>

@@ -62,5 +62,13 @@
 		$paginationInner->close();
 	}
 
+	public function getRandom($tabla){
+		$randQuery = "SELECT codigoProducto,nombreProducto,fotoProdcuto,skuProducto FROM $tabla ORDER BY RAND() LIMIT {$this->getInicioPag()}";
+		$rand = $this->db->prepare($randQuery);
+		$rand->execute();
+		return $rand->fetchAll();
+		$rand->close();
+	}
+
  }
 

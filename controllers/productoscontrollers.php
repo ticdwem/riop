@@ -18,7 +18,7 @@ class Productos
 		$dato = $this->VDato = $datos;
 		$tbl1 = $this->tabla1 = 'productos';
 		$whereComplemett = $this->where = "";
-
+		$disponible;
 		if(strlen($dato)>1){
 			$validar = new Validacion();
 			$veamos = $validar->pregmatchletras($dato);
@@ -52,14 +52,18 @@ class Productos
 		$pagTion->setWhereCTP($whereComplemett);
 		$todpPagination = $pagTion->conseguirTodosPagination($tbl1,$numero_elementos_pagina);
 		if($numElementos != 0 ){
-			foreach ($todpPagination as $mostrar) {				
+			foreach ($todpPagination as $mostrar) {	
+				if(is_file($mostrar["fotoProdcuto"])){
+					$disponible = $mostrar["fotoProdcuto"];
+				}else{					
+					$disponible = 'images/no_disponible.jpg';
+				}			
 			?> 
 	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
 	         <div class="card h-100">
-	            <a href="producto/<?php echo Validacion::removeBOM($mostrar["codigoProducto"])?>"><img class="card-img-top" src="<?php echo $mostrar["fotoProdcuto"]; ?>" alt="">
+	            <a href="producto/<?php echo Validacion::removeBOM($mostrar["codigoProducto"])?>"><img class="card-img-top" src="<?php echo $disponible; ?>" alt="">
 	             <div class="card-body">
 	              <h4 class="card-title">
-	              	<?php //echo Validacion::guionEnTexto($mostrar["nombreProducto"]); ?>
 	              	<?php echo $mostrar["nombreProducto"]; ?>
 	              </h4>
 	              <p class="card-text">MODELO: <?php echo $mostrar["modeloProducto"]; ?></p>
@@ -87,6 +91,7 @@ class Productos
 		$VDPersonal = $this->VDato = $bPer;
 		$tbl1 = $this->tabla1='sublinea';
 		$tbl2 = $this->tabla2='productos';
+		$disponible;
 
 		$validar = new Validacion();
 		$valTF = $validar->pregmatchletras($VDPersonal);
@@ -116,11 +121,16 @@ class Productos
 		$todpPagination = $pagTion->getPersonalizado($tbl1,$tbl2,$valTF,$empiezaAqui,$numero_elementos_pagina);
 
 		if($numElementos != 0 ){
-			foreach ($todpPagination as $mostrar) {				
+			foreach ($todpPagination as $mostrar) {	
+				if(is_file($mostrar["fotoProdcuto"])){
+					$disponible = $mostrar["fotoProdcuto"];
+				}else{					
+					$disponible = 'images/no_disponible.jpg';
+				}			
 			?> 
 	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4" >
 	         <div class="card h-100">
-	            <a href="producto/<?php echo $mostrar["codigoProducto"];?>"><img class="card-img-top" src='<?php echo $mostrar["fotoProdcuto"]; ?>' alt="">
+	            <a href="producto/<?php echo $mostrar["codigoProducto"];?>"><img class="card-img-top" src='<?php echo $disponible; ?>' alt="">
 	             <div class="card-body">
 	              <h4 class="card-title">
 	              	<?php echo $mostrar["nombreProducto"]; ?>
@@ -149,6 +159,7 @@ class Productos
 		require_once 'models/modeloBd.php';
 		$productoName = $this->VDPersonal = $nombre;
 		$whereComplemett;
+		$disponible;
 
 		if(strlen($productoName)>1){
 			$validar = new Validacion();
@@ -161,9 +172,15 @@ class Productos
 
 		$productoO = new CatLineaSub();
 		$mostrarP = $productoO->getProductSpecifict($veamos,'productos','marca','sublinea');
+
+		if(is_file($mostrarP[0]["fotoProdcuto"])){
+			$disponible = $mostrarP[0]["fotoProdcuto"];
+		}else{					
+			$disponible = 'images/no_disponible.jpg';
+		}
 		?> 
         <div class="card mt-4">
-          <img class="card-img-top img-fluid" src="<?php echo $mostrarP[0]["fotoProdcuto"] ?>" alt="">
+          <img class="card-img-top img-fluid" src="<?php echo $disponible;?>" alt="">
           <div class="card-body">
             <h3 class="card-title"><?php echo $mostrarP[0]["nombreProducto"];?></h3>
 			
@@ -195,6 +212,27 @@ class Productos
         </div>
 		<?php
 
+	}
+
+	public function randomStrat(){
+
+		$tbl=$this->tabla1 = 'productos';
+		$disponible;
+		$randPRoducto = new ProductosModels();
+		$randPRoducto->setInicioPag(6);
+		$tp = $randPRoducto->getRandom($tbl);
+		if($tp != 0){
+			foreach($tp as $presentar){
+				if(is_file($presentar["fotoProdcuto"])){
+					$disponible = $presentar["fotoProdcuto"];
+				}else{					
+					$disponible = 'images/no_disponible.jpg';
+				}
+			?>
+				<div class="slide"><a href='producto/<?=$presentar["codigoProducto"]?>'><img src="<?=$disponible; ?>"></a><p><?=$presentar["nombreProducto"]; ?></p></div>
+			<?php
+			}
+		}
 	}
 }
 
