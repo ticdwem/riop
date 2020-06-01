@@ -21,7 +21,7 @@
      <li class="nav-item">
     	 <a class="nav-link text-white text-center" id="animacion8" href="tel://5558500140"><i class="fa fa-phone" aria-hidden="true" itemprop="telephone"></i> Tel: (55) 58-50-01-40
        </a>
-       <p class="nav-link text-white text-center"><img src="images/whats-app-logo.png" alt="contacto" id="" width="20" height="20"> <a href="https://wa.link/30zod7" class="text-white"> 55.91.99.62.45</p></a>
+       <p class="nav-link text-white text-center"><img src="<?php echo $especifDato;?>images/whats-app-logo.png" alt="contacto" id="" width="20" height="20"> <a href="https://wa.link/30zod7" class="text-white"> 55.91.99.62.45</p></a>
        <p class="ser-dom-txt text-white text-center">Servicio a Domicilio</p>
         <p class="ser-dom-txt2 text-white text-center">A partir de $1,000.00 mx </p>
      </li>
