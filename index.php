@@ -10,6 +10,7 @@ require_once "controllers/articulosController.php";
 require_once "controllers/productoscontrollers.php";
 require_once "controllers/validacion.php";
 require_once "controllers/categorias.php";
+require_once "config\parameters.php";
 
 
 // require_once "controllers/NumeroALetras.php";

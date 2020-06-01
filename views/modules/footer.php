@@ -8,16 +8,16 @@
         </div>
         <div class="col-sm-12 col-md-12 col-lg-3 offset-lg-3 " >
 			<a href="https://wa.link/30zod7" >
-				<img src="<?php echo $especifFooter; ?>images/whats-app-logo.png" alt="contacto" id="animacion14" width="50" height="50">
+				<img src="<?=base_url?>images/whats-app-logo.png" alt="contacto" id="animacion14" width="50" height="50">
 			</a>
             <a href="https://www.facebook.com/ferreriopisuena/">
-            	<img  src="<?php echo $especifFooter; ?>images/fab.png" alt="encuentranos" class="" id="animacion9" width="50" height="50">
+            	<img  src="<?=base_url?>images/fab.png" alt="encuentranos" class="" id="animacion9" width="50" height="50">
             </a>
              <a href="encuentranos" >
-             	<img  src="<?php echo $especifFooter; ?>images/maps.png" alt="mapa" id="animacion10" width="50" height="50">
+             	<img  src="<?=base_url?>images/maps.png" alt="mapa" id="animacion10" width="50" height="50">
              </a>
 			<a href="contacto" >
-				<img src="<?php echo $especifFooter; ?>images/mail2.png" alt="contacto" id="animacion11" width="50" height="50">
+				<img src="<?=base_url?>images/mail2.png" alt="contacto" id="animacion11" width="50" height="50">
 			</a>
 				
         </div>
@@ -33,7 +33,7 @@
             </div>
             <div class="col-sm-9 col-md-6 col-lg-1 "></div>
             <div class="col-sm-12 col-md-12 col-lg-4 text-center">
-                	<img src="<?php echo $especifFooter; ?>images/servicio-domicilio.png"  alt="contacto" id="animacion13" width="100" height="50">	
+                	<img src="<?=base_url?>images/servicio-domicilio.png"  alt="contacto" id="animacion13" width="100" height="50">	
                 <p class="text-white text-center">Contamos con servicio de distribución y entrega a toda la República Mexicana. Póngase en contacto para más información de los destinos.</p>
                   <p class="text-white text-center"> "Siempre buscando la satisfacción del cliente"  </p>
             </div>
