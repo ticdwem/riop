@@ -104,8 +104,62 @@ include "views/modules/header.php";
   <button type="button" class="btn btn-danger boton-cursos">Me interesa</button>
 </div>
 </section>
-      <div class="container">
-          <div class="row ">
+
+<div class="serv-stilo container">
+<div class=" row">
+<div class="col-lg-3">
+<div class="card text-white bg-danger">
+  <img class="card-img-top" src="images/3.png" alt="Card image cap" style="height: 150px;">
+  <div class="card-body">
+    <h5 class="card-title">Atencion a Clientes:</h5>
+    <p class="card-text">Si no encuentra lo que busca NOSOTROS LO CONSEGUIMOS.</p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="background: #0c2461;">
+  <img class="card-img-top" src="images/servicio-domicilio.png" alt="Card image cap" style="height: 150px;">
+  <div class="card-body text-white">
+    <h5 class="card-title">Servicio a Domicilio</h5>
+    <p class="card-text">Le ofrecemos una gran variedad de productos (más de 15 mil artículos).</p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="">
+  <img class="card-img-top" src="images/servicio5.png" alt="Card image cap" style="height: 150px;">
+  <div class="card-body text-white bg-danger ">
+    <h5 class="card-title">Linea de Credito</h5>
+    <p class="card-text">Podemos ofrecerle una línea de crédito de acuerdo a sus necesidades</p>
+   <!--  <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="card" style="background: #0c2461;">
+  <img class="card-img-top" src="images/servicio4.png" alt="Card image cap" style="height: 150px;">
+  <div class="card-body text-white">
+    <h5 class="card-title">Asesoría en compras:</h5>
+    <p class="card-text">Contamos con un amplio grupo de profesionales.</p>
+   <!--  <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+   <!--    <div class="container">
+          <div class="row">
            <div class="col-lg-12 sec-2">
           <ul class="car" id="c"> 	
               <li class="car-sec"><div class="card text-white bg-danger" style="width: 100% ; ">
@@ -140,19 +194,22 @@ include "views/modules/header.php";
             </div>
       </div>
       </li>
-	<!-- 	<li class="car-sec"><img src="images/servicio4.png" width="75%" height="125px"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li> -->
-	<!-- 	<li class="car-sec"><p class="p"><strong>6</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
+		<li class="car-sec"><img src="images/servicio4.png" width="75%" height="125px"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
+		<li class="car-sec"><p class="p"><strong>6</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
 		<li class="car-sec"><p class="p"><strong>7</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
-		<li class="car-sec"><p class="p"><strong>8</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>  -->
+		<li class="car-sec"><p class="p"><strong>8</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>  
 
-	<!-- 	<li class="car-sec"><p class="p"><strong>9</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
+	<li class="car-sec"><p class="p"><strong>9</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
 		<li class="car-sec"><p class="p"><strong>10</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
 		<li class="car-sec"><p class="p"><strong>11</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li>
-		<li class="car-sec"><p class="p"><strong>12</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li> --> 
+		<li class="car-sec"><p class="p"><strong>12</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></li> 
 	</ul>
     </div>
 </div>
-</div>
+</div> -->
+
+
+
 <div class="sec-4 map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3765.1812673414006!2d-99.074568!3d19.317939!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0364188dc1ef%3A0xec3ae9996a20d6c!2sFerretera%20Rio%20Pisue%C3%B1a!5e0!3m2!1ses-419!2smx!4v1590605222309!5m2!1ses-419!2smx" 
 			width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

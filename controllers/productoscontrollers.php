@@ -179,6 +179,7 @@ class Productos
 			$disponible = 'images/no_disponible.jpg';
 		}
 		?> 
+
         <div class="card mt-4">
           <img class="card-img-top img-fluid" src="<?php echo $disponible;?>" alt="">
           <div class="card-body">
@@ -204,10 +205,10 @@ class Productos
 				<label for="">SUBLINEA:</label>
 				<p class="card-text"><?=$mostrarP[0]["nombreSublinea"]?></p>
 			</div>
-            <button class="btn btn-success">AGEGAR A MI CATÁLOGO</button>
+            <button class="btn btn-success text-center" disabled>Agregar a mi carrito</button>
             <p class="card-text"><?php echo $mostrarP[0]["descripcionProducto"];?></p>
             <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-            4.0 stars
+            4.0 Estrellas
           </div>
         </div>
 		<?php

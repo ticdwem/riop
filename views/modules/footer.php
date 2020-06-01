@@ -7,7 +7,7 @@
             <h3 class="text-white ">Gracias por tu Visita!</h3>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-3 offset-lg-3 " >
-			<a href="" >
+			<a href="https://wa.link/30zod7" >
 				<img src="<?php echo $especifFooter; ?>images/whats-app-logo.png" alt="contacto" id="animacion14" width="50" height="50">
 			</a>
             <a href="https://www.facebook.com/ferreriopisuena/">

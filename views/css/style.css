@@ -97,7 +97,7 @@
 	 padding-bottom: 2%;
 }
 .sec-4{
-	padding-top: 12%;
+	padding-top: 4%;
 }
 /*  
 .map {
@@ -621,6 +621,10 @@ strong {
 	color: white;
 	border-radius: 10px;
 }
+.serv-stilo {
+	padding-top: 5%;
+	padding-bottom: 1%;
+}
 footer{
 	background:#b33939;
 	-webkit-box-shadow: 1px 0px 27px 0px rgba(0, 0, 0, 0.75);
@@ -650,4 +654,11 @@ box-shadow: -1px 0px 31px 0px rgba(0,0,0,0.75);
 }
 .slogan{
 	background: #0c2461;
+}
+
+
+/* VISTA  DE CADA PRODUCTO */
+.prod-stilo{
+	padding-top: 10%;
+	padding-bottom: 3%;
 }

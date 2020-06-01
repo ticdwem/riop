@@ -4,15 +4,15 @@ include "views/modules/header.php";
   <!-- Page Content -->
   <div class="container">
 
-    <div class="row">
+    <div class="prod-stilo row">
 
       <div class="col-lg-3">
-        <h1 class="my-4">Shop Name</h1>
-        <div class="list-group">
+     <!--    <h1 class="my-4"></h1> -->
+      <!--   <div class="list-group">
             <a href="#" class="list-group-item active">Category 1</a>
             <a href="#" class="list-group-item">Category 2</a>
             <a href="#" class="list-group-item">Category 3</a>
-        </div>
+        </div> -->
       </div>
       <!-- /.col-lg-3 -->
 
@@ -29,7 +29,7 @@ include "views/modules/header.php";
       ?>
 
         <!-- /.card -->
-
+<!-- 
          <div class="card card-outline-secondary my-4">
           <div class="card-header">
             Product Reviews
@@ -46,7 +46,7 @@ include "views/modules/header.php";
             <hr>
             <a href="#" class="btn btn-success">Leave a Review</a>
           </div>
-        </div>
+        </div> -->
         <!-- /.card -->
 
       </div>
