@@ -192,21 +192,18 @@ class Validacion
 			return 1;
 		}
 	}
-		public function validarPass($pass)
-	{
+	public function validarPass($pass){
 
 		if(!$pass == ""){
-		 if(preg_match('/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])\S{8,50}/', $pass)){
-		 		return $pass;
-		 }else{
-		 	return 0;
-		 }
+			if(preg_match('/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])\S{8,50}/', $pass)){
+				return $pass;
+			}else{
+				return 0;
+				}
 		}else{
 			return 1;
 		}
 	}
-
-
 
 	public function validarNumIntYNumExt($numero){
 		if(!preg_match("/^\s*$/", $numero || $numero != "")){
