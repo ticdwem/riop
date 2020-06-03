@@ -116,3 +116,19 @@ $(document).ready(function(){
 		
 	})
 });
+
+/**************************mostrar password************************************/
+$(document).ready(function(){
+	$("#showPass").on("click",function(e){
+		e.preventDefault();
+		var showP = document.getElementById("passUser");
+
+		if(showP.type == "password"){
+			showP.type = "text";
+			$(".icon").removeClass('fas fa-eye-slash fa-3x').addClass('far fa-eye fa-3x');
+		}else{
+			showP.type = "password";
+			$(".icon").removeClass('far fa-eye fa-3x').addClass('fas fa-eye-slash fa-3x');
+		}
+	});
+});

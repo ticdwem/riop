@@ -39,7 +39,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"  crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.6/src/jquery.ez-plus.js"></script>
-    <script src="https://kit.fontawesome.com/6a5999581d.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1849e1867b.js" crossorigin="anonymous"></script>
     <script src="<?=base_url?>views/js/jquery.validate.js"></script>
     <script src="<?=base_url?>views/js/modernizr.custom.63321.js"></script>
     <script src="<?=base_url?>views/js/jquery.catslider.js"></script>
