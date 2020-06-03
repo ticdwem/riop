@@ -703,12 +703,6 @@ form .form-control{
 	background-color: rgb(215, 221, 200);
 }
 
-.extaInfo i:hover:before{
-	content: 'PRESIONA';
-	cursor: pointer;
-	background-color: rgb(215, 221, 200);
-}
-
 .botones{
 	top: 10px;
 	left:0px;
