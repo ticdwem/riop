@@ -52,7 +52,8 @@ class Productos
 		$pagTion->setWhereCTP($whereComplemett);
 		$todpPagination = $pagTion->conseguirTodosPagination($tbl1,$numero_elementos_pagina);
 		if($numElementos != 0 ){
-			foreach ($todpPagination as $mostrar) {	
+			foreach ($todpPagination as $mostrar) {
+// var_dump($mostrar["fotoProdcuto"]);
 				if(is_file($mostrar["fotoProdcuto"])){
 					$disponible = $mostrar["fotoProdcuto"];
 				}else{					
@@ -61,7 +62,7 @@ class Productos
 			?> 
 	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
 	         <div class="card h-100">
-	            <a href="producto/<?php echo Validacion::removeBOM($mostrar["codigoProducto"])?>"><img class="card-img-top" src="<?php echo $disponible; ?>" alt="">
+	            <a href="producto/<?php echo Validacion::removeBOM($mostrar["codigoProducto"])?>"><img class="card-img-top" src="<?php echo $mostrar["fotoProdcuto"]; ?>" alt="">
 	             <div class="card-body">
 	              <h4 class="card-title">
 	              	<?php echo $mostrar["nombreProducto"]; ?>
@@ -181,7 +182,7 @@ class Productos
 		?> 
 
         <div class="card mt-4">
-          <img class="card-img-top img-fluid" src="<?php echo $disponible;?>" alt="">
+          <img class="card-img-top img-fluid" src="<?php echo $mostrarP[0]["fotoProdcuto"];?>" alt="">
           <div class="card-body">
             <h3 class="card-title"><?php echo $mostrarP[0]["nombreProducto"];?></h3>
 			
