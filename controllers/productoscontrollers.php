@@ -53,16 +53,18 @@ class Productos
 		$todpPagination = $pagTion->conseguirTodosPagination($tbl1,$numero_elementos_pagina);
 		if($numElementos != 0 ){
 			foreach ($todpPagination as $mostrar) {
-// var_dump($mostrar["fotoProdcuto"]);
-				if(is_file($mostrar["fotoProdcuto"])){
-					$disponible = $mostrar["fotoProdcuto"];
-				}else{					
-					$disponible = 'images/no_disponible.jpg';
-				}			
+				// if (!is_array(@getimagesize(base_url.$mostrar["fotoProdcuto"]))) {
+				if (!is_array(@getimagesize("http://ticdwem.com/ferreterariopisuena/".$mostrar["fotoProdcuto"]))) {
+					    $disponible = base_url.'images/no_disponible.jpg';
+					}else{					
+					$disponible = "http://ticdwem.com/ferreterariopisuena/".$mostrar["fotoProdcuto"];
+					 //$disponible = base_url.$mostrar["fotoProdcuto"];
+				}
+						
 			?> 
 	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
 	         <div class="card h-100">
-	            <a href="producto/<?php echo Validacion::removeBOM($mostrar["codigoProducto"])?>"><img class="card-img-top" src="<?php echo $mostrar["fotoProdcuto"]; ?>" alt="">
+	            <a href="<?=base_url?>producto/<?php echo Validacion::removeBOM($mostrar["codigoProducto"])?>"><img class="card-img-top" src="<?php echo $disponible; ?>" alt="">
 	             <div class="card-body">
 	              <h4 class="card-title">
 	              	<?php echo $mostrar["nombreProducto"]; ?>
@@ -123,11 +125,13 @@ class Productos
 
 		if($numElementos != 0 ){
 			foreach ($todpPagination as $mostrar) {	
-				if(is_file($mostrar["fotoProdcuto"])){
-					$disponible = $mostrar["fotoProdcuto"];
-				}else{					
-					$disponible = 'images/no_disponible.jpg';
-				}			
+				// if (!is_array(@getimagesize(base_url.$mostrar["fotoProdcuto"]))) {
+				if (!is_array(@getimagesize("http://ticdwem.com/ferreterariopisuena/".$mostrar["fotoProdcuto"]))) {
+					    $disponible = base_url.'images/no_disponible.jpg';
+					}else{					
+					$disponible = "http://ticdwem.com/ferreterariopisuena/".$mostrar["fotoProdcuto"];
+					 //$disponible = base_url.$mostrar["fotoProdcuto"];
+				}		
 			?> 
 	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4" >
 	         <div class="card h-100">
@@ -173,16 +177,18 @@ class Productos
 
 		$productoO = new CatLineaSub();
 		$mostrarP = $productoO->getProductSpecifict($veamos,'productos','marca','sublinea');
-
-		if(is_file($mostrarP[0]["fotoProdcuto"])){
-			$disponible = $mostrarP[0]["fotoProdcuto"];
-		}else{					
-			$disponible = 'images/no_disponible.jpg';
-		}
+		$disponible;
+		// if (!is_array(@getimagesize(base_url.$mostrar["fotoProdcuto"]))) {
+				if (!is_array(@getimagesize("http://ticdwem.com/ferreterariopisuena/".$mostrarP[0]["fotoProdcuto"]))) {
+					    $disponible = base_url.'images/no_disponible.jpg';
+					}else{					
+					$disponible = "http://ticdwem.com/ferreterariopisuena/".$mostrarP[0]["fotoProdcuto"];
+					 //$disponible = base_url.$mostrar["fotoProdcuto"];
+				}
 		?> 
 
         <div class="card mt-4">
-          <img class="card-img-top img-fluid" src="<?php echo $mostrarP[0]["fotoProdcuto"];?>" alt="">
+          <img class="card-img-top img-fluid" src="<?php echo $disponible;?>" alt="">
           <div class="card-body">
             <h3 class="card-title"><?php echo $mostrarP[0]["nombreProducto"];?></h3>
 			
@@ -225,10 +231,11 @@ class Productos
 		$tp = $randPRoducto->getRandom($tbl);
 		if($tp != 0){
 			foreach($tp as $presentar){
-				if(is_file($presentar["fotoProdcuto"])){
-					$disponible = $presentar["fotoProdcuto"];
-				}else{					
-					$disponible = 'images/no_disponible.jpg';
+				if (!is_array(@getimagesize("http://ticdwem.com/ferreterariopisuena/".$presentar["fotoProdcuto"]))) {
+					    $disponible = base_url.'images/no_disponible.jpg';
+					}else{					
+					$disponible = "http://ticdwem.com/ferreterariopisuena/".$presentar["fotoProdcuto"];
+					 //$disponible = base_url.$mostrar["fotoProdcuto"];
 				}
 			?>
 				<div class="slide"><a href='producto/<?=$presentar["codigoProducto"]?>'><img src="<?=$disponible; ?>"></a><p><?=$presentar["nombreProducto"]; ?></p></div>
