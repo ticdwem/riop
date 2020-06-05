@@ -164,7 +164,7 @@ function expRegular(texto,contenido){
 	var varif;  
 	switch (texto) {
 	  case "nombre":
-	   letras_latinas = /^[a-zA-ZáéíóúàèìòùÀÈÌÒÙÁÉÍÓÚñÑüÜ_\s]+$/;
+	   letras_latinas = /^[a-zA-ZáéíóúàèìòùÀÈÌÒÙÁÉÍÓÚñÑüÜ/-_-\s]+$/;
 	   varif = letras_latinas;
 	    break;
 	  case "email":

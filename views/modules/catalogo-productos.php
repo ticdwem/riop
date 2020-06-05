@@ -61,7 +61,6 @@ include "views/modules/header.php";
           <div class="row" id="Sublinea">
           <div class="d-flex align-items-center" >
             <strong style="font-size: 20px;">Selecciona una Linea...</strong>
-            <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
           </div>
             </div>
             <button type="button" class="btn btn-outline-success" id="btnBuscarPreciso" style="display: none;">BUSCAR</button>

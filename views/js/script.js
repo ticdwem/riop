@@ -58,7 +58,8 @@ $(document).ready(function(){
 
 
 // check if a checkbox where cliked
-	$("#Dvlinea input[name='lineaPr']").on("click",function(){
+	// $("#Dvlinea input[name='lineaPr']").on("click",function(){
+	$("body").on("click","#Dvlinea input[name='lineaPr']",function(){
 		var valorRb = $(this).val();
 		var netTabla = "sublinea";
 		var linTabla = "linea";

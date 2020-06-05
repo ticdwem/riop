@@ -100,7 +100,7 @@ class Productos
 		$valTF = $validar->pregmatchletras($VDPersonal);
 		if($valTF == '0'){
 			echo '<div class="alert alert-danger" role="alert">DATOS INCORRECTOS PRUEBA UNA VEZ MÁS</div>';
-			die();
+			
 		}
 
 		$am = new ProductosModels();
@@ -170,8 +170,7 @@ class Productos
 			$validar = new Validacion();
 			$veamos = $validar->valornumerico($productoName);
 			if($veamos == '0'){
-				echo "DATOS INCORRECTOS, PRUEBA UNA VEZ MAS";
-				die();
+				echo "DATOS INCORRECTOS, PRUEBA UNA VEZ MAShhhh";
 			}
 		}
 

@@ -62,7 +62,7 @@
 
 
     </div>
-  <script src="<?=base_url?>views/js/scriptmin.js"></script>
+  <script src="<?=base_url?>views/js/script.js"></script>
   <script src="<?=base_url?>views/js/validacion_contacto.js"></script>
 
  

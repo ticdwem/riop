@@ -21,7 +21,7 @@ class Validacion
 	
 	public function pregmatchletras($valor1){
 		$vacio = self::emptySpace($valor1);
-		if($vacio != 1 && preg_match("/^[a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙñÑ\s\']+$/", $valor1)){
+		if($vacio != 1 && preg_match("/^[a-zA-Z0-9ÁáÉéÍíÓóÚúÑñ .\/-]+$/", $valor1)){
 			return mb_strtoupper($valor1, 'UTF-8');
 		}else{
 			return 0;			 
@@ -31,8 +31,7 @@ class Validacion
 	public function removeBOM($valor1){
 		$bom = pack("CCC", 0xEF, 0xBB, 0xBF);
 		$sinBom = str_replace($bom, '', $valor1);
-		if(preg_match("/^[a-zA-Z0-9áéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙñÑ\-s\']+$/", $sinBom)){
-			
+		if(preg_match('/^[a-z0-9ÁáÉéÍíÓóÚúÑñ -\-]+$/i', $sinBom)){			
 			return mb_strtoupper($sinBom, 'UTF-8');
 		}else{
 			return 0;			 

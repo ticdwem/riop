@@ -66,7 +66,7 @@
         $insert = "INSERT INTO usuarios
         (nombreUsuario, apellidosUsuario, nobreUsuario, passwordUsuario, emailUsuario, tipoUsuario, statusUsuario) 
         VALUES ('{$this->getNombre()}', '{$this->getApellidos()}', '{$this->getNombreUsuario()}', '{$this->getPassword()}', '{$this->getEmail()}', '{$this->getTipoUser()}', '1')";
-        $user = $this->db->prepare($insert);;
+        $user = $this->db->prepare($insert);
         $user->execute();
         if($user){
             return "success";
