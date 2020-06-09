@@ -78,6 +78,7 @@ $(document).ready(function(){
 				document.getElementById("loguinLock").innerHTML='<div><img src="views/images/load.gif"  width="30px" height="30px" /></div>';
 			},*/
 			success:function(nextValue){
+				console.log(nextValue);
 				if(nextValue != 0){
 					$.each(nextValue,function (i,item) {
 						// radio += '<div class="form-check col-lg-6"><input type="radio" name="subLineaRadio" class="form-check-input" value="'+item.idSubLn+'"><label class="form-check-label" for="exampleCheck1">'+item.nombre+'</label></div>';
@@ -130,6 +131,37 @@ $(document).ready(function(){
 		}else{
 			showP.type = "password";
 			$(".icon").removeClass('far fa-eye fa-3x').addClass('fas fa-eye-slash fa-3x');
+		}
+	});
+
+/**************************añadir carrito************************************/
+	$("#btnAddCart").on("click",function(e){
+		e.preventDefault();
+		var idProducto = $("#codProdUnico").html();
+		var validarProdId = expRegular("nombre",idProducto);
+
+		if (validarProdId != 0){
+			$.ajax({
+				
+				url: "../views/modules/ajax.php",
+				method:"POST",
+				data:{"idProducto":idProducto},
+				cache:false,
+				beforeSend:function(){
+					$('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
+				},
+				success:function(artUno){
+					console.log(artUno);
+					if(artUno == 1){
+						window.location.href = "http://localhost/final-catalogo/catalogo";
+					}else if(artUno == 0){
+						alert("Hubo un error porfavor intente mas tarde no es array");
+					}else if(artUno == 2){
+						alert("no sumo");
+					}
+				}
+			});
+
 		}
 	});
 });

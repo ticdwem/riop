@@ -64,7 +64,6 @@ include "views/modules/header.php";
 
       </div>
       <!-- /.col-lg-9 -->
-
     </div>
 
   </div>

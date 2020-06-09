@@ -1,4 +1,5 @@
 <?php 
+session_start();
 /**
  * mike trujillo
  */
@@ -170,7 +171,7 @@ class Productos
 			$validar = new Validacion();
 			$veamos = $validar->valornumerico($productoName);
 			if($veamos == '0'){
-				echo "DATOS INCORRECTOS, PRUEBA UNA VEZ MAShhhh";
+				echo "DATOS INCORRECTOS, PRUEBA UNA VEZ MAS";
 			}
 		}
 
@@ -190,7 +191,11 @@ class Productos
           <img class="card-img-top img-fluid" src="<?php echo $disponible;?>" alt="">
           <div class="card-body">
             <h3 class="card-title"><?php echo $mostrarP[0]["nombreProducto"];?></h3>
-			
+
+			<div class="form-group row">
+				<label for="">CODIGO: </label>
+				<p class="card-text" id="codProdUnico"><?=$mostrarP[0]["codigoProducto"]?></p>			
+			</div>
 			<div class="form-group row">
 				<label for="">MODELO:</label>
 				<p class="card-text"><?=$mostrarP[0]["modeloProducto"]?></p>			
@@ -211,8 +216,9 @@ class Productos
 				<label for="">SUBLINEA:</label>
 				<p class="card-text"><?=$mostrarP[0]["nombreSublinea"]?></p>
 			</div>
-            <button class="btn btn-success text-center" disabled>Agregar a mi carrito</button>
-            <p class="card-text"><?php echo $mostrarP[0]["descripcionProducto"];?></p>
+            <button  class="btn btn-success text-center" id="btnAddCart" name="addCart">Agregar a mi carrito</button>
+            <div class="spinnerWhite"></div>
+			<p class="card-text"><?php echo $mostrarP[0]["descripcionProducto"];?></p>
             <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
             4.0 Estrellas
           </div>
@@ -222,7 +228,7 @@ class Productos
 	}
 
 	public function randomStrat(){
-
+	
 		$tbl=$this->tabla1 = 'productos';
 		$disponible;
 		$randPRoducto = new ProductosModels();

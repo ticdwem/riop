@@ -10,6 +10,7 @@ class EnlacesModels{
 		   $enlaces == "producto"||
 		   $enlaces == "encuentranos"||
 		   $enlaces == "registro"||
+		   $enlaces == "catalogo"||
 		   $enlaces == "contacto"){
 
 			$module = "views/modules/".$enlaces.".php";

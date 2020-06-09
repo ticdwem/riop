@@ -43,7 +43,7 @@
 		$innerPAg = "SELECT p.codigoProducto,p.nombreProducto,p.descripcionProducto,p.modeloProducto,
 							p.skuProducto,p.unidadBaseProducto,p.fotoProdcuto,mr.nombreMarca,mr.fotoMarca,
 							sb.nombreSublinea 
-					FROM ".$tabla1." p
+					FROM ".$tabla1." p 
 					INNER JOIN ".$tabla2." mr
 					ON p.idMarcaProdcuto = mr.idMarca
 					INNER JOIN ".$tabla3." sb

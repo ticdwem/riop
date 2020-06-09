@@ -51,7 +51,6 @@
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158337767-1"></script>
-<script>
 
     <script src="<?=base_url?>views/js/jquery.validate.js"></script>
     <script src="<?=base_url?>views/js/modernizr.custom.63321.js"></script>
@@ -66,7 +65,6 @@
     ======================================--> 
       
     <?php
-     SESSION_START();
       $modulos = new Enlaces();
       $modulos -> enlacesController();
     

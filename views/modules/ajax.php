@@ -1,13 +1,17 @@
 <?php 
 require_once "../../controllers/articulosController.php";
 require_once "../../controllers/productoscontrollers.php";
+require_once "../../controllers/CatalogoController.php";
 require_once "../../controllers/categorias.php";
 require_once '../../controllers/validacion.php';
 require_once '../../models/catLineaSub.php';
+require_once '../../models/carrito.php';
+require_once '../../helpers/utils.php';
 
 class Ajax{
 	public $arraySent;
 	public $arrayLinea;
+	public $producto;
 
 	public function enviarCorreo(){
 		$sent = $this->arraySent;
@@ -30,8 +34,16 @@ class Ajax{
 		}
 
 	}
+
+	public function carrito(){
+		$idProducto = $this->producto;
+
+		$guardarCarrito = new CatalogoController();
+		$guardarCarrito->add($idProducto);
+	}
 	
 }
+
 
 if(isset($_POST["correoHaciaAjax"])){
 	$sent = new Ajax();
@@ -45,5 +57,9 @@ if(isset($_POST['valor'])){
 	$consulta -> consultaDato();
  
 }
-
+ if(isset($_POST["idProducto"])){
+	 $id = new Ajax();
+	 $id -> producto = $_POST["idProducto"];
+	 $id->carrito();
+ }
 ?>
