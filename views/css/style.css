@@ -925,3 +925,95 @@ border: transparent; }
 .form-control:-moz-placeholder {
 	/* Firefox 18- */
 	color: rgba(255, 255, 255, 0.5); }
+
+/*VISTA CARRITO*/
+.catlist{
+	/* border: 1px solid red; */
+	border-top: 1px solid #D2CCCC;
+	margin-top: 11%;
+	height: auto;
+	width: 100%;
+}
+
+.catlist #tituloCatalogo{
+	top: 0px;
+	left: 0px;
+	height: 71px;
+	position: relative;
+}
+
+.catlist #tituloCatalogo h3{
+	position: relative;
+    margin-right: 45%;
+	margin-top: 15px;
+	margin-left: 35%;
+	text-decoration: underline;
+}
+
+
+.catlist table tbody tr td img{
+	height: auto;
+	width: 50px;
+	display: block;
+	margin: 10px;
+}
+
+
+.catlist table thead tr th:nth-child(3),
+.catlist table thead tr th:nth-child(4),
+.catlist table thead tr th:nth-child(5),
+.catlist table tbody tr td:nth-child(4),
+.catlist table tbody tr td:nth-child(5){
+	text-align: center;
+}
+
+.tableEmpty tbody tr td{
+	height: 250px;
+}
+
+/* carrito en header */
+.shopping{
+	position: relative;
+	margin-left: 15px;
+}
+
+.shopping a i{
+	color: white;
+}
+
+.shopping a i:hover{
+	animation: 2s vibrar 1;
+}
+
+
+@keyframes vibrar{
+	20%{
+		transform: rotate(30deg);
+	}
+	30%{
+		transform: rotate(-35deg);
+	}
+	40%{
+		transform: rotate(30deg);
+	}
+	50%{
+		transform: rotate(-15deg);
+	}
+	60%{
+		transform: rotate(10deg);
+	}
+	70%{
+		transform: rotate(-5deg);
+	}
+	80%{
+		transform: rotate(0deg);
+	}
+	90%{
+		transform: rotate(-5deg);
+	}
+	98%{
+		transform: rotate(2deg);
+	}
+
+}
+

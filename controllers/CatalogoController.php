@@ -58,11 +58,5 @@ class CatalogoController{
         require_once 'helpers/utils.php';
         Utls::deleteSession('carrito');
 
-        if($_SESSION['carrito']){
-            echo " no se ha borrado";
-        }else{
-             header("Location:".base_url."catalogo-productos");
-            echo "se ha borrado correctamente";
-        }
     }
 }
