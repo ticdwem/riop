@@ -14,7 +14,8 @@ class Productos
 
 	public function mostrarProductos($datos){
 		require_once "vendor/autoload.php";
-		require_once 'models/modeloBd.php';
+		require_once 'models/modeloBd.php';		
+		require_once 'helpers/utils.php';
 
 		$dato = $this->VDato = $datos;
 		$tbl1 = $this->tabla1 = 'productos';
@@ -54,13 +55,7 @@ class Productos
 		$todpPagination = $pagTion->conseguirTodosPagination($tbl1,$numero_elementos_pagina);
 		if($numElementos != 0 ){
 			foreach ($todpPagination as $mostrar) {
-				// if (!is_array(@getimagesize(base_url.$mostrar["fotoProdcuto"]))) {
-				if (!is_array(@getimagesize("http://ticdwem.com/ferreterariopisuena/".$mostrar["fotoProdcuto"]))) {
-					    $disponible = base_url.'images/no_disponible.jpg';
-					}else{					
-					$disponible = "http://ticdwem.com/ferreterariopisuena/".$mostrar["fotoProdcuto"];
-					 //$disponible = base_url.$mostrar["fotoProdcuto"];
-				}
+				$disponible = Utls::existImg($mostrar["fotoProdcuto"]);
 						
 			?> 
 	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
@@ -90,7 +85,8 @@ class Productos
 
 	public function mostrarPersonalizado($bPer){
 		require_once "vendor/autoload.php";
-		require_once "models/productosModels.php";
+		require_once "models/productosModels.php";		
+		require_once 'helpers/utils.php';
 
 		$VDPersonal = $this->VDato = $bPer;
 		$tbl1 = $this->tabla1='sublinea';
@@ -126,13 +122,7 @@ class Productos
 
 		if($numElementos != 0 ){
 			foreach ($todpPagination as $mostrar) {	
-				// if (!is_array(@getimagesize(base_url.$mostrar["fotoProdcuto"]))) {
-				if (!is_array(@getimagesize("http://ticdwem.com/ferreterariopisuena/".$mostrar["fotoProdcuto"]))) {
-					    $disponible = base_url.'images/no_disponible.jpg';
-					}else{					
-					$disponible = "http://ticdwem.com/ferreterariopisuena/".$mostrar["fotoProdcuto"];
-					 //$disponible = base_url.$mostrar["fotoProdcuto"];
-				}		
+				$disponible = Utls::existImg($mostrar["fotoProdcuto"]);
 			?> 
 	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4" >
 	         <div class="card h-100">
@@ -163,6 +153,7 @@ class Productos
 
 	public function mostrarProducto($nombre){
 		require_once 'models/modeloBd.php';
+		require_once 'helpers/utils.php';
 		$productoName = $this->VDPersonal = $nombre;
 		$whereComplemett;
 		$disponible;
@@ -177,14 +168,7 @@ class Productos
 
 		$productoO = new CatLineaSub();
 		$mostrarP = $productoO->getProductSpecifict($veamos,'productos','marca','sublinea');
-		$disponible;
-		// if (!is_array(@getimagesize(base_url.$mostrar["fotoProdcuto"]))) {
-				if (!is_array(@getimagesize("http://ticdwem.com/ferreterariopisuena/".$mostrarP[0]["fotoProdcuto"]))) {
-					    $disponible = base_url.'images/no_disponible.jpg';
-					}else{					
-					$disponible = "http://ticdwem.com/ferreterariopisuena/".$mostrarP[0]["fotoProdcuto"];
-					 //$disponible = base_url.$mostrar["fotoProdcuto"];
-				}
+		$disponible = Utls::existImg($mostrarP[0]["fotoProdcuto"]);
 		?> 
 
         <div class="card mt-4">
