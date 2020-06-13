@@ -42,7 +42,7 @@ require_once 'helpers/utils.php';
 			<form method="post">
 			<button name="borrar">VACIAR CARRITO</button>
 			</form>
-		<?php else: ?>
+			<?php else: ?>
 			<table class="table tableEmpty">
 		  <thead>
 		    <tr>
