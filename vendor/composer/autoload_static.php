@@ -6,6 +6,20 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitad52596e99cbd6b3f33f6c4d896c0d54
 {
+    public static $prefixLengthsPsr4 = array (
+        'B' => 
+        array (
+            'Box\\Spout\\' => 10,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Box\\Spout\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/box/spout/src/Spout',
+        ),
+    );
+
     public static $classMap = array (
         'Zebra_Pagination' => __DIR__ . '/..' . '/stefangabos/zebra_pagination/Zebra_Pagination.php',
     );
@@ -13,6 +27,8 @@ class ComposerStaticInitad52596e99cbd6b3f33f6c4d896c0d54
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInitad52596e99cbd6b3f33f6c4d896c0d54::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitad52596e99cbd6b3f33f6c4d896c0d54::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInitad52596e99cbd6b3f33f6c4d896c0d54::$classMap;
 
         }, null, ClassLoader::class);
