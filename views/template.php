@@ -20,6 +20,7 @@
   <link href="https://fonts.googleapis.com/css?family=Adamina|Roboto+Slab:100,200,300,400,500,600,700,800,900&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="<?=base_url?>views/css/style.css" />
   <link rel="stylesheet" type="text/css" href="<?=base_url?>views/css/animate.css" />
+ 
   <!-- SE INCLUYO ESTE CSS PARA SLIDE MARCAS 19/05/2020 -->
   <link rel="stylesheet" type="text/css" href="<?=base_url?>views/css/infinite-slider.css" />
 
@@ -40,12 +41,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.6/src/jquery.ez-plus.js"></script>
   <script src="https://kit.fontawesome.com/1849e1867b.js" crossorigin="anonymous"></script>
-  <script src="views/js/parallax.js"></script>  
+  <script src="<?=base_url?>views/js/parallax.js"></script>  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-  <!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
+  <script src="<?=base_url?>dist/sweetalert.js"></script>
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+  <script src="https://unpkg.com/sweetalert2@9.5.3/dist/sweetalert2.all.min.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158337767-1"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158337767-1"></script>
 
     <script src="<?=base_url?>views/js/jquery.validate.js"></script>
     <script src="<?=base_url?>views/js/modernizr.custom.63321.js"></script>
