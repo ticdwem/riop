@@ -164,4 +164,68 @@ $(document).ready(function(){
 
 		}
 	});
+/**********************************ACTUALIZAR DATOS********************************************************/
+	$("#uploadData").on("click",function(){
+
+
+		var Form = new FormData($('#filesForm')[0]);
+
+		$.ajax({
+			url: "views/modules/ajax.php",
+			method:"POST",
+			data:Form,
+			cache:false,
+			contentType:false,
+			processData:false,
+			beforeSend:function(){
+			Swal.fire({
+	            title: 'INSERTANDO INFORMACION, ESPERE POR FAVOR',
+	            allowEscapeKey: false,
+	            allowOutsideClick: false,
+	            background: '#fff',
+	            showConfirmButton: false,
+	            onOpen: ()=>{
+	                Swal.showLoading();
+	            }
+
+            // timer: 3000,
+            // timerProgressBar: true
+        	});	
+						// $('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
+					},
+			success:function(dato){
+				console.log(dato);
+				if(dato == 1){
+					Swal.fire({
+					  icon: 'error',
+					  title: 'Oops...',
+					  text: 'HA SUPERADO EL TIEMPO DE EJECIÓN',
+					  footer: 'llama al administrador para una revisión'
+					})
+				}else if(dato == 2){
+					Swal.fire(
+					  'DEBES SELECCIONAR UN ARCHIVO',
+					  'HAZ CLICK EN EL BOTON PARA REGRESAR',
+					  'warning'
+					)
+				}else if(dato == 3){
+					Swal.fire({
+					  position: 'top-end',
+					  icon: 'success',
+					  title: 'SE HA CARGADO EL ARCHIVO',
+					  showConfirmButton: false,
+					  timer: 1500
+					})
+				}else{
+					Swal.fire({
+					  icon: 'error',
+					  title: 'Oops...',
+					  text: 'SUBIMOS ALGÚNOS REGISTROS,PERO NO SE COMPLETO AL 100%',
+					  footer: 'llama al administrador para una revisión'
+					})
+				}
+			
+			 }
+		})
+	});
 });
