@@ -2,16 +2,32 @@
 require_once "../../controllers/articulosController.php";
 require_once "../../controllers/productoscontrollers.php";
 require_once "../../controllers/CatalogoController.php";
+require_once "../../controllers/updateCatalogo.php";
 require_once "../../controllers/categorias.php";
 require_once '../../controllers/validacion.php';
 require_once '../../models/catLineaSub.php';
 require_once '../../models/carrito.php';
+require_once '../../models/crudProducto.php';
 require_once '../../helpers/utils.php';
+require_once "../../vendor/box/spout/src/Spout/Autoloader/autoload.php";
 
 class Ajax{
 	public $arraySent;
 	public $arrayLinea;
+	private $dato;
 	public $producto;
+
+public function getDato()
+{
+    return $this->dato;
+}
+
+public function setDato($archivo)
+{
+    $this->dato = $archivo;
+    return $this;
+}
+
 
 	public function enviarCorreo(){
 		$sent = $this->arraySent;
@@ -41,9 +57,16 @@ class Ajax{
 		$guardarCarrito = new CatalogoController();
 		$guardarCarrito->add($idProducto);
 	}
+
+	public function updateMasivo(){
+		$ar = $this->getDato();
+		
+		$generar = new datosBack();
+		$generar->readexcel($ar);
+
+	}
 	
 }
-
 
 if(isset($_POST["correoHaciaAjax"])){
 	$sent = new Ajax();
@@ -61,5 +84,10 @@ if(isset($_POST['valor'])){
 	 $id = new Ajax();
 	 $id -> producto = $_POST["idProducto"];
 	 $id->carrito();
+ }
+ if(isset($_FILES["fileContacts"])){
+ 	$ph = new Ajax();
+ 	$ph->setDato($_FILES["fileContacts"]);
+ 	$ph->updateMasivo();
  }
 ?>
