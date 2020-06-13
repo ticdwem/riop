@@ -11,6 +11,7 @@ class EnlacesModels{
 		   $enlaces == "encuentranos"||
 		   $enlaces == "registro"||
 		   $enlaces == "catalogo"||
+		   $enlaces == "updateDatos"||
 		   $enlaces == "contacto"){
 
 			$module = "views/modules/".$enlaces.".php";
