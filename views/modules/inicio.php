@@ -2,7 +2,7 @@
 include "views/modules/header.php";
 ?>
 
-<div class="line-btn btn-group-vertical">
+<!-- <div class="line-btn btn-group-vertical">
   <button type="button" class="btn btn-lin">ABRASIVOS</button>
   <button type="button" class="btn btn-lin">ELECTRICO</button>
   <button type="button" class="btn btn-lin">MATERIAL ELECTRICO</button>
@@ -10,9 +10,55 @@ include "views/modules/header.php";
   <button type="button" class="btn btn-lin">ALMACENAMIENTO</button>
   <button type="button" class="btn btn-lin">HERRAMIENTA</button>
   <button type="button" class="btn btn-lin">PINTURA</button>
-</div> 
+</div>  -->
+
+
 <div class="container">
+      <div class="btn-lineas">
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-danger active">
+          <input type="radio" name="options" id="option1" autocomplete="off" checked> Abrasivos
+        </label>
+        <label class="btn btn-danger">
+          <input type="radio" name="options" id="option2" autocomplete="off"> Cargas
+        </label>
+        <label class="btn btn-danger">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Cintas
+        </label>
+        <label class="btn btn-danger">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Eléctrico
+        </label>
+        <label class="btn btn-danger">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Equipo de Seguridad
+        </label>
+        <label class="btn btn-danger">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Escaleras
+        </label>
+        <label class="btn btn-danger">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Fijación
+        </label>
+          <label class="btn btn-danger">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Herramienta
+        </label>
+          <label class="btn btn-danger">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Herramienta Corte
+        </label>
+          <label class="btn btn-danger">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Herramienta Eléctrica
+        </label>
+          <label class="btn btn-danger">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Limpieza
+        </label>
+      </div>
+</div>
+
 <div class="row">
+
+  
+
+
+
+
 <div class="sec-1 col-lg-12">   
 <div id="carouselExampleIndicators" class="stil carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -27,30 +73,30 @@ include "views/modules/header.php";
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner-prueba0.jpg" alt="First slide">
+      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/banner-prueba0.jpg" alt="First slide">
           <div class="carousel-caption d-none d-md-block"> 
   </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner-prueba1.jpg" alt="Second slide">
+      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/banner-prueba1.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner-prueba2.jpg" alt="Third slide">
+      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/banner-prueba2.jpg" alt="Third slide">
     </div>
        <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner-prueba3.jpg" alt="Third slide">
+      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/banner-prueba3.jpg" alt="Third slide">
     </div>
        <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner-prueba4.jpg" alt="Fourth slide">
+      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/banner-prueba4.jpg" alt="Fourth slide">
     </div>
       <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner-prueba5.jpg" alt="Fifth slide">
+      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/banner-prueba5.jpg" alt="Fifth slide">
     </div>
       <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner-prueba6.jpg" alt="Sixty slide">
+      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/banner-prueba6.jpg" alt="Sixty slide">
     </div>
       <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 400px;" src="images/banner24.png" alt="Seventy slide">
+      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/banner24.png" alt="Seventy slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -63,12 +109,27 @@ include "views/modules/header.php";
   </a>
 </div>
 </div>
+  <div class="sec-srch col-lg-12">
+          <form class="bar-bus" action="<?php echo htmlspecialchars(base_url.'catalogo-productos');?>" method="get" id="frmFormSerarching">
+          <div class="input-group input-group-lg">
+            <input type="text" class="form-control" id="buscarInput" placeholder="Buscar producto" aria-label="large" name="buscar" aria-describedby="button-addon2" autocomplete="off">
+            <div class="errorInput"></div>
+            <div class="input-group-append">
+             <!-- <button class="btn btn-outline-danger" type="button" id="btn_buscar"><i class="fa fa-search" aria-hidden="true"></i></button>-->
+           <!--   <input type="submit" class="btn btn-outline-danger" id="btn_buscar" value="BUSCAR">  -->
+            </div>
+          </div>
+        </form>
+        </div>
 <!-- <div class="col-lg-6">
 <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fferreriopisuena%2Fvideos%2F201354774131642%2F&show_text=0&width=560" width="100%" height="400" style="border:none;overflow:hidden"
  scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
 </div> -->
   </div>
 </div>
+      
+
+
 <div class="container">
   <div class="sec-3">
   <section class="herramientas-logos slider">
