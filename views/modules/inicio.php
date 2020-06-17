@@ -200,22 +200,13 @@ include "views/modules/header.php";
   <img class="card-img-top" src="images/servicio4.png" alt="Card image cap" style="height: 150px;">
   <div class="card-body text-white">
     <h5 class="card-title">Asesoría en compras:</h5>
-    <p class="card-text">Contamos con un amplio grupo de profesionales.</p>
+    <p class="card-text">Contamos con un amplio grupo de profesionales, ¡Llámanos!</p>
    <!--  <a href="#" class="btn btn-primary">Go somewhere</a> -->
   </div>
 </div>
 </div>
-
-
-
-
 </div>
-
-
-
-
 </div>
-
    <!--    <div class="container">
           <div class="row">
            <div class="col-lg-12 sec-2">
