@@ -41,7 +41,7 @@
 	}
 
 	public function conseguirTodosPagination($tabla,$numElementospg){
- 		$selectPagination = "select * from $tabla {$this->getWhereCTP()} LIMIT {$this->getInicioPag()},$numElementospg";
+ 		$selectPagination = "select codigoProducto,nombreProducto,modeloProducto,nombreMarca,fotoProdcuto from $tabla inner JOIN marca ON idMarcaProdcuto = idMarca {$this->getWhereCTP()} LIMIT {$this->getInicioPag()},$numElementospg";
  		$pagination = $this->db->prepare($selectPagination);
 		 $pagination->execute();
  		return $pagination->fetchAll();
