@@ -66,6 +66,7 @@ class Productos
 	              	<?php echo $mostrar["nombreProducto"]; ?>
 	              </h4>
 	              <p class="card-text">MODELO: <?php echo $mostrar["modeloProducto"]; ?></p>
+	              <p class="card-text">MARCA: <?php echo $mostrar["nombreMarca"]; ?></p>
 	            </div>
 	            </a>
 	          </div>
@@ -132,6 +133,7 @@ class Productos
 	              	<?php echo $mostrar["nombreProducto"]; ?>
 	              </h4>
 	              <p class="card-text">MODELO: <?php echo $mostrar["modeloProducto"]; ?></p>
+	              <p class="card-text">MARCA: <?php echo $mostrar["nombreMarca"]; ?></p>
 	            </div>
 	            </a>
 	          </div>
