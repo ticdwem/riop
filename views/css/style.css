@@ -125,7 +125,7 @@
 	padding-top: 4%;
 }
 .bar-bus{
-	/* border-radius: 10%; */
+	border-radius: 25%;
 	-webkit-box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
 	box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
@@ -164,6 +164,9 @@
 	-webkit-box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
 	box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
+}
+.card-title{
+	font-size:14px;
 }
 .mi-slider {
 	position: relative;
@@ -666,13 +669,18 @@ box-shadow: -1px 0px 31px 0px rgba(0,0,0,0.75);
 	background: #0c2461;
 }
 
-
-/* VISTA  DE CADA PRODUCTO */
+/* VISTA  PRODUCTO */
 .prod-stilo{
-	padding-top: 10%;
+	padding-top: 12%;
 	padding-bottom: 3%;
 }
+.prod-vis{
+	padding-top: 3%;
+	-webkit-box-shadow: 7px 10px 31px -4px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 7px 10px 31px -4px rgba(0, 0, 0, 0.75);
+	box-shadow: 7px 10px 31px -4px rgba(0, 0, 0, 0.75);
 
+}
 /*///////////////////////////////////////vista registro usuario////////////////////////////////////////////////*/
 /*vista de registro*/
 form{
@@ -913,28 +921,43 @@ border-color: #2f89fc;
 }
 
 .form-control {
-height: 40px !important;
+	/* 	border-radius: 25%;
+	-webkit-box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
+	box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5); */
+
+}
+	
+/* height: 40px !important;
 background: rgb(243, 243, 243);
 color: #000;
 font-size: 13px;
 border-radius: 4px;
 -webkit-box-shadow: none !important;
 box-shadow: none !important;
-border: transparent; }
-.form-control:focus, .form-control:active {
-	border-color: #000; }
-.form-control::-webkit-input-placeholder {
-	/* Chrome/Opera/Safari */
-	color: rgba(182, 140, 140, 0.5); }
+border: transparent;  */
+
+/* .form-control:focus, .form-control:active {
+	border-color: #000; } */
+/* .form-control::-webkit-input-placeholder {
+
+	color: rgba(182, 140, 140, 0.5);
+}
+
 .form-control::-moz-placeholder {
-	/* Firefox 19+ */
-	color: rgba(255, 255, 255, 0.5); }
+
+	color: rgba(255, 255, 255, 0.5);
+}
+
 .form-control:-ms-input-placeholder {
-	/* IE 10+ */
-	color: rgba(255, 255, 255, 0.5); }
+
+	color: rgba(255, 255, 255, 0.5);
+}
+
 .form-control:-moz-placeholder {
-	/* Firefox 18- */
-	color: rgba(255, 255, 255, 0.5); }
+
+	color: rgba(255, 255, 255, 0.5);
+} */
 
 /*VISTA CARRITO*/
 .catlist{
