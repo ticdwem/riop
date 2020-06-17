@@ -4,7 +4,7 @@ include "views/modules/header.php";
 <div class="container">  
   <div class="card border-0 shadow my-5"> 
     <div class="card-body p-5">
-      <div class="row">
+      <div class="row bus-bar">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
              <ol class="carousel-indicators">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>

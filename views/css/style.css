@@ -9,7 +9,7 @@
 .navbar{
 	color: white;
 	font-family: 'Fredoka One',	cursive;
-	font-size: 17px;
+	font-size: 16px;
 	background: #192a56;
 	opacity: 0.9;
 	/* -webkit-linear-gradient(left, 
@@ -80,14 +80,24 @@
 /* .nav-stil{
 	background-color: red;
 } */
+.btn-lineas{
+	padding-top: 10.9%;
+}
+.sec-srch{
+	padding-top:1.5%;
+}
 .sec-1 {
-	padding-top: 10.5%;
+	padding-top:1%;
 	/*  position:relative; */
 }
 .stil{
-	-webkit-box-shadow: -1px -4px 49px -10px rgba(0, 0, 0, 0.75);
+/* 	-webkit-box-shadow: -1px -4px 49px -10px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: -1px -4px 49px -10px rgba(0, 0, 0, 0.75);
-	box-shadow: -1px -4px 49px -10px rgba(0, 0, 0, 0.75);
+	box-shadow: -1px -4px 49px -10px rgba(0, 0, 0, 0.75); */
+
+	-webkit-box-shadow: -2px 14px 24px -6px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -2px 14px 24px -6px rgba(0, 0, 0, 0.75);
+	box-shadow: -2px 14px 24px -6px rgba(0, 0, 0, 0.75);
 }
 .sec-2{
 	padding-top: 7%;
@@ -115,7 +125,7 @@
 	padding-top: 4%;
 }
 .bar-bus{
-	border-radius: 5%;
+	/* border-radius: 10%; */
 	-webkit-box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
 	box-shadow: -4px 10px 30px -13px rgba(0, 0, 0, 0.5);
