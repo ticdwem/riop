@@ -674,16 +674,16 @@ form .form-control{
 	border-radius: 20px;
 }
 .tituloreg{
-	top: -30px;
+	top: 0px;
 	left: 0px;
 	position: relative;
 }
 
 .tituloreg h2{
-	width: 50%;
+	width: 100%;
 	position: relative;
-	left:30%;
-	top:5px;
+	left:0%;
+	top:0px;
 	
 }
 .extaInfo i{
@@ -1016,4 +1016,44 @@ border: transparent; }
 	}
 
 }
+
+/**********************botones para categorias*********************************************/
+.categoriasExceldownload{
+	width: 100%;
+	height: 450px;
+	/* background: red; */
+	top: 0px;
+	left: 0px;
+	overflow: auto;
+}
+.categoriasExceldownload .catExcelD{
+	top: 0px;
+	left: 7%;
+	width: 250px;
+	height: 250px;
+	position: relative;
+	float: left;
+	margin: 8px 8px;
+	/* -webkit-transition:all .9s ease; /* Safari y Chrome */
+	z-index: 0;
+	overflow: hidden;
+}
+.catExcelD img{
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	-webkit-transition-duration: 0.3s;
+	z-index: 10;
+	border: 1px solid black;
+}
+ .catExcelD:hover img{
+	-webkit-transform:scale(1.25);
+	box-shadow: 8px 12px 9px #999;
+	cursor: pointer;
+	z-index: 20
+}
+
+
+
 

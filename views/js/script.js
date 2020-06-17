@@ -171,7 +171,7 @@ $(document).ready(function(){
 		var Form = new FormData($('#filesForm')[0]);
 
 		$.ajax({
-			url: "views/modules/ajax.php",
+			url: "../views/modules/ajax.php",
 			method:"POST",
 			data:Form,
 			cache:false,
@@ -228,4 +228,55 @@ $(document).ready(function(){
 			 }
 		})
 	});
+
+/**********************************enviar checkbox******************************************************/
+ $("#sendCheckbox").on("click", function(e){
+ 	e.preventDefault();
+
+ 	var genera = new Array();
+
+ 	$('input[type=checkbox]:checked').each(function(){
+ 		genera.push($(this).val());
+ 	});
+
+ 	if(genera.length == 1){
+ 		Swal.fire({
+		  icon: 'error',
+		  title: 'ERROR...',
+		  text: 'DEBES SELECCIONAR AL MENOS UNA FILA',
+		  footer: 'SELECCIONAR UNA FILA PARA DESCARGAR EL ARCHIVO'
+		});
+ 	}else{
+ 		$.ajax({
+			url: "../views/modules/ajax.php",
+			method:"POST",
+			data:{'genera':JSON.stringify(genera)},
+			cache:false,
+			contentType:false,
+			processData:false,
+			beforeSend:function(){
+			Swal.fire({
+	            title: 'INSERTANDO INFORMACION, ESPERE POR FAVOR',
+	            allowEscapeKey: false,
+	            allowOutsideClick: false,
+	            background: '#fff',
+	            showConfirmButton: false,
+	            onOpen: ()=>{
+	                Swal.showLoading();
+	            },
+
+             timer: 3000,
+             timerProgressBar: true
+        	});	
+						// $('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
+					},
+			success:function(dato){
+				console.log(dato);
+				
+			
+			 }
+		})
+ 	}
+
+ });
 });

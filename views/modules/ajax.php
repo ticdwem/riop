@@ -68,6 +68,8 @@ public function setDato($archivo)
 	
 }
 
+var_dump($_POST);
+exit();
 if(isset($_POST["correoHaciaAjax"])){
 	$sent = new Ajax();
 	$sent -> arraySent = $_POST["correoHaciaAjax"];
