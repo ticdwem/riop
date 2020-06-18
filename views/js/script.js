@@ -234,10 +234,14 @@ $(document).ready(function(){
  	e.preventDefault();
 
  	var genera = new Array();
+ 	var checks;
+ 	var query = $('#get').val();
+ 	var option = $('select[name=datos]').val();
 
  	$('input[type=checkbox]:checked').each(function(){
  		genera.push($(this).val());
  	});
+ 		genera.push({"tabla":option,"id":query});
 
  	if(genera.length == 1){
  		Swal.fire({
@@ -247,13 +251,12 @@ $(document).ready(function(){
 		  footer: 'SELECCIONAR UNA FILA PARA DESCARGAR EL ARCHIVO'
 		});
  	}else{
+ 		checks = {"chek":JSON.stringify(genera)};
  		$.ajax({
 			url: "../views/modules/ajax.php",
 			method:"POST",
-			data:{'genera':JSON.stringify(genera)},
+			data:checks,
 			cache:false,
-			contentType:false,
-			processData:false,
 			beforeSend:function(){
 			Swal.fire({
 	            title: 'INSERTANDO INFORMACION, ESPERE POR FAVOR',
@@ -263,10 +266,10 @@ $(document).ready(function(){
 	            showConfirmButton: false,
 	            onOpen: ()=>{
 	                Swal.showLoading();
-	            },
-
+	            }
+	            /*,
              timer: 3000,
-             timerProgressBar: true
+             timerProgressBar: true*/
         	});	
 						// $('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
 					},

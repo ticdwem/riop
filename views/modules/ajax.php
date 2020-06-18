@@ -65,11 +65,17 @@ public function setDato($archivo)
 		$generar->readexcel($ar);
 
 	}
+
+	public function createQuery(){
+		$query = $this->getDato();
+
+		$generarQuery = new datosBack();
+		$generarQuery->gnerateQuery($query);
+	}
 	
 }
 
-var_dump($_POST);
-exit();
+
 if(isset($_POST["correoHaciaAjax"])){
 	$sent = new Ajax();
 	$sent -> arraySent = $_POST["correoHaciaAjax"];
@@ -91,5 +97,11 @@ if(isset($_POST['valor'])){
  	$ph = new Ajax();
  	$ph->setDato($_FILES["fileContacts"]);
  	$ph->updateMasivo();
+ }
+
+ if (isset($_POST['chek'])) {
+ 	$checks  = new Ajax();
+ 	$checks->setDato($_POST['chek']);
+ 	$checks->createQuery();
  }
 ?>
