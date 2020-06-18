@@ -80,8 +80,17 @@
 /* .nav-stil{
 	background-color: red;
 } */
+/* TIRAJE DE LINEAS*/
 .btn-lineas{
 	padding-top: 10.9%;
+}
+@media screen and (max-width: 1200px) {
+	.btn-lineas {
+
+		display: none;
+		/* position: none;
+		display: none; */
+	}
 }
 .sec-srch{
 	padding-top:1.5%;
@@ -89,6 +98,26 @@
 .sec-1 {
 	padding-top:1%;
 	/*  position:relative; */
+}
+@media screen and (max-width: 1200px) {
+	.sec-1 {
+
+		padding-top: 15%;
+
+		
+		/* position: none;
+		display: none; */
+	}
+}
+@media screen and (max-width: 1200px) {
+	.sec-1 {
+
+		padding-top: 15%;
+
+
+		/* position: none;
+		display: none; */
+	}
 }
 .stil{
 /* 	-webkit-box-shadow: -1px -4px 49px -10px rgba(0, 0, 0, 0.75);
@@ -522,7 +551,6 @@ display: none;
 	display: block;
 	width: 50px;
 	height: 50px;
-
 		}
 	.ferre{
 			display: none;
@@ -596,9 +624,14 @@ strong {
 	font-size: 60px;
 	line-height: 100px;
 }
+/*Estilo de PARALLAX*/
+.paral-sec{
+	padding-top: 3%;
+}
 .parallax-window {
+	/* padding-top:50%; */
 	width: 100%;
-	min-height: 400px;
+	min-height: 300px;
 	background: transparent;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 	z-index: -1;
@@ -611,29 +644,105 @@ strong {
 	font-family: 'Fredoka One',	cursive;
 	position: absolute;
 	top: 110%;
-	left: 20%;
+	left: 28%;
 	z-index: 1;
 	font-size: 50px;
 	color: white;
 }
-.centrado2 {
+/* .centrado2 {
 	position: absolute;
 	top: 115%;
 	left: 15%;
 	z-index: 1;
 	font-size: 30px;
 	color: white;
-}
+} */
 .boton-cursos {
 	position: absolute;
 	font-family: 'Fredoka One',	cursive;
-	top: 112%;
-	left: 70%;
+	top: 120%;
+	left: 45%;
 	z-index: 1;
 	font-size: 30px;
 	color: white;
 	border-radius: 10px;
 }
+
+@media screen and (max-width: 1200px) {
+	.parallax-window{
+		/* position: none;
+		display: none; */
+	}
+}
+@media screen and (max-width: 540px) {
+	.parallax-window {
+	width: 100%;
+	min-height: 250px;
+	background: transparent;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+	z-index: -1;
+	-webkit-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
+	}
+}
+@media screen and (max-width: 1200px) {
+	.texto-encima2 {
+			font-family: 'Fredoka One',
+			cursive;
+			position: absolute;
+			top: 80%;
+			left: 28%;
+			z-index: 1;
+			font-size: 25px;
+			color: white;
+		/* position: none;
+		display: none; */
+	}
+}
+@media screen and (max-width: 720px) {
+	.texto-encima2 {
+		font-family: 'Fredoka One', cursive;
+		position: absolute;
+		top: 80%;
+		left: 24%;
+		z-index: 1;
+		font-size: 25px;
+		color: white;
+		/* position: none;
+		display: none; */
+	}
+}
+@media screen and (max-width: 540px) {
+	.texto-encima2 {
+		font-family: 'Fredoka One',cursive;
+		position: absolute;
+		text-align: center;
+		top: 78%;
+		left: 15%;
+		z-index: 1;
+		font-size: 20px;
+		color: white;
+		/* position: none;
+		display: none; */
+	}
+}
+@media screen and (max-width: 540px) {
+	.boton-cursos {
+		font-family: 'Fredoka One', cursive;
+		position: absolute;
+		top: 85%;
+		left: 35%;
+		z-index: 1;
+		font-size: 25px;
+		color: white;
+		/* position: none;
+		display: none; */
+	}
+}
+/* FIN DE ESTILO DEL PARALLAX*/
+
+
 .serv-stilo {
 	padding-top: 5%;
 	padding-bottom: 1%;

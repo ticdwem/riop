@@ -1,7 +1,6 @@
 <?php
 include "views/modules/header.php";
 ?>
-
 <!-- <div class="line-btn btn-group-vertical">
   <button type="button" class="btn btn-lin">ABRASIVOS</button>
   <button type="button" class="btn btn-lin">ELECTRICO</button>
@@ -11,8 +10,6 @@ include "views/modules/header.php";
   <button type="button" class="btn btn-lin">HERRAMIENTA</button>
   <button type="button" class="btn btn-lin">PINTURA</button>
 </div>  -->
-
-
 <div class="container">
       <div class="btn-lineas">
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -154,14 +151,14 @@ include "views/modules/header.php";
   </section>
 </div>
 </div>
-<section>
+<div class="paral-sec">
   <div class="parallax-window" data-parallax="scroll" data-image-src="images/bann-catalogo5.jpg">
   <p class="texto-encima2">"Contamos con Ventas a Industrias"</p>
   <!-- <div class="centrado2" style="font-family: 'Dosis', sans-serif;">Ventas a Industrias</div> -->
   <!-- <button type="button" class="btn btn-danger boton-cursos">Me interesa</button> -->
    <a class="btn btn-danger boton-cursos text-white" id="" href="<?php echo $especifDato;?>contacto">Me Interesa</a>
 </div>
-</section>
+</div>
 
 <div class="serv-stilo container">
 <div class=" row">
@@ -257,8 +254,6 @@ include "views/modules/header.php";
 </div>
 </div> -->
 
-
-
 <div class="sec-4 map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3765.1812673414006!2d-99.074568!3d19.317939!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0364188dc1ef%3A0xec3ae9996a20d6c!2sFerretera%20Rio%20Pisue%C3%B1a!5e0!3m2!1ses-419!2smx!4v1590605222309!5m2!1ses-419!2smx" 
 			width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -266,52 +261,27 @@ include "views/modules/header.php";
 
 <div class="sec-3">
   <section class="customer-logos slider">
-    <div class="slide"><img src="images/werner-logo.png"></div>
-    <div class="slide"><img src="images/anclo-logo.png"></div>
-    <div class="slide"><img src="images/austromex-logo.jpg"></div>
-    <div class="slide"><img src="images/bosch-logo.jpg"></div>
-    <div class="slide"><img src="images/cifunsa-logo.jpg"></div>
-    <div class="slide"><img src="images/deacero-logo.gif"></div>
-    <div class="slide"><img src="images/dewalt-logo.png"></div>
-    <div class="slide"><img src="images/escalumex-logo.jpg"></div>
-    <div class="slide"><img src="images/fanal-logo.jpg"></div>
-    <div class="slide"><img src="images/fandeli-logo.jpg"></div>
-    <div class="slide"><img src="images/fifa.png"></div>
-    <div class="slide"><img src="images/fischer-logo.png"></div>
-    <div class="slide"><img src="images/helvex.jpg"></div>
-    <div class="slide"><img src="images/henkel-logo.png"></div>
-    <div class="slide"><img src="images/intec-logo.jpg"></div>
-    <div class="slide"><img src="images/truper-logo.png"></div>
-    <div class="slide"><img src="images/3m-logo.png"></div>
+    <div class="slide"><img src="images/werner-logo.png" width="" height=""></div>
+    <div class="slide"><img src="images/anclo-logo.png" width="" height="" ></div>
+    <div class="slide"><img src="images/austromex-logo.jpg" width="" height=""></div>
+    <div class="slide"><img src="images/bosch-logo.jpg" width="" height=""></div>
+    <div class="slide"><img src="images/cifunsa-logo.jpg" width="" height=""></div>
+    <div class="slide"><img src="images/deacero-logo.gif" width="" height=""></div>
+    <div class="slide"><img src="images/dewalt-logo.png" width="" height=""></div>
+    <div class="slide"><img src="images/escalumex-logo.jpg" width="" height=""></div>
+    <div class="slide"><img src="images/fanal-logo.jpg" width="" height=""></div>
+    <div class="slide"><img src="images/fandeli-logo.jpg" width="" height=""></div>
+    <div class="slide"><img src="images/fifa.png"  width="" height=""></div>
+    <div class="slide"><img src="images/fischer-logo.png" width="" height=""></div>
+    <div class="slide"><img src="images/helvex.jpg" width="" height=""></div>
+    <div class="slide"><img src="images/henkel-logo.png" width="" height=""></div>
+    <div class="slide"><img src="images/intec-logo.jpg" width="" height=""></div>
+    <div class="slide"><img src="images/truper-logo.png" width="" height=""></div>
+    <div class="slide"><img src="images/3m-logo.png" width="" height=""></div>
   </section>
 </div>   
 
-         <!-- Load Facebook SDK for JavaScript -->
-      <div class="msn-fb" id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v7.0'
-          });
-        };
 
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-
-      <!-- Your Chat Plugin code -->
-      <div class="fb-customerchat"
-        attribution=setup_tool
-        page_id="182875078985108"
-  theme_color="#0c2461"
-  logged_in_greeting="Buen día,¿En que podemos ayudarte? le ofrecemos una gran variedad de productos "
-  logged_out_greeting="Buen día,¿En que podemos ayudarte? le ofrecemos una gran variedad de productos ">
-      </div>
 
 <?php
 include "views/modules/footer.php";
