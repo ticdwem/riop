@@ -40,46 +40,24 @@ class datosBack
 		}
 	}
 	
-	/*public function actualizarTodo($argument)
+	public function gnerateQuery($argument)
 	{
+		$data = json_decode($_POST['chek'],true);
+		$last = end($data);
 
-		$archivo = $_FILES["fileContacts"]["name"];
-		$archivoCopiado = $_FILES["fileContacts"]["tmp_name"];
-		$archivo_guardado = "../../guardarExcel/copia_".$archivo;
-		$copi = copy($archivoCopiado,$archivo_guardado );
+		$table = new Validacion();
+		$id = $table->pregmatchletras($last['id']);
+		$tbl = $table->pregmatchletras($last['tabla']);
 
-		if(file_exists($archivo_guardado)){
-			try{
-			set_time_limit(360);
-			$fp = fopen($archivo_guardado, "r");
-			$fila = 0;
-				while ($datos = fgetcsv($fp,0,",")) {
-					$fila ++;
+		if($id != 1 || $tbl != 1){
 
-					if($fila > 1){
-						$insert = new Crud();
-						$insert -> setCodigoProducto($datos[0]);
-						$insert -> setNombreProducto($datos[1]);
-						$insert -> setDescripcionProducto($datos[2]);
-						$insert -> setModeloProducto($datos[3]);
-						$insert -> setSkuProducto($datos[4]);
-						$insert -> setCodigoSatProductos($datos[5]);
-						$insert -> setPrecio($datos[6]);
-						$insert -> setIdMarcaProdcuto($datos[7]);
-						$insert -> setUnidadBaseProducto($datos[8]);
-						$insert -> setIdProveedorProducto($datos[9]);
-						$insert -> setIdSublineaProducto($datos[10]);
-						$insert -> setFotoProdcuto ($datos[11]);
-						$insert -> insertProd();
-						
-					}
-				}
-			fclose($fp);
-			}catch(PathException $e){
-				echo 'Exception';
-			}
-		}else{
-			echo "2";
+			var_dump($data);
+			$delete = array_pop($data);
+			$datos = implode(",", $data);
 		}
-	}*/
+
+		// var_dump($last['tabla']);
+		// var_dump($last['id']);
+		
+	}
 }

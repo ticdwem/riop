@@ -5,6 +5,7 @@ include "views/modules/menulateral.php";
  <div class="tituloreg">
     <h2>ESCOGE LAS FILAS QUE DESEAS MODIFICAR</h2>
 </div>
+<input type="hidden" name="get" id="get" value="<?=$_GET['n']?>">
 <div class="selectRows">
 	<div class="form-group row">
 		<div class="col-sm-10">
@@ -63,10 +64,19 @@ include "views/modules/menulateral.php";
 				</label>
 			</div>
 		</div>
+	</div>
+		<div class="idAlgo">
+
+			<?php 
+				$reciveGet;
+				if(isset($_GET['n'])){$reciveGet = $_GET['n'];}
+				$mira = new LineaSublinea();
+				$mira->showbrand($reciveGet);
+			 ?>
+		</div>
 		<div class="boto">
 			<button id="sendCheckbox">GENERAR</button>
 		</div>
-	</div>
 </div>
  </div>
 </div>
