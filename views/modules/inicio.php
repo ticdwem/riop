@@ -168,7 +168,6 @@ include "views/modules/header.php";
   <div class="card-body">
     <h5 class="card-title">Atencion a Clientes:</h5>
     <p class="card-text">Si no encuentra lo que busca NOSOTROS LO CONSEGUIMOS.</p>
-    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
   </div>
 </div>
 </div>
@@ -178,7 +177,6 @@ include "views/modules/header.php";
   <div class="card-body text-white">
     <h5 class="card-title">Servicio a Domicilio</h5>
     <p class="card-text">Le ofrecemos una gran variedad de productos (más de 15 mil artículos).</p>
-    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
   </div>
 </div>
 </div>
@@ -188,7 +186,6 @@ include "views/modules/header.php";
   <div class="card-body text-white bg-danger ">
     <h5 class="card-title">Linea de Credito</h5>
     <p class="card-text">Podemos ofrecerle una línea de crédito de acuerdo a sus necesidades</p>
-   <!--  <a href="#" class="btn btn-primary">Go somewhere</a> -->
   </div>
 </div>
 </div>
@@ -198,7 +195,6 @@ include "views/modules/header.php";
   <div class="card-body text-white">
     <h5 class="card-title">Asesoría en compras:</h5>
     <p class="card-text">Contamos con un amplio grupo de profesionales, ¡Llámanos!</p>
-   <!--  <a href="#" class="btn btn-primary">Go somewhere</a> -->
   </div>
 </div>
 </div>
