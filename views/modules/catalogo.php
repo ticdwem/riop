@@ -15,24 +15,24 @@ require_once 'helpers/utils.php';
 		      <th scope="col">#</th>
 		      <th scope="col">IMAGEN</th>
 		      <th scope="col">NOMBRE</th>
-		      <th scope="col">PRECIO</th>
-		      <th scope="col">UNIDADES</th>
+		      <!-- <th scope="col">todos</th> -->
 		    </tr>
 		  </thead>
 		  <tbody>
 		  	<?php
 		  		$contador = 1;
 		  	 foreach ($carrito as $indice => $elemento):
-		  	 	//var_dump($elemento);
+		  	 	// echo "<pre>";
+		  	 	// var_dump($elemento);
+		  	 	// echo "</pre>";
 		  	 	$producto = $elemento['producto'][0];
 		        $disponible = Utls::existImg($producto['fotoProdcuto']);
 		  	  ?>
 		  	<tr>
 		      <th scope="row"><?=$contador;?></th>
 		      <td><img class="card-img-top" src="<?=$disponible?>" alt=""></td>
-		      <td><?=$producto['nombreProducto']?></td>
-		      <td><?=$elemento['precio'];?></td>
-		      <td><?=$elemento['unidades'];?></td>
+		      <td style="text-align: center;"><?=$producto['nombreProducto']?></td>
+		      <!-- <td style="text-align: center;"><?=$elemento['unidades']?></td> -->
 		    </tr>
 		  	<?php 
 		  		$contador ++;
@@ -42,6 +42,7 @@ require_once 'helpers/utils.php';
 			<form method="post">
 			<button name="borrar">VACIAR CARRITO</button>
 			</form>
+			<button name="print" id="print">IMPRIMIR CATALOGO</button>
 			<?php else: ?>
 			<table class="table tableEmpty">
 		  <thead>
@@ -49,9 +50,6 @@ require_once 'helpers/utils.php';
 		      <th scope="col">#</th>
 		      <th scope="col">IMAGEN</th>
 		      <th scope="col">NOMBRE</th>
-		      <th scope="col">PRECIO</th>
-		      <th scope="col">UNIDADES</th>
-		      <th scope="col">ACCIÓN</th>
 		    </tr>
 		  </thead>
 		  <tbody>
