@@ -19,4 +19,14 @@ class Utls{
 		}
 		return $disponible;
     }
+    public static function existModelo($modelo){
+        $models;
+        if (!empty($modelo)) {
+                $models = $modelo;
+            }else{                  
+            $models = "S/M";
+             //$disponible = base_url.$mostrar["fotoProdcuto"];
+        }
+        return $models;
+    }
 }
