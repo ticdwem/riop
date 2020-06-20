@@ -152,12 +152,45 @@ $(document).ready(function(){
 				},
 				success:function(artUno){
 					console.log(artUno);
+					//return false;
 					if(artUno == 1){
 						window.location.href = "http://localhost/final-catalogo/catalogo";
 					}else if(artUno == 0){
-						alert("Hubo un error porfavor intente mas tarde no es array");
+						Swal.fire(
+						  'ERROR',
+						  'INTENTE MAS TARDE NO ES UN ARRAY',
+						  'warning'
+						)
 					}else if(artUno == 2){
 						alert("no sumo");
+					}else if(artUno == 3){
+						Swal.fire({
+						  title: 'ERROR',
+						  text: "TU CARRITO ESTA LLENO",
+						  icon: 'warning',
+						  showCancelButton: false,
+						  confirmButtonColor: '#3085d6',
+						  cancelButtonColor: '#d33',
+						  confirmButtonText: 'ACEPTAR'
+						}).then((result) => {
+						  if (result.value) {
+						    window.location.href = "http://localhost/final-catalogo/catalogo";
+						  }
+						})
+					}else if(artUno == 4){
+						Swal.fire({
+						  title: 'ERROR',
+						  text: "ESTE PRODUCTO YA ESTA EN TU CARRITO",
+						  icon: 'warning',
+						  showCancelButton: false,
+						  confirmButtonColor: '#3085d6',
+						  cancelButtonColor: '#d33',
+						  confirmButtonText: 'ACEPTAR'
+						}).then((result) => {
+						  if (result.value) {
+						    window.location.href = "http://localhost/final-catalogo/catalogo";
+						  }
+						})
 					}
 				}
 			});
@@ -281,5 +314,10 @@ $(document).ready(function(){
 		})
  	}
 
+ });
+
+ $("#print").on("click", function(e){
+ 	e.preventDefault();
+ 	window.open('generatePdf/micatalogo.php');
  });
 });
