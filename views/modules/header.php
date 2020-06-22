@@ -38,9 +38,11 @@
         <li class="nav-item">
         <a class="nav-link" href="<?=base_url?>contacto"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Ventas a Industrias  </a>
       </li>
+      <?php $stats = Utls::statCarrito();?>
       <li class="nav-item shopping">
         <a href="<?=base_url?>catalogo">
           <i class="fas fa-shopping-cart fa-2x"></i>
+          <div class="circulo"><p><?=$stats['count'];?></p></div>
         </a>
       </li>
      
