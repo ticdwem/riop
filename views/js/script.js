@@ -154,7 +154,8 @@ $(document).ready(function(){
 					console.log(artUno);
 					//return false;
 					if(artUno == 1){
-						window.location.href = "http://localhost/final-catalogo/catalogo";
+						 window.history.back();
+						 // window.location.href = "http://localhost/final-catalogo/catalogo";
 					}else if(artUno == 0){
 						Swal.fire(
 						  'ERROR',
@@ -174,6 +175,7 @@ $(document).ready(function(){
 						  confirmButtonText: 'ACEPTAR'
 						}).then((result) => {
 						  if (result.value) {
+						   
 						    window.location.href = "http://localhost/final-catalogo/catalogo";
 						  }
 						})
