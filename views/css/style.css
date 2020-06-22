@@ -1067,22 +1067,7 @@ border: transparent;  */
 } */
 
 /*VISTA CARRITO*/
-.circulo{
-	height: 18.5px;
-	width: 18.5px;
-	background: red;
-	border-radius: 50px;
-	position: relative;
-	top: -18px;
-	left: 25px;
-}
 
-.circulo p{
-	color: white;
-	position: relative;
-	top: -3px;
-	left: 5px;
-}
 .catlist{
 	/* border: 1px solid red; */
 	border-top: 1px solid #D2CCCC;
@@ -1118,16 +1103,48 @@ border: transparent;  */
 .catlist table thead tr th:nth-child(3),
 .catlist table thead tr th:nth-child(4),
 .catlist table thead tr th:nth-child(5),
-.catlist table tbody tr td:nth-child(4),
-.catlist table tbody tr td:nth-child(5){
+.catlist table tbody tr td:nth-child(4)/* ,
+.catlist table tbody tr td:nth-child(5) */
+{
 	text-align: center;
 }
 
 .tableEmpty tbody tr td{
 	height: 250px;
 }
+ .catlist tbody tr td button{
+ 	width: 100%;
+ 	height: 30px;
+ 	border-radius: 20px;
+ 	font-family: 'Adamina','Roboto','Slab';
+	background: #F78080;
+}
+ .catlist tbody tr td button:hover{
+ 	width: 100%;
+ 	height: 30px;
+	background: red;
+	text-decoration: underline;
+}
+
+
 
 /* carrito en header */
+.circulo{
+	height: 18.5px;
+	width: 18.5px;
+	background: red;
+	border-radius: 50px;
+	position: relative;
+	top: -18px;
+	left: 25px;
+}
+
+.circulo p{
+	color: white;
+	position: relative;
+	top: -3px;
+	left: 5px;
+}
 .shopping{
 	position: relative;
 	margin-left: 15px;
@@ -1173,6 +1190,36 @@ border: transparent;  */
 
 }
 
+/**********************botones imprimri y vaciar*********************************************/
+ .botones > button{
+	border-radius: 10px;
+/* 	width: 20%;
+	height: auto; */
+	margin: 0 7px 15px 10px;
+	font-size: 1.2em;
+	font-family: 'Adamina','Roboto','Slab';
+}
+
+/*.botones #vaciar{
+	background: #E92E2E;
+	color: white;
+	font-size: 14px;
+	font-weight: bolder;
+}
+.botones #vaciar:hover{
+	background: white;
+	color: red;
+}
+
+.botones #vaciar i{
+	color: #F0D5D5;
+	margin-left: 5px;
+}
+
+
+.botones #print{
+	background: #E92E2E;
+} */
 /**********************botones para categorias*********************************************/
 .categoriasExceldownload{
 	width: 100%;
