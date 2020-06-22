@@ -42,7 +42,7 @@
       <li class="nav-item shopping">
         <a href="<?=base_url?>catalogo">
           <i class="fas fa-shopping-cart fa-2x"></i>
-          <div class="circulo"><p><?=$stats['count'];?></p></div>
+          <div class="circulo" id="circulo"><p><?=$stats['count'];?></p></div>
         </a>
       </li>
      
