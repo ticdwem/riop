@@ -154,6 +154,14 @@ $(document).ready(function(){
 					console.log(artUno);
 					//return false;
 					if(artUno == 1){
+						Swal.fire({
+						  position: 'top-end',
+						  icon: 'success',
+						  title: 'SE HA AGREGADO AL CATALOGO',
+						  showConfirmButton: false,
+						  timer: 9500
+						})
+
 						 window.history.back();
 						 // window.location.href = "http://localhost/final-catalogo/catalogo";
 					}else if(artUno == 0){
@@ -199,6 +207,98 @@ $(document).ready(function(){
 
 		}
 	});
+/**********************************ELIMINAR DEL CARRITO********************************************************/
+$("body").on('click','.table button',function(e){
+	e.preventDefault();
+
+	idPRoducto = $(this).attr('data-id');
+
+	var producto = new FormData();
+	producto.append("idPRoducto",idPRoducto);
+
+	Swal.fire({
+	  title: 'ELIMINAR',
+	  text: "DESEA ELIMINAR ESTE ARTÍCULO DEL CATÁLOGO",
+	  icon: 'warning',
+	  showCancelButton: true,
+	  confirmButtonColor: '#3085d6',
+	  cancelButtonColor: '#d33',
+	  confirmButtonText: 'SI,ELIMINAR'
+	}).then((result) => {
+	  if (result.value) {
+	  	$.ajax({
+			url: "views/modules/ajax.php",
+			method:"POST",
+			data:producto,
+			cache:false,
+			contentType:false,
+			processData:false,
+			beforeSend:function(){
+			$('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
+					},
+			success:function(dato){
+				console.log(dato);
+				$("#catlist").empty();
+       			$("#catlist").load(location.href + " #catlist>", "");
+				$("#circulo").empty();
+       			$("#circulo").load(location.href + " #circulo>", "");			
+			
+			 }
+		})
+	    Swal.fire(
+	      'Deleted!',
+	      'Your file has been deleted.',
+	      'success'
+	    )
+	  }
+	})
+	
+});
+/**********************************VACIAR CARRITO********************************************************/
+$("#vaciar").on("click",function(e){
+	e.preventDefault();
+	var varciar =$("#vaciar").attr('data-id');
+	
+	var clean = new FormData();
+	clean.append("emoryy",varciar);
+
+	Swal.fire({
+	  title: 'ELIMINAR EL CATÁLOGO',
+	  text: "DESEA VACIAR EL CATÁLOGO",
+	  icon: 'warning',
+	  showCancelButton: true,
+	  confirmButtonColor: '#3085d6',
+	  cancelButtonColor: '#d33',
+	  confirmButtonText: 'SI,ELIMINAR'
+	}).then((result) => {
+	  if (result.value) {
+	  	$.ajax({
+			url: "views/modules/ajax.php",
+			method:"POST",
+			data:clean,
+			cache:false,
+			contentType:false,
+			processData:false,
+			beforeSend:function(){
+			$('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
+					},
+			success:function(dato){
+				console.log(dato);
+				$("#catlist").empty();
+       			$("#catlist").load(location.href + " #catlist>", "");
+				$("#circulo").empty();
+       			$("#circulo").load(location.href + " #circulo>", "");			
+			
+			 }
+		})
+	    Swal.fire(
+	      'VACIO!',
+	      'SU CATALOGO ESTA VACIO SELECCIONE AL MENOS UN ARTÍCULO',
+	      'success'
+	    )
+	  }
+	})
+});
 /**********************************ACTUALIZAR DATOS********************************************************/
 	$("#uploadData").on("click",function(){
 
