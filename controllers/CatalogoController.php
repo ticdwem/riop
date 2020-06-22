@@ -61,26 +61,24 @@ class CatalogoController{
         
     }
     
-    public function remove(){
+    public function remove($idPrd){
+        $validar = new Validacion();
+        $veamos = $validar->validarNumero($idPrd);
+        if($veamos == '0'){
+            echo 0; // este debe redirigir al inicio de la pagina, con un alert que diga que no fue agregado al carrito por que los datos estan mal
+        }else{
+            $producto_id = $veamos;
+            //var_dump($_SESSION['carrito']);
+            // var_dump ($_SESSION['carrito'][$idPrd]);
+            unset($_SESSION['carrito'][$producto_id]);
+        }
+
 
     }
 
-    public function delete_all(){
-        require_once 'helpers/utils.php';
-        Utls::deleteSession('carrito');
-
-    }
-
-    public function generatePdf($datos){
-require_once "../../vendor/autoload.php";
-
-
-$html2pdf = new Html2Pdf();
-$html = '<h1>HelloWorld</h1>This is my first test';
-$html.="<p>este es unmaster en php</p>";
-$html2pdf->writeHTML($html);
-$html2pdf->output('juihihi.pdf');
-
+    public function delete_all($sesionName){
+        // require_once 'helpers/utils.php';
+        Utls::deleteSession($sesionName);
 
     }
 }
