@@ -17,6 +17,8 @@ require_once "controllers/categorias.php";
 require_once "controllers/usuario.php";
 require_once "config/parameters.php";
 
+require_once 'helpers/utils.php';
+
 
 // require_once "controllers/NumeroALetras.php";
 
