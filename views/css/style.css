@@ -1067,6 +1067,22 @@ border: transparent;  */
 } */
 
 /*VISTA CARRITO*/
+.circulo{
+	height: 18.5px;
+	width: 18.5px;
+	background: red;
+	border-radius: 50px;
+	position: relative;
+	top: -18px;
+	left: 25px;
+}
+
+.circulo p{
+	color: white;
+	position: relative;
+	top: -3px;
+	left: 5px;
+}
 .catlist{
 	/* border: 1px solid red; */
 	border-top: 1px solid #D2CCCC;
