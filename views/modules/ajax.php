@@ -72,6 +72,19 @@ public function setDato($archivo)
 		$generarQuery = new datosBack();
 		$generarQuery->gnerateQuery($query);
 	}
+
+	public function deleteId(){
+		$query = $this->getDato();
+
+		$generarQuery = new CatalogoController();
+		$generarQuery->remove($query);
+	}
+	public function vaciarCatalogo(){
+		$query = $this->getDato();
+
+		$generarQuery = new CatalogoController();
+		$generarQuery->delete_all($query);
+	}
 	
 }
 
@@ -103,5 +116,17 @@ if(isset($_POST['valor'])){
  	$checks  = new Ajax();
  	$checks->setDato($_POST['chek']);
  	$checks->createQuery();
+ }
+
+ if (isset($_POST['idPRoducto'])) {
+ 	$checks  = new Ajax();
+ 	$checks->setDato($_POST['idPRoducto']);
+ 	$checks->deleteId();
+ }
+
+ if (isset($_POST['emoryy'])) {
+ 	$checks  = new Ajax();
+ 	$checks->setDato($_POST['emoryy']);
+ 	$checks->vaciarCatalogo();
  }
 ?>
