@@ -29,4 +29,18 @@ class Utls{
         }
         return $models;
     }
+
+    public static function statCarrito(){
+        $stats = array(
+            'count' => 0,
+            'total' => 0
+        );
+        if (isset($_SESSION['carrito'])) {
+            # code...
+            $stats['count'] = count($_SESSION['carrito']);
+        }
+
+        
+        return $stats;
+    }
 }
