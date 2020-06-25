@@ -150,8 +150,6 @@ $(document).ready(function(){
 					$('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
 				},
 				success:function(artUno){
-					console.log(artUno);
-					//return false;
 					if(artUno == 1){
 						Swal.fire({
 						  position: 'top-end',
@@ -236,7 +234,6 @@ $("body").on('click','.table button',function(e){
 			$('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
 					},
 			success:function(dato){
-				console.log(dato);
 				$("#catlist").empty();
        			$("#catlist").load(location.href + " #catlist>", "");
 				$("#circulo").empty();
@@ -282,7 +279,6 @@ $("#vaciar").on("click",function(e){
 			$('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
 					},
 			success:function(dato){
-				console.log(dato);
 				$("#catlist").empty();
        			$("#catlist").load(location.href + " #catlist>", "");
 				$("#circulo").empty();
@@ -328,7 +324,6 @@ $("#vaciar").on("click",function(e){
 						// $('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
 					},
 			success:function(dato){
-				console.log(dato);
 				if(dato == 1){
 					Swal.fire({
 					  icon: 'error',
@@ -408,7 +403,6 @@ $("#vaciar").on("click",function(e){
 						// $('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
 					},
 			success:function(dato){
-				console.log(dato);
 				if(dato == 100){
 					Swal.fire({
 					  icon: 'error',
