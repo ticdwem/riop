@@ -416,6 +416,14 @@ $("#vaciar").on("click",function(e){
 					  text: 'HAY UN ERROR EN LOS DATOS',
 					  footer: 'llama al administrador para una revisión'
 					})
+				}else if(dato == 1){
+					Swal.fire({
+					  position: 'center',
+					  icon: 'success',
+					  title: 'SE HA DESCARGADO EL ARCHIVO EN TU CARPETA DE DESCARGAS',
+					  showConfirmButton: false,
+					  timer: 3500
+					})
 				}
 				
 			
