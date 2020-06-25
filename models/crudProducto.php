@@ -17,6 +17,7 @@ class Crud extends Conexion
 	private $idProveedorProducto;
 	private $idSublineaProducto;
 	private $fotoProdcuto;
+    private $tabla;
 
 	public $db;
 	function __construct()
@@ -167,7 +168,17 @@ class Crud extends Conexion
 
         return $this;
     }
+    public function gettabla()
+    {
+        return $this->tabla;
+    }
 
+    public function settabla($tabla)
+    {
+        $this->tabla = $tabla;
+
+        return $this;
+    }
     public function insertProd(){
     	$insertCod = "INSERT INTO productosPrueba
 	(codigoProducto, nombreProducto, descripcionProducto, modeloProducto, skuProducto, codigoSatProductos, precio, idMarcaProdcuto, unidadBaseProducto, idProveedorProducto, idSublineaProducto, fotoProdcuto)
@@ -195,8 +206,7 @@ class Crud extends Conexion
             return "1";
         }
         $insert->close();
-    }
-    
+    }    
 }
 
 
