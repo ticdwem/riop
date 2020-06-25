@@ -65,7 +65,7 @@
 	
 
 	 public function getDinamico(){
-	 	$query = "SELECT {$this->getDatos()} from {$this->getTabla()} WHERE {$this->getWhere()} = {$this->getIdCategoria()} ";
+	 	$query = "SELECT {$this->getDatos()} from {$this->getTabla()} WHERE {$this->getWhere()} = '{$this->getIdCategoria()}' ";
 	 	$dinamico = $this->db->prepare($query);
 	 	$dinamico->execute();
 	 	return $dinamico->fetchAll(PDO::FETCH_ASSOC);
