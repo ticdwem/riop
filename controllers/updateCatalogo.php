@@ -1,5 +1,9 @@
 <?php 
 use Box\Spout\Reader\Common\Creator\ReaderEntityFactory;
+use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
+use Box\Spout\Writer\Common\Creator\Style\StyleBuilder;
+use Box\Spout\Common\Entity\Style\CellAlignment;
+use Box\Spout\Common\Entity\Style\Color;
 class datosBack
 {
 
@@ -42,22 +46,74 @@ class datosBack
 	
 	public function gnerateQuery($argument)
 	{
+		$categoria;
+		$header;
 		$data = json_decode($_POST['chek'],true);
 		$last = end($data);
+		$contar = count($data);
+		unset($data[$contar-1]);
 
 		$table = new Validacion();
-		$id = $table->pregmatchletras($last['id']);
+		$id = $table->validarNumero($last['id']);
 		$tbl = $table->pregmatchletras($last['tabla']);
+		if($id != 0 || $tbl != 0){
+			for ($i=0; $i <$contar-1 ; $i++) { 
+				$dato = $table->pregmatchletras($data[$i]);
+				if($dato == '0'){
+					echo '100';
+					break;
+				}
+			}
 
-		if($id != 1 || $tbl != 1){
-
-			var_dump($data);
-			$delete = array_pop($data);
 			$datos = implode(",", $data);
+			switch ($last['tabla']) {
+				case 'marca':
+					$categoria = "idMarcaProdcuto";
+					break;
+				case 'sublinea':
+					$categoria = "idSublineaProducto";
+					break;	
+				case 'proveedor':
+					$categoria = "idProveedorProducto";
+					break;
+				case 'linea':
+					$categoria = "";
+					break;				
+				default:
+					# code...
+					break;
+			}
+
+			$get = new GetAndSetFilas();
+			$get ->setDatos($datos);
+			$get ->setTabla("productos");
+			$get ->setWhere($categoria);
+			$get ->setIdCategoria($last['id']);
+			$filas = $get->getDinamico();
+			
+		$writer = WriterEntityFactory::createXLSXWriter();
+		$filePath = '../../guardarExcel/copia_.xlsx';
+		$writer->openToFile($filePath);
+		// $writer->openToBrowser("excelNuevo"); // stream data directly to the browser
+		//agregamos encabezado
+		$row = WriterEntityFactory::createRowFromArray($data);
+		$writer->addRow($row);
+		//imprimimos en las filas
+		 $contador = 1;
+		 foreach ($filas as $indice) {
+			$row = WriterEntityFactory::createRowFromArray($indice);
+			$writer->addRow($row);
+			$contador++;
+		 	# code...
+		 }
+		
+		/** Create a row with cells and apply the style to all cells */
+
+		/** Add the row to the writer */
+		$writer->close();
 		}
 
-		// var_dump($last['tabla']);
-		// var_dump($last['id']);
+		
 		
 	}
 }
