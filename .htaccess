@@ -4,7 +4,7 @@ Options +FollowSymLinks -MultiViews
 
 
 RewriteEngine on
-ErrorDocument 404 http://www.riopisuena.com.mx/error
+#ErrorDocument 404 http://www.riopisuena.com.mx/error
 
 RewriteCond %{HTTP_HOST} ^http://www.riopisuena.com.mx [NC]
 RewriteRule ^(.*)$ http://http://www.riopisuena.com.mx/$1 [L,R=301]
