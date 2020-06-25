@@ -8,6 +8,7 @@ require_once '../../controllers/validacion.php';
 require_once '../../models/catLineaSub.php';
 require_once '../../models/carrito.php';
 require_once '../../models/crudProducto.php';
+require_once '../../models/updateWithExcel.php';
 require_once '../../helpers/utils.php';
 require_once "../../vendor/box/spout/src/Spout/Autoloader/autoload.php";
 
