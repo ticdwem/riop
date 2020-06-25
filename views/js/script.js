@@ -78,7 +78,6 @@ $(document).ready(function(){
 				document.getElementById("loguinLock").innerHTML='<div><img src="views/images/load.gif"  width="30px" height="30px" /></div>';
 			},*/
 			success:function(nextValue){
-				console.log(nextValue);
 				if(nextValue != 0){
 					$.each(nextValue,function (i,item) {
 						// radio += '<div class="form-check col-lg-6"><input type="radio" name="subLineaRadio" class="form-check-input" value="'+item.idSubLn+'"><label class="form-check-label" for="exampleCheck1">'+item.nombre+'</label></div>';
@@ -376,7 +375,7 @@ $("#vaciar").on("click",function(e){
  	$('input[type=checkbox]:checked').each(function(){
  		genera.push($(this).val());
  	});
- 		genera.push({"tabla":option,"id":query});
+ 		genera.push({"tabla":query,"id":option});
 
  	if(genera.length == 1){
  		Swal.fire({
@@ -402,14 +401,22 @@ $("#vaciar").on("click",function(e){
 	            onOpen: ()=>{
 	                Swal.showLoading();
 	            }
-	            /*,
+	            ,
              timer: 3000,
-             timerProgressBar: true*/
+             timerProgressBar: true
         	});	
 						// $('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
 					},
 			success:function(dato){
 				console.log(dato);
+				if(dato == 100){
+					Swal.fire({
+					  icon: 'error',
+					  title: 'Error',
+					  text: 'HAY UN ERROR EN LOS DATOS',
+					  footer: 'llama al administrador para una revisión'
+					})
+				}
 				
 			
 			 }
