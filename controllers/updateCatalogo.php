@@ -46,8 +46,9 @@ class datosBack
 	
 	public function gnerateQuery($argument)
 	{
+	require_once "../../vendor/autoload.php";
 		$categoria;
-		$header;
+		$tabla;
 		$data = json_decode($_POST['chek'],true);
 		$last = end($data);
 		$contar = count($data);
@@ -69,48 +70,51 @@ class datosBack
 			switch ($last['tabla']) {
 				case 'marca':
 					$categoria = "idMarcaProdcuto";
+					$tabla = "productos";
 					break;
 				case 'sublinea':
 					$categoria = "idSublineaProducto";
+					$tabla = "productos";
 					break;	
 				case 'proveedor':
 					$categoria = "idProveedorProducto";
+					$tabla = "productos";
 					break;
 				case 'linea':
-					$categoria = "";
+					$categoria = "linea.idLinea";
+					$tabla = "productos 
+								INNER JOIN sublinea 
+								ON idSublineaProducto = idSublinea 
+								INNER JOIN linea 
+								ON sublinea.idLinea = linea.idLinea";
 					break;				
 				default:
 					# code...
 					break;
-			}
+			};
 
 			$get = new GetAndSetFilas();
 			$get ->setDatos($datos);
-			$get ->setTabla("productos");
+			$get ->setTabla($tabla);
 			$get ->setWhere($categoria);
 			$get ->setIdCategoria($last['id']);
 			$filas = $get->getDinamico();
 			
-		$writer = WriterEntityFactory::createXLSXWriter();
-		$filePath = '../../guardarExcel/copia_.xlsx';
-		$writer->openToFile($filePath);
-		// $writer->openToBrowser("excelNuevo"); // stream data directly to the browser
-		//agregamos encabezado
-		$row = WriterEntityFactory::createRowFromArray($data);
-		$writer->addRow($row);
-		//imprimimos en las filas
-		 $contador = 1;
-		 foreach ($filas as $indice) {
-			$row = WriterEntityFactory::createRowFromArray($indice);
+			$writer = WriterEntityFactory::createXLSXWriter();
+			$filePath = url_home."\Downloads\modificar".ucfirst($last['tabla']).date('i_s').".xlsx";
+			$writer->openToFile($filePath);
+			//agregamos encabezado
+			$row = WriterEntityFactory::createRowFromArray($data);
 			$writer->addRow($row);
-			$contador++;
-		 	# code...
-		 }
-		
-		/** Create a row with cells and apply the style to all cells */
-
-		/** Add the row to the writer */
-		$writer->close();
+			//imprimimos en las filas
+			 foreach ($filas as $indice) {
+				$row = WriterEntityFactory::createRowFromArray($indice);
+				$writer->addRow($row);
+			 }
+			$writer->close();
+			echo '1';
+		}else{
+			echo '100';
 		}
 
 		
