@@ -156,7 +156,7 @@ include "views/modules/header.php";
   <p class="texto-encima2">"Contamos con Ventas a Industrias"</p>
   <!-- <div class="centrado2" style="font-family: 'Dosis', sans-serif;">Ventas a Industrias</div> -->
   <!-- <button type="button" class="btn btn-danger boton-cursos">Me interesa</button> -->
-   <a class="btn btn-danger boton-cursos text-white" id="" href="<?php echo $especifDato;?>contacto">Me Interesa</a>
+   <a class="btn btn-danger boton-cursos text-white" id="" href="<?=base_url?>contacto">Me Interesa</a>
 </div>
 </div>
 
