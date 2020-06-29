@@ -301,7 +301,7 @@ $("#vaciar").on("click",function(e){
 		var Form = new FormData($('#filesForm')[0]);
 
 		$.ajax({
-			url: "../views/modules/ajax.php",
+			url: "views/modules/ajax.php",
 			method:"POST",
 			data:Form,
 			cache:false,
@@ -316,14 +316,15 @@ $("#vaciar").on("click",function(e){
 	            showConfirmButton: false,
 	            onOpen: ()=>{
 	                Swal.showLoading();
-	            }
+	            },
 
-            // timer: 3000,
-            // timerProgressBar: true
+            timer: 3000,
+            timerProgressBar: true
         	});	
 						// $('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
 					},
 			success:function(dato){
+				console.log(dato);
 				if(dato == 1){
 					Swal.fire({
 					  icon: 'error',
@@ -426,9 +427,58 @@ $("#vaciar").on("click",function(e){
  	}
 
  });
+/****************************enviar correo******************************************/
 
  $("#print").on("click", function(e){
  	e.preventDefault();
- 	window.open('generatePdf/micatalogo.php');
+ 	//window.open('generatePdf/micatalogo.php');
+ 	var nombre = empty($("#Inputname").val());
+ 	var correo = empty($("#inputEmail").val());
+
+ 	var contador = false;
+ 	if(nombre != 1){
+ 		var verNom = expRegular("nombre",$("#Inputname").val());
+ 		if(verNom!=0){
+ 			contador = true;
+ 			$("#Inputname").addClass("is-valid");
+ 		}else{
+ 			contador = false;
+ 			$("#Inputname").addClass("is-invalid");
+ 			$(".nameError").css("color","red");
+	 		$(".nameError").html("ingresa un nombre valido");
+ 		}
+ 	}else{
+ 		contador = false;
+ 		$("#Inputname").addClass("is-invalid");
+ 	}
+ 	if(correo != 1){
+ 		 var email = expRegular("email",$("#inputEmail").val());
+ 		if(email != 0){
+	 		correo = true;
+	 		$("#inputEmail").addClass("is-valid");
+
+ 		}else{ 	
+ 			contador = false;		
+ 			$("#inputEmail").addClass("is-invalid");
+	 		$(".emailError").css("color","red");
+	 		$(".emailError").html("ingresa un correo valido");
+ 		}
+ 	}else{
+ 		contador = false;
+ 		$("#inputEmail").addClass("is-invalid");
+ 	}
  });
+ /****************************cancelar modal******************************************/
+ $("#cancel").on("click",function(e){
+ 	e.preventDefault();
+ 	var nombre = $("#Inputname").val("");
+ 	var correo = $("#inputEmail").val("");
+	$("#Inputname").addClass("is-invalid");
+ 	$("#inputEmail").addClass("is-invalid");
+ 	$("#Inputname").addClass("is-valid");
+ 	$("#inputEmail").addClass("is-valid");
+ 	$(".nameError").html("");
+	$(".emailError").html("i");
+
+ })
 });
