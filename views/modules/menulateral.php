@@ -1,8 +1,8 @@
 <div class="wrapper d-flex align-items-stretch">
 <nav id="sidebar">
   <div class="custom-menu">
-    <button type="button" id="sidebarCollapse" class="btn btn-primary">
-    </button>
+    <a href=""><button type="button" id="sidebarCollapse" class="btn btn-primary">
+    </button></a>
   </div>
   <div class="img bg-wrap text-center py-4" style="background-image: url(<?=base_url?>images/logo.png);">
     <div class="user-logo">
@@ -11,11 +11,8 @@
     </div>
   </div>
   <ul class="list-unstyled components mb-5">
-    <li class="active">
-      <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
-    </li>
     <li>
-      <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>
+      <a href="<?=base_url?>downloadExcel"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> MODIFICAR POR CATEGORIA</a>
     </li>
     <li>
       <a href="#"><span class="fa fa-gift mr-3"></span> Gift Code</a>

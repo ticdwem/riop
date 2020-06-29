@@ -49,8 +49,5 @@
               
     </ul>
     </div>
-  <!--   <div class="imagf" id="animacion7">
-    	<a href="inicio" class="imagelog" itemprop="logo"><img src="<?php //echo $especifDato; ?>images/logo1.png" alt="logo_roipizuena"></a>
-    		</div> -->
   </div>
 </nav>

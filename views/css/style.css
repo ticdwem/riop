@@ -1240,33 +1240,10 @@ border: transparent;  */
 /**********************botones imprimri y vaciar*********************************************/
  .botones > button{
 	border-radius: 10px;
-/* 	width: 20%;
-	height: auto; */
 	margin: 0 7px 15px 10px;
 	font-size: 1.2em;
 	font-family: 'Adamina','Roboto','Slab';
 }
-
-/*.botones #vaciar{
-	background: #E92E2E;
-	color: white;
-	font-size: 14px;
-	font-weight: bolder;
-}
-.botones #vaciar:hover{
-	background: white;
-	color: red;
-}
-
-.botones #vaciar i{
-	color: #F0D5D5;
-	margin-left: 5px;
-}
-
-
-.botones #print{
-	background: #E92E2E;
-} */
 /**********************botones para categorias*********************************************/
 .categoriasExceldownload{
 	width: 100%;

@@ -227,12 +227,7 @@ class Productos
 		$tp = $randPRoducto->getRandom($tbl);
 		if($tp != 0){
 			foreach($tp as $presentar){
-				if (!is_array(@getimagesize("http://ticdwem.com/ferreterariopisuena/".$presentar["fotoProdcuto"]))) {
-					    $disponible = base_url.'images/no_disponible.jpg';
-					}else{					
-					$disponible = "http://ticdwem.com/ferreterariopisuena/".$presentar["fotoProdcuto"];
-					 //$disponible = base_url.$mostrar["fotoProdcuto"];
-				}
+				$disponible = Utls::existImg($presentar["fotoProdcuto"]);
 			?>
 				<div class="slide"><a href='producto/<?=$presentar["codigoProducto"]?>'><img src="<?=$disponible; ?>"></a><p><?=$presentar["nombreProducto"]; ?></p></div>
 			<?php
