@@ -15,10 +15,10 @@
       <a href="<?=base_url?>downloadExcel"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> MODIFICAR POR CATEGORIA</a>
     </li>
     <li>
-      <a href="#"><span class="fa fa-gift mr-3"></span> Gift Code</a>
+      <a href="<?=base_url?>updateDatos"><span class="fa fa-gift mr-3"></span>SUBIR CAMBIOS EXCEL</a>
     </li>
     <li>
-      <a href="#"><span class="fa fa-trophy mr-3"></span> Top Review</a>
+      <a href="<?=base_url?>registro"><span class="fa fa-trophy mr-3"></span>NUEVO USUARIO</a>
     </li>
     <li>
       <a href="#"><span class="fa fa-cog mr-3"></span> Settings</a>
