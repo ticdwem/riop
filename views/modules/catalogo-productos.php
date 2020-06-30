@@ -1,5 +1,7 @@
 <?php
+//$comienzo= microtime(true);  //al inicio del archivo
 include "views/modules/header.php";
+include 'views/modules/topcache.php';
 ?>
 <div class="container">  
   <div class="card border-0 shadow my-5"> 
@@ -120,4 +122,7 @@ include "views/modules/header.php";
 </div>
 <?php
 include "views/modules/footer.php";
+include 'views/modules/buttomcache.php';
+/*$final= microtime(true);  //al final del archivo
+echo  "Tiempo: ". number_format($final-$comienzo,4)."  segundos.";*/
 ?>
