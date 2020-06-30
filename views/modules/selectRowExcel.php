@@ -3,7 +3,7 @@ include "views/modules/menulateral.php";
 ?>
  <div id="content" class="p-4 p-md-5 pt-5">
  <div class="tituloreg">
-    <h2>ESCOGE LAS FILAS QUE DESEAS MODIFICAR</h2>
+    <h2>FILAS SELECCIONADAS PARA DESCARGAR</h2>
 </div>
 <input type="hidden" name="get" id="get" value="<?=$_GET['n']?>">
 <div class="selectRows">
@@ -16,49 +16,49 @@ include "views/modules/menulateral.php";
 				</label>
 			</div>
 			<div class="form-check">
-				<input class="form-check-input" type="checkbox" id="NombreP" name="nombreProducto" value="nombreProducto">
+				<input class="form-check-input" type="checkbox" id="NombreP" name="nombreProducto" value="nombreProducto" checked disabled>
 				<label class="form-check-label" for="NombreP">
 					NOMBRE PRODUCTO
 				</label>
 			</div>
 			<div class="form-check">
-				<input class="form-check-input" type="checkbox" id="descripcion" name="descripcionProducto" value="descripcionProducto">
+				<input class="form-check-input" type="checkbox" id="descripcion" name="descripcionProducto" value="descripcionProducto" checked disabled>
 				<label class="form-check-label" for="descripcion">
 					DESCRIPCIÓN PRODUCTO
 				</label>
 			</div>
 			<div class="form-check">
-				<input class="form-check-input" type="checkbox" id="modelo" name="modeloProducto" value="modeloProducto">
+				<input class="form-check-input" type="checkbox" id="modelo" name="modeloProducto" value="modeloProducto" checked disabled>
 				<label class="form-check-label" for="modelo">
 					MODELO PRODUCTO
 				</label>
 			</div>
 			<div class="form-check">
-				<input class="form-check-input" type="checkbox" id="sku" name="skuProducto" value="skuProducto">
+				<input class="form-check-input" type="checkbox" id="sku" name="skuProducto" value="skuProducto" checked disabled>
 				<label class="form-check-label" for="sku">
 					SKU PRODUCTO
 				</label>
 			</div>
 			<div class="form-check">
-				<input class="form-check-input" type="checkbox" id="csat" name="codigoSatProductos" value="codigoSatProductos">
+				<input class="form-check-input" type="checkbox" id="csat" name="codigoSatProductos" value="codigoSatProductos" checked disabled>
 				<label class="form-check-label" for="csat">
 					CODIGO SAT PRODUCTO
 				</label>
 			</div>
 			<div class="form-check">
-				<input class="form-check-input" type="checkbox" id="precio" name="precio" value="precio">
+				<input class="form-check-input" type="checkbox" id="precio" name="precio" value="precio" checked disabled>
 				<label class="form-check-label" for="precio">
 					PRECIO PRODUCTO
 				</label>
 			</div>
 			<div class="form-check">
-				<input class="form-check-input" type="checkbox" id="unidad" name="unidadBaseProducto" value="unidadBaseProducto">
+				<input class="form-check-input" type="checkbox" id="unidad" name="unidadBaseProducto" value="unidadBaseProducto" checked disabled>
 				<label class="form-check-label" for="unidad">
 					UNIDAD PRODUCTO
 				</label>
 			</div>
 			<div class="form-check">
-				<input class="form-check-input" type="checkbox" id="prove" name="idProveedorProducto" value="idProveedorProducto">
+				<input class="form-check-input" type="checkbox" id="prove" name="idProveedorProducto" value="idProveedorProducto" checked disabled>
 				<label class="form-check-label" for="prove">
 					PROVEEDOR PRODUCTO
 				</label>
