@@ -1,0 +1,501 @@
+<div class="container">  
+  <div class="card border-0 shadow my-5"> 
+    <div class="card-body p-5">
+      <div class="row bus-bar">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+             <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100"style="width: 100px; height:350px;"  src="images/bann-catalogo4.png" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" style="width: 100px; height: 350px;"  src="images/bann-catalogo3.jpg" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" style="width: 100px; height: 350px;" src="images/bann-catalogo5.jpg" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+      </div>     
+      <div style="height:100%">  
+      <div class="row bus-bar">
+        <div class="col-lg-12">
+          <form class="bar-bus" action="http://192.168.1.69/final-catalogo/catalogo-productos" method="get" id="frmFormSerarching">
+          <div class="input-group input-group-lg">
+            <input type="text" class="form-control" id="buscarInput" placeholder="Busqueda de producto" aria-label="" name="buscar" aria-describedby="button-addon2" autocomplete="off">
+            <div class="errorInput"></div>
+            <div class="input-group-append">
+             <!-- <button class="btn btn-outline-danger" type="button" id="btn_buscar"><i class="fa fa-search" aria-hidden="true"></i></button>-->
+           <!--   <input type="submit" class="btn btn-outline-danger" id="btn_buscar" value="BUSCAR"> -->
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+        <div class="row check-all" >
+          <div class="card bus-check card-body col-lg-6">
+            <p class="txt-estilo text-center">LINEA</p>
+            <div class="row" id="Dvlinea">
+              		<div class="form-check col-lg-6">
+			<input type="radio" name="lineaPr" class="form-check-input" value="1">
+			<label class="form-check-label" for="exampleCheck1">ABRASIVOS </label>
+		</div>
+			<div class="form-check col-lg-6">
+			<input type="radio" name="lineaPr" class="form-check-input" value="2">
+			<label class="form-check-label" for="exampleCheck1">HERRAMIENTA </label>
+		</div>
+			<div class="form-check col-lg-6">
+			<input type="radio" name="lineaPr" class="form-check-input" value="3">
+			<label class="form-check-label" for="exampleCheck1">PLOMERIA </label>
+		</div>
+			<div class="form-check col-lg-6">
+			<input type="radio" name="lineaPr" class="form-check-input" value="4">
+			<label class="form-check-label" for="exampleCheck1">OTROS </label>
+		</div>
+	            </div>
+          </div>
+          <div class="card bus-check card-body col-lg-6">
+          <div class="row" id="Sublinea">
+          <div class="d-flex align-items-center" >
+            <strong style="font-size: 20px;">Selecciona una Linea...</strong>
+          </div>
+            </div>
+            <button type="button" class="btn btn-outline-success" id="btnBuscarPreciso" style="display: none;">BUSCAR</button>
+          </div>
+        <!--     <div class="card bus-check3 card-body col-lg-4">
+                 <p class="text-center">LINEA</p>
+            <div class="row">
+            <div class="form-check col-lg-6">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">CARPINTERIA</label>
+            </div>
+            <div class="form-check col-lg-6">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">PLOMERIA</label>
+            </div>
+            <div class="form-check col-lg-6">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">ALBAÑILERIA</label>
+            </div>
+            <div class="form-check col-lg-6">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">ABRASIVOS</label>
+            </div>
+            <div class="form-check col-lg-6">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">HERRAMIENTA</label>
+            </div>
+             <div class="form-check col-lg-6">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">ELECTRICO</label>
+            </div>
+            </div>
+          </div> -->
+        </div>
+        <div class="row srch-prod crd-prod">
+         
+	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+	         <div class="card h-100">
+	            <a href="http://192.168.1.69/final-catalogo/producto/333-108A3-02"><img class="card-img-top" src="http://ticdwem.com/ferreterariopisuena/images/prod/333-108A3-02.jpg" alt="">
+	             <div class="card-body">
+	              <h4 class="card-title">
+	              	ACEITE LUBRICANTE DE 90 ML.	              </h4>
+	              <p class="card-text">MODELO: </p>
+	              <p class="card-text">MARCA: 3 EN 1</p>
+	            </div>
+	            </a>
+	          </div>
+	        </div>
+			 
+	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+	         <div class="card h-100">
+	            <a href="http://192.168.1.69/final-catalogo/producto/327-106N1"><img class="card-img-top" src="http://ticdwem.com/ferreterariopisuena/images/prod/327-106N1.jpg" alt="">
+	             <div class="card-body">
+	              <h4 class="card-title">
+	              	TAPON AUDITIVO TIPO MALVAVISCO EAR  YELLOW	              </h4>
+	              <p class="card-text">MODELO: 3M1250</p>
+	              <p class="card-text">MARCA: 3M</p>
+	            </div>
+	            </a>
+	          </div>
+	        </div>
+			 
+	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+	         <div class="card h-100">
+	            <a href="http://192.168.1.69/final-catalogo/producto/327-106N4"><img class="card-img-top" src="http://ticdwem.com/ferreterariopisuena/images/prod/327-106N4.jpg" alt="">
+	             <div class="card-body">
+	              <h4 class="card-title">
+	              	MASCARILLA DE CONCHA	              </h4>
+	              <p class="card-text">MODELO: 3M8210</p>
+	              <p class="card-text">MARCA: 3M</p>
+	            </div>
+	            </a>
+	          </div>
+	        </div>
+			 
+	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+	         <div class="card h-100">
+	            <a href="http://192.168.1.69/final-catalogo/producto/327-106N5"><img class="card-img-top" src="http://ticdwem.com/ferreterariopisuena/images/prod/327-106N5.jpg" alt="">
+	             <div class="card-body">
+	              <h4 class="card-title">
+	              	MASCARILLA DE MEDIA CARA SERIE 6000	              </h4>
+	              <p class="card-text">MODELO: 6200</p>
+	              <p class="card-text">MARCA: 3M</p>
+	            </div>
+	            </a>
+	          </div>
+	        </div>
+			 
+	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+	         <div class="card h-100">
+	            <a href="http://192.168.1.69/final-catalogo/producto/327-106N6"><img class="card-img-top" src="http://ticdwem.com/ferreterariopisuena/images/prod/327-106N6.jpg" alt="">
+	             <div class="card-body">
+	              <h4 class="card-title">
+	              	CARTUCHO PARA VAPORES ORGANICOS (PAR)	              </h4>
+	              <p class="card-text">MODELO: 6001</p>
+	              <p class="card-text">MARCA: 3M</p>
+	            </div>
+	            </a>
+	          </div>
+	        </div>
+			 
+	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+	         <div class="card h-100">
+	            <a href="http://192.168.1.69/final-catalogo/producto/333-106CN-02"><img class="card-img-top" src="http://ticdwem.com/ferreterariopisuena/images/prod/333-106CN-02.jpg" alt="">
+	             <div class="card-body">
+	              <h4 class="card-title">
+	              	Cinta de Aislar 19 mm * 18 mt  	              </h4>
+	              <p class="card-text">MODELO: SCOTCH 33</p>
+	              <p class="card-text">MARCA: 3M</p>
+	            </div>
+	            </a>
+	          </div>
+	        </div>
+			 
+	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+	         <div class="card h-100">
+	            <a href="http://192.168.1.69/final-catalogo/producto/333-106CN-021"><img class="card-img-top" src="http://ticdwem.com/ferreterariopisuena/images/prod/333-106CN-021.jpg" alt="">
+	             <div class="card-body">
+	              <h4 class="card-title">
+	              	Cinta de Aislar Fibra de  Vidrio 1/2"  * 20 MT	              </h4>
+	              <p class="card-text">MODELO: SCOTCH 27</p>
+	              <p class="card-text">MARCA: 3M</p>
+	            </div>
+	            </a>
+	          </div>
+	        </div>
+			 
+	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+	         <div class="card h-100">
+	            <a href="http://192.168.1.69/final-catalogo/producto/333-106CN-022"><img class="card-img-top" src="http://ticdwem.com/ferreterariopisuena/images/prod/333-106CN-022.jpg" alt="">
+	             <div class="card-body">
+	              <h4 class="card-title">
+	              	Cinta de Aislar Fibra  de Vidrio 3/4 	              </h4>
+	              <p class="card-text">MODELO: SCOTCH 27</p>
+	              <p class="card-text">MARCA: 3M</p>
+	            </div>
+	            </a>
+	          </div>
+	        </div>
+			 
+	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+	         <div class="card h-100">
+	            <a href="http://192.168.1.69/final-catalogo/producto/333-106CN-023"><img class="card-img-top" src="http://ticdwem.com/ferreterariopisuena/images/prod/333-106CN-023.jpg" alt="">
+	             <div class="card-body">
+	              <h4 class="card-title">
+	              	Cinta de  Aislar Vulcanizable 3/4 * 9 MT	              </h4>
+	              <p class="card-text">MODELO: SCOTCH 23  .</p>
+	              <p class="card-text">MARCA: 3M</p>
+	            </div>
+	            </a>
+	          </div>
+	        </div>
+			 
+	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+	         <div class="card h-100">
+	            <a href="http://192.168.1.69/final-catalogo/producto/333-106CN-024"><img class="card-img-top" src="http://ticdwem.com/ferreterariopisuena/images/prod/333-106CN-024.jpg" alt="">
+	             <div class="card-body">
+	              <h4 class="card-title">
+	              	Cinta de Aislar  19 mm * 18 mt  	              </h4>
+	              <p class="card-text">MODELO: TEMFLEX 1600</p>
+	              <p class="card-text">MARCA: 3M</p>
+	            </div>
+	            </a>
+	          </div>
+	        </div>
+			 
+	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+	         <div class="card h-100">
+	            <a href="http://192.168.1.69/final-catalogo/producto/333-106CN-03"><img class="card-img-top" src="http://ticdwem.com/ferreterariopisuena/images/prod/333-106CN-03.jpg" alt="">
+	             <div class="card-body">
+	              <h4 class="card-title">
+	              	CINTA ANTIDERRAPANTE PARA ESCALONES 1" * 18 MTS	              </h4>
+	              <p class="card-text">MODELO: 3MRA25</p>
+	              <p class="card-text">MARCA: 3M</p>
+	            </div>
+	            </a>
+	          </div>
+	        </div>
+			 
+	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+	         <div class="card h-100">
+	            <a href="http://192.168.1.69/final-catalogo/producto/333-106CN-035"><img class="card-img-top" src="http://ticdwem.com/ferreterariopisuena/images/prod/333-106CN-035.jpg" alt="">
+	             <div class="card-body">
+	              <h4 class="card-title">
+	              	CINTA ANTIDERRAPANTE P/ESCALONES  3/4" * 18 MT 	              </h4>
+	              <p class="card-text">MODELO: 3MRA19</p>
+	              <p class="card-text">MARCA: 3M</p>
+	            </div>
+	            </a>
+	          </div>
+	        </div>
+			 
+	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+	         <div class="card h-100">
+	            <a href="http://192.168.1.69/final-catalogo/producto/333-106CN-04"><img class="card-img-top" src="http://ticdwem.com/ferreterariopisuena/images/prod/333-106CN-04.jpg" alt="">
+	             <div class="card-body">
+	              <h4 class="card-title">
+	              	FIBRA SCOTCH BRITE VERDE 	              </h4>
+	              <p class="card-text">MODELO: P-96</p>
+	              <p class="card-text">MARCA: 3M</p>
+	            </div>
+	            </a>
+	          </div>
+	        </div>
+			 
+	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+	         <div class="card h-100">
+	            <a href="http://192.168.1.69/final-catalogo/producto/324-101GR-01"><img class="card-img-top" src="http://ticdwem.com/ferreterariopisuena/images/prod/324-101GR-01.jpg" alt="">
+	             <div class="card-body">
+	              <h4 class="card-title">
+	              	GUANTE DE LATEX ROJO GRABADO 	              </h4>
+	              <p class="card-text">MODELO: TALLA 7</p>
+	              <p class="card-text">MARCA: ADEX</p>
+	            </div>
+	            </a>
+	          </div>
+	        </div>
+			 
+	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+	         <div class="card h-100">
+	            <a href="http://192.168.1.69/final-catalogo/producto/324-101GR-02"><img class="card-img-top" src="http://ticdwem.com/ferreterariopisuena/images/prod/324-101GR-02.jpg" alt="">
+	             <div class="card-body">
+	              <h4 class="card-title">
+	              	GUANTE DE LATEX ROJO GRABADO 	              </h4>
+	              <p class="card-text">MODELO: TALLA 8</p>
+	              <p class="card-text">MARCA: ADEX</p>
+	            </div>
+	            </a>
+	          </div>
+	        </div>
+			 
+	         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+	         <div class="card h-100">
+	            <a href="http://192.168.1.69/final-catalogo/producto/324-101GR-03"><img class="card-img-top" src="http://ticdwem.com/ferreterariopisuena/images/prod/324-101GR-03.jpg" alt="">
+	             <div class="card-body">
+	              <h4 class="card-title">
+	              	GUANTE DE LATEX ROJO GRABADO 	              </h4>
+	              <p class="card-text">MODELO: TALLA 9</p>
+	              <p class="card-text">MARCA: ADEX</p>
+	            </div>
+	            </a>
+	          </div>
+	        </div>
+			<div class="Zebra_Pagination"><ul class="pagination"><li class="page-item disabled"><a href="javascript:void(0)" class="page-link" rel="prev">&laquo;</a></li><li class="page-item active"><a href="/final-catalogo/catalogo-productos?p=catalogo-productos" class="page-link">001</a></li><li class="page-item"><a href="/final-catalogo/catalogo-productos?p=catalogo-productos&amp;page=2" class="page-link">002</a></li><li class="page-item"><a href="/final-catalogo/catalogo-productos?p=catalogo-productos&amp;page=3" class="page-link">003</a></li><li class="page-item"><a href="/final-catalogo/catalogo-productos?p=catalogo-productos&amp;page=4" class="page-link">004</a></li><li class="page-item"><a href="/final-catalogo/catalogo-productos?p=catalogo-productos&amp;page=5" class="page-link">005</a></li><li class="page-item"><a href="/final-catalogo/catalogo-productos?p=catalogo-productos&amp;page=6" class="page-link">006</a></li><li class="page-item"><a href="/final-catalogo/catalogo-productos?p=catalogo-productos&amp;page=7" class="page-link">007</a></li><li class="page-item"><a href="/final-catalogo/catalogo-productos?p=catalogo-productos&amp;page=8" class="page-link">008</a></li><li class="page-item"><a href="/final-catalogo/catalogo-productos?p=catalogo-productos&amp;page=9" class="page-link">009</a></li><li class="page-item"><a href="/final-catalogo/catalogo-productos?p=catalogo-productos&amp;page=10" class="page-link">010</a></li><li class="page-item"><span class="page-link">&hellip;</span></li><li class="page-item"><a href="/final-catalogo/catalogo-productos?p=catalogo-productos&amp;page=814" class="page-link">814</a></li><li class="page-item"><a href="/final-catalogo/catalogo-productos?p=catalogo-productos&amp;page=2" class="page-link" rel="next">&raquo;</a></li></ul></div><p class="">ENCONTRADOS 13024 RESULTADOS | PAGINA 1 DE 814</p>        </div>
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+    <!-- Pie de Pagina -->
+<footer class="py-4">
+    <div class="container">
+        <div class="row col-sm-12 col-md-12 col-lg-12">
+        	<div class="col-sm-12 col-md-12 col-lg-6 ">
+            <h3 class="text-white ">Gracias por tu Visita!</h3>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-3 offset-lg-3 " >
+			<a href="https://wa.link/30zod7" >
+				<img src="http://192.168.1.69/final-catalogo/images/whats-app-logo.png" alt="contacto" id="animacion14" width="50" height="50">
+			</a>
+            <a href="https://www.facebook.com/ferreriopisuena/">
+            	<img  src="http://192.168.1.69/final-catalogo/images/fab.png" alt="encuentranos" class="" id="animacion9" width="50" height="50">
+            </a>
+             <a href="encuentranos" >
+             	<img  src="http://192.168.1.69/final-catalogo/images/maps.png" alt="mapa" id="animacion10" width="50" height="50">
+             </a>
+			<a href="contacto" >
+				<img src="http://192.168.1.69/final-catalogo/images/mail2.png" alt="contacto" id="animacion11" width="50" height="50">
+			</a>
+				
+        </div>
+            <div class="col-sm-9 col-md-6 col-lg-3">
+			<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v7.0"></script>
+<div class="fb-page" data-href="https://www.facebook.com/ferreriopisuena/" data-tabs="timeline" width="300" height="250px" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+<blockquote cite="https://www.facebook.com/ferreriopisuena/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ferreriopisuena/">Ferretera Rio Pisueña</a></blockquote></div>
+		<!-- 	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3765.1812673414006!2d-99.074568!3d19.317939!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0364188dc1ef%3A0xec3ae9996a20d6c!2sFerretera%20Rio%20Pisue%C3%B1a!5e0!3m2!1ses-419!2smx!4v1590605222309!5m2!1ses-419!2smx" 
+			width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+<!-- <h3 class="text-white">Llamanos:<br><a href="tel://58500140" class="text-primary">(55) 58-50-01-40</a></h3>
+              <h3 class="text-white">WhatsApp:<br><a href="whatsapp://send?text=Hola me puedes dar información acerca de ...&phone=+5215591996245" class="text-primary">5591996245</a></h3> -->
+            </div>
+            <div class="col-sm-9 col-md-6 col-lg-1 "></div>
+            <div class="col-sm-12 col-md-12 col-lg-4 text-center">
+                	<img src="http://192.168.1.69/final-catalogo/images/servicio-domicilio.png"  alt="contacto" id="animacion13" width="100" height="50">	
+                <p class="text-white text-center">Contamos con servicio de distribución y entrega a toda la República Mexicana. Póngase en contacto para más información de los destinos.</p>
+                  <p class="text-white text-center"> "Siempre buscando la satisfacción del cliente"  </p>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 text-white text-right">Av. Tláhuac No. 1552 Col. Año de Juárez C.P. 09780 Del. Iztapalapa CDMX a un lado de la estacion del metro Periferico Oriente de la línea 12 del metro-CDMX.<br>
+					 <h6 class="text-white">Correo Electronico<br><a href="contacto" class="text-white">ventas@riopisuena.com.mx</a></h6>
+					 <h4 class="text-white">Nuestros Horarios:</h4>
+					 <p class="text-white ">	Lunes a Viernes: 8:00 a 18:00 <br>
+					     Sabados: 8:00  a 15:00</p>
+					 </div>
+            </div>
+					<p class="text-white text-left "><a href="#" class="text-white">Regresar Arriba</a>
+					<h6><p class="text-white">Creado por <a href="http://ticdwem.com/" class="text-white">TICDWEM.</a> </h6></p>
+				</div>
+      <!-- /.container -->
+</footer>
+<footer class="py-1 stil-footer">
+	<div class="container">
+	<ul>	
+		<li><p class="text-white text-center" style="max-width: 100rem;">Copyright &copy; FERRETERA RIO PISUEÑA, S.A. DE C.V. |<a href="#" class="text-white" data-toggle="modal" data-target="#exampleModala">Aviso de Privacidad</a></p>
+				<div class="modal fade" id="exampleModala" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog modal-lg" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header text-center">
+			        <h5 class="modal-title " id="exampleModalLabel">AVISO DE PRIVACIDAD</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+<p class="text-justify">
+	En cumplimiento a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (la "Ley") le informamos los términos y condiciones del Aviso de Privacidad de Ferretera Rio Pisueña, S.A. de C.V., en lo subsecuente ("RIO PISUEÑA") con domicilio en Av. Tláhuac No. 1552 Col. Año de Juárez, Del. Iztapalapa, C.P. 09780, Distrito Federal, México.
+	Los Datos Personales como se define en la Ley, que usted libre y voluntariamente proporcione a RIO PISUEÑA directamente por diversos medios: entrevistas, papel, teléfono y/o medios electrónicos, así como información que recogemos cuando visita nuestros sitios web e información que obtenemos de fuentes públicas legalmente disponibles o por cualquier otro medio, podrán incluir de manera enunciativa más no limitativa su: nombre, domicilio, dirección de correo electrónico, números telefónicos, fecha de nacimiento, nacionalidad, lugar de nacimiento; y en los casos de contratación de personal, podremos incluir también, intereses personales, formación profesional y académica, experiencia laboral, información sobre sus dependientes económicos, fotografía, e inclusive datos personales sensibles, caso en el cual se obtendrá previamente su consentimiento expreso y por escrito.
+	RIO PISUEÑA puede utilizar los Datos Personales para fines de identificación, promoción, venta, publicidad, estadística, análisis interno, prestación de nuestros servicios comerciales, para actividades administrativas y laborales, con fines de reclutamiento y selección de personal, con fines de comunicación, promoción de productos y/o servicios,  o cualquier otra actividad análoga de conformidad con su objeto social.
+	Es posible que compartamos información para complementar un procedimiento solicitado por el titular, para atender requerimientos de las autoridades o para proteger y defender los derechos de RIO PISUEÑA. Esto siempre de acuerdo a lo estrictamente señalado en el capítulo V artículos 36 y 37 de la Ley Federal de Protección de Datos Personales en Posesión de Particulares.
+	RIO PISUEÑA tiene implementadas medidas de seguridad físicas, electrónicas y técnicas para proteger sus Datos Personales, que son cuando menos, iguales a las utilizadas para asegurar y resguardar su propia información.
+	Para el ejercicio de los derechos ARCO (acceso, rectificación, cancelación y oposición al tratamiento de sus Datos Personales) deberá enviar un correo al responsable del manejo y la administración de los Datos Personales a la dirección de correo electrónico: jmaya@riopisuena.com.mx. Dicha solicitud deberá contener por lo menos: (a) nombre y domicilio u otro medio para comunicarle la respuesta a su solicitud; (b) los documentos que acrediten su identidad o, en su caso, la representación legal; (c) la descripción clara y precisa de los datos personales respecto de los que se solicita ejercer alguno de los derechos ARCO.
+
+	Las leyes y regulaciones de otros países pueden imponer diferentes requerimientos para la protección de la información en general y de los Datos Personales que se recolectan vía internet. RIO PISUEÑA se encuentra ubicada en México y todos los asuntos en relación a este Website son regidos por las leyes de México. Si Usted está ubicado en algún otro país distinto de México y nos contacta, por favor tome en cuenta que cualquier información que Usted nos provea será transferida a México, y al momento de ingresar su información Usted autoriza esta transferencia y la aceptación del presente Aviso de Privacidad. RIO PISUEÑA se reserva el derecho de cambiar este aviso de privacidad en cualquier momento, en cuyo caso, se publicará una nota visible en este Website.
+	Publicado el 20/12/2012
+</p>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</li>
+	</ul>
+</div>
+</footer>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158337767-1');
+
+$(document).ready(function () {
+	$('.herramientas-logos').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 3000,
+		arrows: false,
+		dots: false,
+		pauseOnHover: false,
+		responsive: [{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 4
+			}
+		}, {
+			breakpoint: 520,
+			settings: {
+				slidesToShow: 3
+			}
+		}]
+	});
+});
+//SE INCLUYO SCRIPT PARA SLIDE DE MARCAS -->
+
+$(document).ready(function () {
+	$('.customer-logos').slick({
+		slidesToShow: 12,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 200,
+		arrows: false,
+		dots: false,
+		pauseOnHover: false,
+		responsive: [{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 4
+			}
+		}, {
+			breakpoint: 520,
+			settings: {
+				slidesToShow: 3
+			}
+		}]
+	});
+});
+</script>
+<script>
+	var timer = 4000;
+
+var i = 0;
+var max = $('#c > li').length;
+ 
+	$("#c > li").eq(i).addClass('active').css('left','0');
+	$("#c > li").eq(i + 1).addClass('active').css('left','25%');
+	$("#c > li").eq(i + 2).addClass('active').css('left','50%');
+	$("#c > li").eq(i + 3).addClass('active').css('left','75%');
+ 
+
+	setInterval(function(){ 
+
+		$("#c > li").removeClass('active');
+
+		$("#c > li").eq(i).css('transition-delay','0.25s');
+		$("#c > li").eq(i + 1).css('transition-delay','0.5s');
+		$("#c > li").eq(i + 2).css('transition-delay','0.75s');
+		$("#c > li").eq(i + 3).css('transition-delay','1s');
+
+		if (i < max-4) {
+			i = i+4; 
+		}
+
+		else { 
+			i = 0; 
+		}  
+
+		$("#c > li").eq(i).css('left','0').addClass('active').css('transition-delay','1.25s');
+		$("#c > li").eq(i + 1).css('left','25%').addClass('active').css('transition-delay','1.5s');
+		$("#c > li").eq(i + 2).css('left','50%').addClass('active').css('transition-delay','1.75s');
+		$("#c > li").eq(i + 3).css('left','75%').addClass('active').css('transition-delay','2s');
+	
+	}, timer);
+ 
+</script>
+ </body>
+</html>
