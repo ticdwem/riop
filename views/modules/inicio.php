@@ -162,7 +162,7 @@ include "views/modules/header.php";
 
 <div class="serv-stilo container">
 <div class=" row">
-<div class="col-lg-3">
+<div class="crd-sec col-lg-3">
 <div class="card text-white bg-danger">
   <img class="card-img-top" src="images/3.png" alt="Card image cap" style="height: 150px;">
   <div class="card-body">
@@ -171,7 +171,7 @@ include "views/modules/header.php";
   </div>
 </div>
 </div>
-<div class="col-lg-3">
+<div class="crd-sec col-lg-3">
 <div class="card" style="background: #0c2461;">
   <img class="card-img-top" src="images/servicio-domicilio.png" alt="Card image cap" style="height: 150px;">
   <div class="card-body text-white">
@@ -180,7 +180,7 @@ include "views/modules/header.php";
   </div>
 </div>
 </div>
-<div class="col-lg-3">
+<div class="crd-sec col-lg-3">
 <div class="card" style="">
   <img class="card-img-top" src="images/servicio5.png" alt="Card image cap" style="height: 150px;">
   <div class="card-body text-white bg-danger ">
@@ -189,7 +189,7 @@ include "views/modules/header.php";
   </div>
 </div>
 </div>
-<div class="col-lg-3">
+<div class="crd-sec col-lg-3">
 <div class="card" style="background: #0c2461;">
   <img class="card-img-top" src="images/servicio4.png" alt="Card image cap" style="height: 150px;">
   <div class="card-body text-white">

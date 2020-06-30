@@ -641,7 +641,7 @@ strong {
 }
 
 .texto-encima2 {
-	font-family: 'Fredoka One',	cursive;
+	font-family: 'Fredoka One', cursive;
 	position: absolute;
 	top: 110%;
 	left: 28%;
@@ -649,6 +649,7 @@ strong {
 	font-size: 50px;
 	color: white;
 }
+
 /* .centrado2 {
 	position: absolute;
 	top: 115%;
@@ -659,7 +660,7 @@ strong {
 } */
 .boton-cursos {
 	position: absolute;
-	font-family: 'Fredoka One',	cursive;
+	font-family: 'Fredoka One', cursive;
 	top: 120%;
 	left: 45%;
 	z-index: 1;
@@ -668,38 +669,54 @@ strong {
 	border-radius: 10px;
 }
 
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
 	.parallax-window{
-		/* position: none;
-		display: none; */
+		position: none;
+		display: none;
 	}
-}
+} */
 @media screen and (max-width: 540px) {
 	.parallax-window {
-	width: 100%;
-	min-height: 250px;
-	background: transparent;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-	z-index: -1;
-	-webkit-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
-	box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
+		width: 100%;
+		min-height: 250px;
+		background: transparent;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+		z-index: -1;
+		-webkit-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
+		box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
+		 opacity: 0.7;
 	}
 }
+
+@media screen and (max-width: 350px) {
+	.parallax-window {
+		width: 100%;
+		min-height: 250px;
+		background: transparent;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+		z-index: -1;
+		-webkit-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
+		box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
+	}
+}
+
 @media screen and (max-width: 1200px) {
 	.texto-encima2 {
-			font-family: 'Fredoka One',
+		font-family: 'Fredoka One',
 			cursive;
-			position: absolute;
-			top: 80%;
-			left: 28%;
-			z-index: 1;
-			font-size: 25px;
-			color: white;
+		position: absolute;
+		top: 80%;
+		left: 28%;
+		z-index: 1;
+		font-size: 25px;
+		color: white;
 		/* position: none;
 		display: none; */
 	}
 }
+
 @media screen and (max-width: 720px) {
 	.texto-encima2 {
 		font-family: 'Fredoka One', cursive;
@@ -713,26 +730,43 @@ strong {
 		display: none; */
 	}
 }
+
 @media screen and (max-width: 540px) {
 	.texto-encima2 {
-		font-family: 'Fredoka One',cursive;
+		font-family: 'Fredoka One', cursive;
 		position: absolute;
 		text-align: center;
-		top: 78%;
-		left: 15%;
+		top: 109%;
+		left: 5%;
 		z-index: 1;
 		font-size: 20px;
 		color: white;
+		text-align: center;
+		background-color: black;
 		/* position: none;
 		display: none; */
 	}
 }
+
+/* @media screen and (max-width: 360px) {
+	.texto-encima2{
+		font-family: 'Fredoka One',cursive;
+		position: absolute;
+		text-align: center;
+		top: 500%;
+		left: 15%;
+		z-index: 1;
+		font-size: 20px;
+		color: white;
+
+	}
+} */
 @media screen and (max-width: 540px) {
 	.boton-cursos {
 		font-family: 'Fredoka One', cursive;
 		position: absolute;
-		top: 85%;
-		left: 35%;
+		top: 125%;
+		left: 30%;
 		z-index: 1;
 		font-size: 25px;
 		color: white;
@@ -740,11 +774,32 @@ strong {
 		display: none; */
 	}
 }
+
+/* @media screen and (max-width: 300px) {
+	.boton-cursos {
+		font-family: 'Fredoka One', cursive;
+		position: absolute;
+		top: 450%;
+		left: 35%;
+		z-index: 1;
+		font-size: 25px;
+		color: white;
+	
+	}
+} */
 /* FIN DE ESTILO DEL PARALLAX*/
 .serv-stilo {
 	padding-top: 5%;
 	padding-bottom: 1%;
 }
+@media screen and (max-width: 540px) {
+	.crd-sec{
+		padding-top: 5%;
+		
+	}
+}
+
+
 footer{
 	background:#b33939;
 	-webkit-box-shadow: 1px 0px 27px 0px rgba(0, 0, 0, 0.75);
@@ -758,6 +813,12 @@ footer{
 /* SECCION CONTACTO- VENTAS INDUSTRIAS  */
 .cont-st{
 	padding-top: 6%;
+}
+@media screen and (max-width: 540px) {
+	.cont-st{
+		padding-top: 20%;
+		
+	}
 }
 .msn-fb{
 	z-index: 2;
@@ -777,10 +838,27 @@ box-shadow: -1px 0px 31px 0px rgba(0,0,0,0.75);
 }
 
 /* VISTA  PRODUCTO */
+.prod-ini{
+	 
+}
+@media screen and (max-width: 540px) {
+	.prod-ini {
+		padding-top: 10%;
+		
+	}
+}
+
 .prod-stilo{
 	padding-top: 12%;
 	padding-bottom: 3%;
 }
+@media screen and (max-width: 540px) {
+	.prod-stilo {
+		top: 20%;
+		
+	}
+}
+
 .prod-vis{
 	padding-top: 3%;
 	-webkit-box-shadow: 7px 10px 31px -4px rgba(0, 0, 0, 0.75);
@@ -788,6 +866,13 @@ box-shadow: -1px 0px 31px 0px rgba(0,0,0,0.75);
 	box-shadow: 7px 10px 31px -4px rgba(0, 0, 0, 0.75);
 
 }
+@media screen and (max-width: 540px) {
+	.prod-vis {
+		top: 20%;
+		
+	}
+}
+
 /*///////////////////////////////////////vista registro usuario////////////////////////////////////////////////*/
 /*vista de registro*/
 form{

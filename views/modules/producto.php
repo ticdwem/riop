@@ -6,7 +6,7 @@ include "views/modules/header.php";
 
     <div class="prod-stilo row">
 
-      <div class="col-lg-12">
+      <div class="prod-ini col-lg-12">
           <form class="bar-bus" action="<?php echo htmlspecialchars(base_url.'catalogo-productos');?>" method="get" id="frmFormSerarching">
           <div class="input-group input-group-lg">
             <input type="text" class="form-control" id="buscarInput" placeholder="Busqueda de producto" aria-label="" name="buscar" aria-describedby="button-addon2" autocomplete="off">
