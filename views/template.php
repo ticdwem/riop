@@ -43,7 +43,6 @@
   <script src="https://kit.fontawesome.com/1849e1867b.js" crossorigin="anonymous"></script>
   <script src="<?=base_url?>views/js/parallax.js"></script>  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-  <script src="<?=base_url?>dist/sweetalert.js"></script>
   <!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
   <script src="https://unpkg.com/sweetalert2@9.5.3/dist/sweetalert2.all.min.js"></script>
 
@@ -53,6 +52,8 @@
     <script src="<?=base_url?>views/js/jquery.validate.js"></script>
     <script src="<?=base_url?>views/js/modernizr.custom.63321.js"></script>
     <script src="<?=base_url?>views/js/jquery.catslider.js"></script>
+    <script src="<?=base_url?>views/js/script.js"></script>
+  <script src="<?=base_url?>views/js/validacion_contacto.js"></script>
     </head>
 
 <body>
@@ -72,8 +73,7 @@
 
 
     </div>
-  <script src="<?=base_url?>views/js/script.js"></script>
-  <script src="<?=base_url?>views/js/validacion_contacto.js"></script>
+  
 
  
 </body>
