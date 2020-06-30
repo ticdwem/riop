@@ -180,24 +180,21 @@ class Crud extends Conexion
         return $this;
     }
     public function insertProd(){
-    	$insertCod = "INSERT INTO productosPrueba
+    	/*$insertCod = "INSERT INTO productosPrueba
 	(codigoProducto, nombreProducto, descripcionProducto, modeloProducto, skuProducto, codigoSatProductos, precio, idMarcaProdcuto, unidadBaseProducto, idProveedorProducto, idSublineaProducto, fotoProdcuto)
-	VALUES ('{$this->getCodigoProducto()}', '{$this->getNombreProducto()}', '{$this->getDescripcionProducto()}', '{$this->getModeloProducto()}', '{$this->getSkuProducto()}', {$this->getCodigoSatProductos()}, {$this->getPrecio()}, {$this->getIdMarcaProdcuto()}, '{$this->getUnidadBaseProducto()}', '{$this->getIdProveedorProducto()}', {$this->getIdSublineaProducto()}, '{$this->getFotoProdcuto()}')";
- //    	$insertCod = "UPDATE productosprueba
-	// SET		
-	// 	nombreProducto='{$this->getNombreProducto()}',
-	// 	descripcionProducto='{$this->getDescripcionProducto()}',
-	// 	modeloProducto='{$this->getModeloProducto()}',
-	// 	skuProducto='{$this->getSkuProducto()}',
-	// 	codigoSatProductos={$this->getCodigoSatProductos()},
-	// 	precio={$this->getPrecio()},
-	// 	idMarcaProdcuto={$this->getIdMarcaProdcuto()},
-	// 	unidadBaseProducto='{$this->getUnidadBaseProducto()}',
-	// 	idProveedorProducto='{$this->getIdProveedorProducto()}',
-	// 	idSublineaProducto={$this->getIdSublineaProducto()},
-	// 	fotoProdcuto='{$this->getFotoProdcuto()}'
-	// WHERE 
-	// codigoProducto='{$this->getCodigoProducto()}'";
+	VALUES ('{$this->getCodigoProducto()}', '{$this->getNombreProducto()}', '{$this->getDescripcionProducto()}', '{$this->getModeloProducto()}', '{$this->getSkuProducto()}', {$this->getCodigoSatProductos()}, {$this->getPrecio()}, {$this->getIdMarcaProdcuto()}, '{$this->getUnidadBaseProducto()}', '{$this->getIdProveedorProducto()}', {$this->getIdSublineaProducto()}, '{$this->getFotoProdcuto()}')";*/
+     	$insertCod = "UPDATE productos
+	 SET		
+	 	nombreProducto='{$this->getNombreProducto()}',
+	 	descripcionProducto='{$this->getDescripcionProducto()}',
+	 	modeloProducto='{$this->getModeloProducto()}',
+	 	skuProducto='{$this->getSkuProducto()}',
+	 	codigoSatProductos={$this->getCodigoSatProductos()},
+	 	precio={$this->getPrecio()},
+	 	unidadBaseProducto='{$this->getUnidadBaseProducto()}',
+	 	idProveedorProducto='{$this->getIdProveedorProducto()}'
+	 WHERE 
+	 codigoProducto='{$this->getCodigoProducto()}'";
 		$insert = $this->db->prepare($insertCod);
 		$insert->execute();
 		 if($insert){
