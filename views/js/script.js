@@ -58,8 +58,8 @@ $(document).ready(function(){
 
 
 // check if a checkbox where cliked
-	// $("#Dvlinea input[name='lineaPr']").on("click",function(){
-	$("body").on("click","#Dvlinea input[name='lineaPr']",function(){
+	$("#Dvlinea input[name='lineaPr']").on("click",function(){
+	// $("body").on("click","#Dvlinea input[name='lineaPr']",function(){
 		var valorRb = $(this).val();
 		var netTabla = "sublinea";
 		var linTabla = "linea";
@@ -78,6 +78,7 @@ $(document).ready(function(){
 				document.getElementById("loguinLock").innerHTML='<div><img src="views/images/load.gif"  width="30px" height="30px" /></div>';
 			},*/
 			success:function(nextValue){
+				console.log();
 				if(nextValue != 0){
 					$.each(nextValue,function (i,item) {
 						// radio += '<div class="form-check col-lg-6"><input type="radio" name="subLineaRadio" class="form-check-input" value="'+item.idSubLn+'"><label class="form-check-label" for="exampleCheck1">'+item.nombre+'</label></div>';
@@ -316,10 +317,11 @@ $("#vaciar").on("click",function(e){
 	            showConfirmButton: false,
 	            onOpen: ()=>{
 	                Swal.showLoading();
-	            },
+	            }
+	           //  ,
 
-            timer: 3000,
-            timerProgressBar: true
+            // timer: 3000,
+            // timerProgressBar: true
         	});	
 						// $('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
 					},
