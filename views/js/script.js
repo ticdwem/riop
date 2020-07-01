@@ -384,48 +384,50 @@ $("#vaciar").on("click",function(e){
 		});
  	}else{
  		checks = {"chek":JSON.stringify(genera)};
- 		$.ajax({
-			url: "../views/modules/ajax.php",
-			method:"POST",
-			data:checks,
-			cache:false,
-			beforeSend:function(){
-			Swal.fire({
-	            title: 'INSERTANDO INFORMACION, ESPERE POR FAVOR',
-	            allowEscapeKey: false,
-	            allowOutsideClick: false,
-	            background: '#fff',
-	            showConfirmButton: false,
-	            onOpen: ()=>{
-	                Swal.showLoading();
-	            }
-	            ,
-             timer: 3000,
-             timerProgressBar: true
-        	});	
-						// $('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
-					},
-			success:function(dato){
-				if(dato == 100){
-					Swal.fire({
-					  icon: 'error',
-					  title: 'Error',
-					  text: 'HAY UN ERROR EN LOS DATOS',
-					  footer: 'llama al administrador para una revisión'
-					})
-				}else if(dato == 1){
-					Swal.fire({
-					  position: 'center',
-					  icon: 'success',
-					  title: 'SE HA DESCARGADO EL ARCHIVO EN TU CARPETA DE DESCARGAS',
-					  showConfirmButton: false,
-					  timer: 3500
-					})
-				}
+ 		window.open('../helpers/excel.php?dtos='+JSON.stringify(genera));
+ 	// 	$.ajax({
+		// 	url: "../views/modules/ajax.php",
+		// 	method:"POST",
+		// 	data:checks,
+		// 	cache:false,
+		// 	beforeSend:function(){
+		// 	Swal.fire({
+	 //            title: 'INSERTANDO INFORMACION, ESPERE POR FAVOR',
+	 //            allowEscapeKey: false,
+	 //            allowOutsideClick: false,
+	 //            background: '#fff',
+	 //            showConfirmButton: false,
+	 //            onOpen: ()=>{
+	 //                Swal.showLoading();
+	 //            }
+	 //            ,
+  //            timer: 3000,
+  //            timerProgressBar: true
+  //       	});	
+		// 				// $('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
+		// 			},
+		// 	success:function(dato){
+		// 		console.log(dato);
+		// 		if(dato == 100){
+		// 			Swal.fire({
+		// 			  icon: 'error',
+		// 			  title: 'Error',
+		// 			  text: 'HAY UN ERROR EN LOS DATOS',
+		// 			  footer: 'llama al administrador para una revisión'
+		// 			})
+		// 		}else if(dato == 1){
+		// 			Swal.fire({
+		// 			  position: 'center',
+		// 			  icon: 'success',
+		// 			  title: 'SE HA DESCARGADO EL ARCHIVO EN TU CARPETA DE DESCARGAS',
+		// 			  showConfirmButton: false,
+		// 			  timer: 3500
+		// 			})
+		// 		}
 				
 			
-			 }
-		})
+		// 	 }
+		// })
  	}
 
  });
@@ -436,6 +438,7 @@ $("#vaciar").on("click",function(e){
  	//window.open('generatePdf/micatalogo.php');
  	var nombre = empty($("#Inputname").val());
  	var correo = empty($("#inputEmail").val());
+ 	var datos = new Array();
 
  	var contador = false;
  	if(nombre != 1){
@@ -468,6 +471,14 @@ $("#vaciar").on("click",function(e){
  	}else{
  		contador = false;
  		$("#inputEmail").addClass("is-invalid");
+ 	}
+
+ 	if(contador){
+ 		datos.push({"nombre":nombre,"email":correo});
+ 		validados = {"correcto":JSON.stringify(datos)};
+ 		console.log(validados);
+ 	}else{
+ 		alert("no no no no");
  	}
  });
  /****************************cancelar modal******************************************/
