@@ -1,10 +1,12 @@
 <?php
 //$comienzo= microtime(true);  //al inicio del archivo
 include "views/modules/header.php";
-include 'views/modules/topcache.php';
+/* include 'views/modules/topcache.php'; */
 ?>
 <div class="container">  
   <div class="card border-0 shadow my-5"> 
+
+
     <div class="card-body p-5">
       <div class="row bus-bar">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -15,13 +17,13 @@ include 'views/modules/topcache.php';
                 </ol>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img class="d-block w-100"style="width: 100px; height:350px;"  src="images/bann-catalogo4.png" alt="First slide">
+                    <img class="d-block w-100"style="width: 100px; height:250px;"  src="images/ban2.jpeg" alt="First slide">
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" style="width: 100px; height: 350px;"  src="images/bann-catalogo3.jpg" alt="Second slide">
+                    <img class="d-block w-100" style="width: 100px; height: 250px;"  src="images/ban3.jpeg" alt="Second slide">
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" style="width: 100px; height: 350px;" src="images/bann-catalogo5.jpg" alt="Third slide">
+                    <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/ban4.jpeg" alt="Third slide">
                   </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -33,7 +35,7 @@ include 'views/modules/topcache.php';
                   <span class="sr-only">Next</span>
                 </a>
               </div>
-      </div>     
+      </div>      
       <div style="height:100%">  
       <div class="row bus-bar">
         <div class="col-lg-12">
