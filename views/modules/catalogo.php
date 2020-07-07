@@ -39,7 +39,9 @@ require_once 'helpers/utils.php';
 		<div class="botones">
 			<button type="button" class="btn btn-outline-danger" data-id="carrito" id="vaciar">VACIAR <i class="fa fa-trash-o" aria-hidden="true"></i></button>
 			<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#fillFormToSentCat">IMPRIMIR <i class="fa fa-print" aria-hidden="true"></i></button>
-			<!-- <button type="button" class="btn btn-outline-primary" name="print" id="print">IMPRIMIR <i class="fa fa-print" aria-hidden="true"></i></button> -->
+			<?php if(isset($_GET["n"])){ ?>
+			<div class="alert alert-danger" role="alert">LOS DATOS QUE INGRESASTE SON INCORRECTOS. VERIFICA POR FAVOR!</div>
+		<?php }?>
 		</div>
 			<?php else: ?>
 			<table class="table tableEmpty">
@@ -79,28 +81,30 @@ include "views/modules/footer.php";
         </button>
       </div>
       <div class="modal-body">
-		<form>
+		<form action="<?=base_url?>generatePdf/micatalogo.php" method="post">
 		  <div class="form-group row">
 	      	<label for="Inputname" class="col-sm-12 col-form-label">NOMBRE COMPLETO</label>
 	      	<div class="col-sm-12">
-	         <input type="text" class="form-control" id="Inputname" placeholder="JUAN PEREZ">
+	         <input type="text" class="form-control" name="nombre" id="Inputname" placeholder="JUAN PEREZ">
 	      	</div>
 	      	<div class="nameError"></div>
 	      </div>
 		  <div class="form-group row">
 		    <label for="inputEmail" class="col-sm-12 col-form-label">Email</label>
 		    <div class="col-sm-12">
-		      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+		      <input type="email" class="form-control" name="correo" id="inputEmail" placeholder="Email">
 		    </div>
 		    <div class="emailError"></div>
+		    <div class="emailMensaje"></div>
 		  </div>
+		   <div class="modal-footer">
+		   	<button type="button" class="btn btn-secondary" id="cancel" data-dismiss="modal">Cancelar</button>
+		    <input type="submit" values ="enviar" name="sent" class="btn btn-primary" id="print">
+           </div>      
 		</form>
 
 	 </div>
-     <div class="modal-footer">
-       <button type="button" class="btn btn-secondary" id="cancel" data-dismiss="modal">Cancelar</button>
-       <button type="button" class="btn btn-primary" name="print" id="print">Enviar</button>
-     </div>
+    
     </div>
   </div>
 </div>
