@@ -59,37 +59,22 @@ include "views/modules/header.php";
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+ 
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/banner-prueba0.jpg" alt="First slide">
+      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/ban1.jpeg" alt="First slide">
           <div class="carousel-caption d-none d-md-block"> 
   </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/banner-prueba1.jpg" alt="Second slide">
+      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/ban2.jpeg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/banner-prueba2.jpg" alt="Third slide">
+      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/ban4.jpeg" alt="Third slide">
     </div>
        <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/banner-prueba3.jpg" alt="Third slide">
-    </div>
-       <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/banner-prueba4.jpg" alt="Fourth slide">
-    </div>
-      <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/banner-prueba5.jpg" alt="Fifth slide">
-    </div>
-      <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/banner-prueba6.jpg" alt="Sixty slide">
-    </div>
-      <div class="carousel-item">
-      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/banner24.png" alt="Seventy slide">
+      <img class="d-block w-100" style="width: 100px; height: 250px;" src="images/ban5.jpeg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -152,7 +137,7 @@ include "views/modules/header.php";
 </div>
 </div>
 <div class="paral-sec">
-  <div class="parallax-window" data-parallax="scroll" data-image-src="images/bann-catalogo5.jpg">
+  <div class="parallax-window" data-parallax="scroll" data-image-src="images/banner_30.jpg">
   <p class="texto-encima2">"Contamos con Ventas a Industrias"</p>
   <!-- <div class="centrado2" style="font-family: 'Dosis', sans-serif;">Ventas a Industrias</div> -->
   <!-- <button type="button" class="btn btn-danger boton-cursos">Me interesa</button> -->
