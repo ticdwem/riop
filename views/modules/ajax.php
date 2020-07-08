@@ -11,7 +11,8 @@ require_once '../../models/crudProducto.php';
 require_once '../../models/updateWithExcel.php';
 require_once '../../helpers/utils.php';
 require_once "../../config/parameters.php";
-require_once "../../vendor/box/spout/src/Spout/Autoloader/autoload.php";
+// require_once "../../vendor/box/spout/src/Spout/Autoloader/autoload.php";
+
 
 class Ajax{
 	public $arraySent;
@@ -63,8 +64,17 @@ public function setDato($archivo)
 	public function updateMasivo(){
 		$ar = $this->getDato();
 		
-		$generar = new datosBack();
-		$generar->readexcel($ar);
+		$archivo = $_FILES["media"]["name"];
+		$archivoCopiado = $_FILES["media"]["tmp_name"];
+		
+		$arrayDatos = array('archivo' => $archivo, 'temp' => $archivoCopiado );
+		// var_dump($arrayDatos);
+		// exit();
+		//$excelRegreso = json_encode($arrayDatos);
+		echo json_encode($arrayDatos);
+		// $generar = new datosBackIn();
+		// $generar->readexcel($ar);
+
 
 	}
 
@@ -89,7 +99,10 @@ public function setDato($archivo)
 	}
 	
 }
-
+// echo "<pre>";
+// var_dump($_FILES["media"]["tmp_name"]);
+// echo "</pre>";
+// exit();
 
 if(isset($_POST["correoHaciaAjax"])){
 	$sent = new Ajax();
@@ -108,9 +121,9 @@ if(isset($_POST['valor'])){
 	 $id -> producto = $_POST["idProducto"];
 	 $id->carrito();
  }
- if(isset($_FILES["fileContacts"])){
+ if(isset($_FILES["media"])){
  	$ph = new Ajax();
- 	$ph->setDato($_FILES["fileContacts"]);
+ 	$ph->setDato($_FILES["media"]);
  	$ph->updateMasivo();
  }
 
