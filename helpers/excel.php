@@ -70,7 +70,7 @@ class DatosBack
 			
 			$writer = WriterEntityFactory::createXLSXWriter();
 			// $filePath = url_home."\Downloads\modificar".ucfirst($last['tabla']).date('i_s').".xlsx";
-			$filename = ucfirst($last['tabla']).date('i_s').".xlsx";
+			$fileName = ucfirst($last['tabla']).$last['id'].date('i_s').".xlsx";
 			$writer->openToBrowser($fileName); // stream data directly to the browser
 			// $writer->openToFile($filePath);
 			//agregamos encabezado
