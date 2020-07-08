@@ -8,7 +8,7 @@ include "views/modules/menulateral.php";
 		<div class="formulario">
 			<form method="post" enctype="multipart/form-data" id="filesForm">
 			    <div class="">
-			        <input type="file" class="form-control" name="fileContacts">
+			        <input type="file" class="form-control" name="media">
 			        <button type="button" id="uploadData" class="btn btn-primary">CARGAR</button>
 			        <div class="spinnerWhite"></div>
 			    </div>			    
