@@ -300,7 +300,9 @@ $("#vaciar").on("click",function(e){
 
 
 		var Form = new FormData($('#filesForm')[0]);
-
+		//formData.append(f.attr("name"), $(this)[0].files[0]);
+		
+		//window.open("controllers/updateCatalogo.php?upDatos="+Form);
 		$.ajax({
 			url: "views/modules/ajax.php",
 			method:"POST",
@@ -326,8 +328,11 @@ $("#vaciar").on("click",function(e){
 						// $('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
 					},
 			success:function(dato){
-				console.log(dato);
-				if(dato == 1){
+				var updateExcel = jQuery.parseJSON(dato);
+				// console.log(updateExcel);
+				// return false;
+				window.open('helpers/updateCatalogo.php?name='+updateExcel["archivo"]+'/'+updateExcel["temp"]);
+				/*if(dato == 1){
 					Swal.fire({
 					  icon: 'error',
 					  title: 'Oops...',
@@ -355,7 +360,7 @@ $("#vaciar").on("click",function(e){
 					  text: 'SUBIMOS ALGÚNOS REGISTROS,PERO NO SE COMPLETO AL 100%',
 					  footer: 'llama al administrador para una revisión'
 					})
-				}
+				}*/
 			
 			 }
 		})
@@ -433,8 +438,10 @@ $("#vaciar").on("click",function(e){
  });
 /****************************enviar correo******************************************/
 
- $("#print").on("click", function(e){
- 	e.preventDefault();
+ $("#print").on("click", function(){
+ 	$(".emailError").html('<span class="spinner-grow text-primary "></span>');
+ 	$(".emailMensaje").html('NO REFRESQUES LA PAGINA O PRESIONES UN BOTON, EL PROCESO PUEDE TARDAR');
+ 	var name,mailE;
  	//window.open('generatePdf/micatalogo.php');
  	var nombre = empty($("#Inputname").val());
  	var correo = empty($("#inputEmail").val());
@@ -446,6 +453,7 @@ $("#vaciar").on("click",function(e){
  		if(verNom!=0){
  			contador = true;
  			$("#Inputname").addClass("is-valid");
+ 			name = $("#Inputname").val();
  		}else{
  			contador = false;
  			$("#Inputname").addClass("is-invalid");
@@ -459,9 +467,11 @@ $("#vaciar").on("click",function(e){
  	if(correo != 1){
  		 var email = expRegular("email",$("#inputEmail").val());
  		if(email != 0){
-	 		correo = true;
-	 		$("#inputEmail").addClass("is-valid");
-
+	 		contador = true;
+	 		//$("#print").attr("disabled", true);
+	 		$("#inputEmail").addClass("is-valid");	 		
+			
+	 		mailE = $("#inputEmail").val();
  		}else{ 	
  			contador = false;		
  			$("#inputEmail").addClass("is-invalid");
@@ -473,12 +483,9 @@ $("#vaciar").on("click",function(e){
  		$("#inputEmail").addClass("is-invalid");
  	}
 
- 	if(contador){
- 		datos.push({"nombre":nombre,"email":correo});
- 		validados = {"correcto":JSON.stringify(datos)};
- 		console.log(validados);
- 	}else{
- 		alert("no no no no");
+ 	if(contador == false){
+ 		$(".emailError").html("LOS DATOS SON INCORRECTOS");
+ 		return false;
  	}
  });
  /****************************cancelar modal******************************************/
@@ -495,3 +502,9 @@ $("#vaciar").on("click",function(e){
 
  })
 });
+
+
+
+  function redireccionar() {
+    setTimeout("location.href='http://192.168.1.69/final-catalogo'", 5000);
+  }
