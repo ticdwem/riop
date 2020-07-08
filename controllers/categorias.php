@@ -50,17 +50,14 @@ class LineaSublinea
 		$val = $validar->pregmatchletras($marca);
 
 		if($val != 1 || $val != 0){
-				$val = strtolower($val);
-				$marcas = new ModeloBase();
-				$ver = $marcas->conseguirTodos($val);
-		$registros;
-				
-		echo '<select class="form-control form-control-lg" name="datos">';
-		foreach ($ver as $registros) {
-			$retVal = ($val == "sublinea") ? $registros[2] : $registros[1] ;
-			echo "<option value='".$registros[0]."'>".$retVal ."</option>";
-		}
-		echo	'</select>';
+			$val = strtolower($val);
+			$marcas = new ModeloBase();
+			$ver = $marcas->conseguirTodos($val);				
+		
+			foreach ($ver as $registros) {
+				$retVal = ($val == "sublinea") ? $registros[2] : $registros[1] ;
+				echo "<option value='".$registros[0]."'>".$retVal ."</option>";
+			}
 
 		}else{
 			echo '<div class="alert alert-danger" role="alert">ALGO SALIO MAL. LLAMA AL ADMINISTRADOR</div>';
