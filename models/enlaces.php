@@ -14,6 +14,7 @@ class EnlacesModels{
 		   $enlaces == "updateDatos"||
 		   $enlaces == "downloadExcel"||
 		   $enlaces == "selectRowExcel"||
+		   $enlaces == "success"||
 		   $enlaces == "contacto"){
 
 			$module = "views/modules/".$enlaces.".php";
