@@ -10,57 +10,57 @@ include "views/modules/menulateral.php";
 <div class="selectRows">
 	<div class="form-group row">
 		<div class="col-sm-10">
-			<div class="form-check" >
-				<input class="form-check-input" type="checkbox" id="codigo" name="checkrowExcel[]" value="codigoProducto" checked >
-				<label class="form-check-label" for="codigo">
+			<div class="form-check dis" >
+				<input class="form-check-input" type="checkbox" id="codigo" name="checkrowExcel[]" value="codigoProducto" checked disabled>
+				<label class="form-check-label label" for="codigo">
 					CODIGO PRODUCTO
 				</label>
 			</div>
-			<div class="form-check">
-				<input class="form-check-input" type="checkbox" id="NombreP" name="checkrowExcel[]" value="nombreProducto" checked >
-				<label class="form-check-label" for="NombreP">
+			<div class="form-check dis">
+				<input class="form-check-input" type="checkbox" id="NombreP" name="checkrowExcel[]" value="nombreProducto" checked disabled>
+				<label class="form-check-label label" for="NombreP">
 					NOMBRE PRODUCTO
 				</label>
 			</div>
-			<div class="form-check">
-				<input class="form-check-input" type="checkbox" id="descripcion" name="checkrowExcel[]" value="descripcionProducto" checked>
-				<label class="form-check-label" for="descripcion">
+			<div class="form-check dis">
+				<input class="form-check-input" type="checkbox" id="descripcion" name="checkrowExcel[]" value="descripcionProducto" checked disabled>
+				<label class="form-check-label label" for="descripcion">
 					DESCRIPCIÓN PRODUCTO
 				</label>
 			</div>
-			<div class="form-check">
-				<input class="form-check-input" type="checkbox" id="modelo" name="checkrowExcel[]" value="modeloProducto" checked >
-				<label class="form-check-label" for="modelo">
+			<div class="form-check dis">
+				<input class="form-check-input" type="checkbox" id="modelo" name="checkrowExcel[]" value="modeloProducto" checked disabled>
+				<label class="form-check-label label" for="modelo">
 					MODELO PRODUCTO
 				</label>
 			</div>
-			<div class="form-check">
-				<input class="form-check-input" type="checkbox" id="sku" name="checkrowExcel[]" value="skuProducto" checked  >
-				<label class="form-check-label" for="sku">
+			<div class="form-check dis">
+				<input class="form-check-input" type="checkbox" id="sku" name="checkrowExcel[]" value="skuProducto" checked  disabled>
+				<label class="form-check-label label" for="sku">
 					SKU PRODUCTO
 				</label>
 			</div>
-			<div class="form-check">
-				<input class="form-check-input" type="checkbox" id="csat" name="checkrowExcel[]" value="codigoSatProductos" checked  >
-				<label class="form-check-label" for="csat">
+			<div class="form-check dis">
+				<input class="form-check-input" type="checkbox" id="csat" name="checkrowExcel[]" value="codigoSatProductos" checked  disabled>
+				<label class="form-check-label label" for="csat">
 					CODIGO SAT PRODUCTO
 				</label>
 			</div>
-			<div class="form-check">
-				<input class="form-check-input" type="checkbox" id="precio" name="checkrowExcel[]" value="precio" checked  >
-				<label class="form-check-label" for="precio">
+			<div class="form-check dis">
+				<input class="form-check-input" type="checkbox" id="precio" name="checkrowExcel[]" value="precio" checked  disabled>
+				<label class="form-check-label label" for="precio">
 					PRECIO PRODUCTO
 				</label>
 			</div>
-			<div class="form-check">
-				<input class="form-check-input" type="checkbox" id="unidad" name="checkrowExcel[]" value="unidadBaseProducto" checked  >
-				<label class="form-check-label" for="unidad">
+			<div class="form-check dis">
+				<input class="form-check-input" type="checkbox" id="unidad" name="checkrowExcel[]" value="unidadBaseProducto" checked  disabled>
+				<label class="form-check-label label" for="unidad">
 					UNIDAD PRODUCTO
 				</label>
 			</div>
-			<div class="form-check">
-				<input class="form-check-input" type="checkbox" id="prove" name="checkrowExcel[]" value="idProveedorProducto" checked  >
-				<label class="form-check-label" for="prove">
+			<div class="form-check dis">
+				<input class="form-check-input" type="checkbox" id="prove" name="checkrowExcel[]" value="idProveedorProducto" checked  disabled>
+				<label class="form-check-label label" for="prove">
 					PROVEEDOR PRODUCTO
 				</label>
 			</div>
