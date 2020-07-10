@@ -1,6 +1,7 @@
  <?php 
 require_once "../config/parameters.php";
 require_once "../helpers/spout-3.1.0/src/Spout/Autoloader/autoload.php";
+require_once '../models/crudProducto.php';
 use Box\Spout\Reader\Common\Creator\ReaderEntityFactory;
 use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
 use Box\Spout\Writer\Common\Creator\Style\StyleBuilder;
@@ -8,42 +9,37 @@ use Box\Spout\Common\Entity\Style\CellAlignment;
 use Box\Spout\Common\Entity\Style\Color;
 class datosBackIn
 {
-	private $datos;
+	private $extencion;
 
  /**
      * @return mixed
      */
-    public function getDatos()
+    public function getExtencion()
     {
-        return $this->datos;
+        return $this->extencion;
     }
 
     /**
-     * @param mixed $datos
+     * @param mixed $extencion
      *
      * @return self
      */
-    public function setDatos($datos)
+    public function setExtencion($extencion)
     {
-        $this->datos = $datos;
+        $this->extencion = $extencion;
 
         return $this;
     }
 
 	public function readexcel(){
-	
-		$dts = $this->getDatos();
-		$descomp = explode('/', $dts);
-	
-		if (!empty($descomp[0])) {
-			$archivo = $descomp[0];
-			$archivoCopiado = $descomp[1];
-			$archivo_guardado =  url_home."\AppData\Local\Temp".$archivo;
-			// $archivo_guardado = "guardarExcel/copia_".$archivo;
+		
+		if ($this->getExtencion() == "xlsx") {
+			$archivo = $_FILES["media"]["name"];
+			$archivoCopiado = $_FILES["media"]["tmp_name"];
+			$archivo_guardado ="../guardarExcel/copia_".$archivo;
+			chown($archivo_guardado, 777);
 			$copi = move_uploaded_file($archivoCopiado,$archivo_guardado);
-var_dump($archivoCopiado,$archivo_guardado);
-var_dump($copi);
-exit();
+
 			$reader = ReaderEntityFactory::createXLSXReader();
 			$reader->open($archivo_guardado);
 			
@@ -68,15 +64,16 @@ exit();
 				}
 			}
 			$reader->close();
-			echo 3;
+			unlink("../guardarExcel/copia_".$archivo);
+			header('Location:'.base_url.'success');
 		} else {
-			echo 2;
+			echo "no es un archivo excel";
 		}
 	}
 }
 
-if(isset($_GET["name"])){
-	$datos = new datosBackIn();
-	$datos->setDatos($_GET["name"]);
-	$datos->readexcel();
-}
+$extencion = pathinfo($_FILES["media"]["name"]);
+
+$upload = new datosBackIn();
+$upload->setExtencion($extencion["extension"]);
+$upload->readexcel();
