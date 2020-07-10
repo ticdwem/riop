@@ -5,7 +5,9 @@ require_once 'helpers/utils.php';
 <div class="container">
 	<div class="catlist" id="catlist">
 		<div id="tituloCatalogo"><h3>MI CATALOGO</h3></div>
-		<?php if(isset($_SESSION['carrito'])): 
+		<?php 
+		$contar = count($_SESSION['carrito']);
+		if(isset($_SESSION['carrito']) && $contar != 0 ): 
 			$carrito = $_SESSION['carrito'];
 		?>
 
@@ -15,6 +17,7 @@ require_once 'helpers/utils.php';
 		      <th scope="col">#</th>
 		      <th scope="col">IMAGEN</th>
 		      <th scope="col">NOMBRE</th>
+		      <th scope="col">CANTIDAD</th>
 		      <th scope="col">ELIMINAR</th>
 		    </tr>
 		  </thead>
@@ -29,7 +32,14 @@ require_once 'helpers/utils.php';
 		      <th scope="row"><?=$contador;?></th>
 		      <td><img class="card-img-top" src="<?=$disponible?>" alt=""></td>
 		      <td style="text-align: center;"><?=$producto['nombreProducto']?></td>
-		      <td><button class="spinnerWhite" data-id="<?=$indice?>">ELIMINAR</button></td>
+ 			  <td style="text-align: center;" class="">
+		     		<?=$elemento["unidades"]?>
+		     		<div class="updown">
+				      	<button class="btn btn-success plus" data-id="<?=$indice?>">+</button>
+				      	<button class="btn btn-success rest" data-id="<?=$indice?>">-</button>
+		      		</div>
+			  </td>
+		      <td><button class="spinnerWhite deletePr" data-id="<?=$indice?>">ELIMINAR</button></td>
 		    </tr>
 		  	<?php 
 		  		$contador ++;
