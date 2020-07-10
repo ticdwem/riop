@@ -81,4 +81,27 @@ class CatalogoController{
         Utls::deleteSession($sesionName);
 
     }
+
+    public function upPr($id){
+        $validar = new Validacion();
+        $veamos = $validar->validarNumero($id);
+        if($veamos == '-1'){
+            echo 0; // este debe redirigir al inicio de la pagina, con un alert que diga que no fue agregado al carrito por que los datos estan mal
+        }else{
+            $_SESSION['carrito'][$veamos]['unidades']++;
+        }
+    }
+
+    public function downPr($id){
+        $validar = new Validacion();
+        $veamos = $validar->validarNumero($id);
+        if($veamos == '-1'){
+            echo 0; // este debe redirigir al inicio de la pagina, con un alert que diga que no fue agregado al carrito por que los datos estan mal
+        }else{
+            $_SESSION['carrito'][$veamos]['unidades']--;
+            if($_SESSION['carrito'][$veamos]['unidades'] == 0){
+                unset($_SESSION['carrito'][$veamos]);
+            }
+        }
+    }
 }
