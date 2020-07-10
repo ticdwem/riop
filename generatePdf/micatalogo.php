@@ -90,8 +90,7 @@ class Semail
                      $emailBody = '';
                      $emailBody .= 'HOLA '.$user.' muchas gracias por escribirnos , ';
                      $emailBody .= 'en breve nuestro personal en ventas enviara tu cotización de acuerdo a tus artículos selecciónados ';
-                     $emailBody .= '<style color:red;>HOLA QUERIDO ASOCIADO ESTO ES UNA PRUEBA DE CONTROL PAGINA WEB, POR FAVOR HAZ caso omiso HA ESTE CORREO, EN BREVE SE DARAN INSTRUCCIONES</style>';
-
+                    
                     // Instantiation and passing `true` enables exceptions
                     $mail = new PHPMailer(true);
 
