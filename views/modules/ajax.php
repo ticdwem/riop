@@ -97,6 +97,20 @@ public function setDato($archivo)
 		$generarQuery = new CatalogoController();
 		$generarQuery->delete_all($query);
 	}
+
+	public function sumarProducto(){
+		$query = $this->getDato();
+
+		$generarQuery = new CatalogoController();
+		$generarQuery->upPr($query);
+	}
+
+		public function restarPrProducto(){
+		$query = $this->getDato();
+
+		$generarQuery = new CatalogoController();
+		$generarQuery->downPr($query);
+	}
 	
 }
 // echo "<pre>";
@@ -143,5 +157,17 @@ if(isset($_POST['valor'])){
  	$checks  = new Ajax();
  	$checks->setDato($_POST['emoryy']);
  	$checks->vaciarCatalogo();
+ }
+
+  if (isset($_POST['sumarPr'])) {
+ 	$checks  = new Ajax();
+ 	$checks->setDato($_POST['sumarPr']);
+ 	$checks->sumarProducto();
+ }  
+
+ if (isset($_POST['restarPr'])) {
+ 	$checks  = new Ajax();
+ 	$checks->setDato($_POST['restarPr']);
+ 	$checks->restarPrProducto();
  }
 ?>
