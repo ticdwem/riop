@@ -68,6 +68,7 @@ class Semail
                 .contenedor .imagen img{width:180px; heigth:150px}
                 .imagen .description{position:relative;top:180px;left:-180px;}
                 .imagen .description .descr{font-size:10px;}
+                .imagen .description #pz{font-size:15px; color:red}
 
                 </style>';
                 require_once 'impresionDeCatalogo.php';
@@ -87,10 +88,9 @@ class Semail
                     require 'phpmailer/folderMailer/SMTP.php';
                     $emailHeader = 'CATALOGO RIO PISUEÑA';
                      $emailBody = '';
-                     $emailBody .= 'HOLA '.strtoupper($user).' ESTAMOS AGRADECIDOS QUE HAYAS INGRESADO A NUESTRO PORTAL, ';
-                     $emailBody .= 'ADJUNTAMOS LOS PRODUCTOS QUE TE HAN INTERESADO. ACUDE A NUESTRA SUCURSAL ';
-                     $emailBody .= ' Av. Tláhuac No. 1552 Col. Año de Juárez C.P. 09780 Del. Iztapalapa CDMX a un lado de la estacion del metro Periferico Oriente de la línea 12 del metro-CDMX.';
-
+                     $emailBody .= 'HOLA '.$user.' muchas gracias por escribirnos , ';
+                     $emailBody .= 'en breve nuestro personal en ventas enviara tu cotización de acuerdo a tus artículos selecciónados ';
+                     $emailBody .= '<style color:red;>HOLA QUERIDO ASOCIADO ESTO ES UNA PRUEBA DE CONTROL PAGINA WEB, POR FAVOR HAZ caso omiso HA ESTE CORREO, EN BREVE SE DARAN INSTRUCCIONES</style>';
 
                     // Instantiation and passing `true` enables exceptions
                     $mail = new PHPMailer(true);
@@ -108,10 +108,11 @@ class Semail
                         $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
                         //Recipients
-                        $mail->setFrom('mfta_1986@hotmail.com', utf8_decode('pruebaPisueña'));
+                        $mail->setFrom('mfta_1986@hotmail.com', utf8_decode('Rio Pisueña'));
                         $mail->addAddress($email, $user);     // Add a recipient
                        // $mail->addAddress('ellen@example.com');               // Name is optional
                        // $mail->addReplyTo('maft_1986@hotmail.com', 'Information');
+                        //$mail->addCC('ventas@riopisuena.com.mx');
                         $mail->addCC('maft_1986@hotmail.com');
                         //$mail->addBCC('bcc@example.com');
                         //$pdfContent = ; //Nombre default del PDF
@@ -123,7 +124,7 @@ class Semail
                         // Content
                         $mail->isHTML(true);                                  // Set email format to HTML
                         $mail->Subject = utf8_decode($emailHeader);
-                        $mail->Body    = utf8_decode($emailBody);
+                        $mail->Body    = utf8_decode(strtoupper($emailBody));
                         $mail->AltBody = 'correo de rio pisueña';
 
                         $mail->send();
