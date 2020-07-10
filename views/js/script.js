@@ -161,7 +161,6 @@ $(document).ready(function(){
 						})
 
 						 window.history.back();
-						 // window.location.href = "http://localhost/final-catalogo/catalogo";
 					}else if(artUno == 0){
 						Swal.fire(
 						  'ERROR',
@@ -182,7 +181,7 @@ $(document).ready(function(){
 						}).then((result) => {
 						  if (result.value) {
 						   
-						    window.location.href = "http://localhost/final-catalogo/catalogo";
+						    window.location.href = "http://192.168.1.69/final-catalogo/catalogo";
 						  }
 						})
 					}else if(artUno == 4){
@@ -196,7 +195,7 @@ $(document).ready(function(){
 						  confirmButtonText: 'ACEPTAR'
 						}).then((result) => {
 						  if (result.value) {
-						    window.location.href = "http://localhost/final-catalogo/catalogo";
+						    window.location.href = "http://192.168.1.69/final-catalogo/catalogo";
 						  }
 						})
 					}
@@ -206,7 +205,7 @@ $(document).ready(function(){
 		}
 	});
 /**********************************ELIMINAR DEL CARRITO********************************************************/
-$("body").on('click','.table button',function(e){
+$("body").on('click','.table .deletePr',function(e){
 	e.preventDefault();
 
 	idPRoducto = $(this).attr('data-id');
@@ -236,9 +235,9 @@ $("body").on('click','.table button',function(e){
 					},
 			success:function(dato){
 				$("#catlist").empty();
-       			$("#catlist").load(location.href + " #catlist>", "");
+       			$("#catlist").load(location.href + " #catlist", "");
 				$("#circulo").empty();
-       			$("#circulo").load(location.href + " #circulo>", "");			
+       			$("#circulo").load(location.href + " #circulo", "");			
 			
 			 }
 		})
@@ -250,6 +249,68 @@ $("body").on('click','.table button',function(e){
 	  }
 	})
 	
+});
+/**********************************sumar y restar Carrito********************************************************/
+$("body").on('click','.table .plus',function(e){
+	e.preventDefault();
+
+	idPRoducto = $(this).attr('data-id');
+
+	var producto = new FormData();
+	producto.append("sumarPr",idPRoducto);
+	  
+	  	$.ajax({
+			url: "views/modules/ajax.php",
+			method:"POST",
+			data:producto,
+			cache:false,
+			contentType:false,
+			processData:false,
+			beforeSend:function(){
+			$('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
+					},
+			success:function(dato){
+
+				console.log(dato);
+					$("#catlist").empty();
+       			$("#catlist").load(location.href + " #catlist>", "");
+       			$("#circulo").empty();
+       			$("#circulo").load(location.href + " #circulo>", "");	
+			
+			 }
+		});
+
+});
+
+$("body").on('click','.table .rest',function(e){
+	e.preventDefault();
+
+	idPRoducto = $(this).attr('data-id');
+
+	var producto = new FormData();
+	producto.append("restarPr",idPRoducto);
+	  
+	  	$.ajax({
+			url: "views/modules/ajax.php",
+			method:"POST",
+			data:producto,
+			cache:false,
+			contentType:false,
+			processData:false,
+			beforeSend:function(){
+			$('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
+					},
+			success:function(dato){
+
+				console.log(dato);
+					$("#catlist").empty();
+       			$("#catlist").load(location.href + " #catlist>", "");
+       			$("#circulo").empty();
+       			$("#circulo").load(location.href + " #circulo>", "");	
+			
+			 }
+		});
+
 });
 /**********************************VACIAR CARRITO********************************************************/
 $("#vaciar").on("click",function(e){
@@ -295,76 +356,6 @@ $("#vaciar").on("click",function(e){
 	  }
 	})
 });
-/**********************************ACTUALIZAR DATOS********************************************************/
-	$("#uploadData").on("click",function(){
-
-
-		var Form = new FormData($('#filesForm')[0]);
-		//formData.append(f.attr("name"), $(this)[0].files[0]);
-		
-		//window.open("controllers/updateCatalogo.php?upDatos="+Form);
-		$.ajax({
-			url: "views/modules/ajax.php",
-			method:"POST",
-			data:Form,
-			cache:false,
-			contentType:false,
-			processData:false,
-			beforeSend:function(){
-			Swal.fire({
-	            title: 'INSERTANDO INFORMACION, ESPERE POR FAVOR',
-	            allowEscapeKey: false,
-	            allowOutsideClick: false,
-	            background: '#fff',
-	            showConfirmButton: false,
-	            onOpen: ()=>{
-	                Swal.showLoading();
-	            }
-	           //  ,
-
-            // timer: 3000,
-            // timerProgressBar: true
-        	});	
-						// $('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
-					},
-			success:function(dato){
-				var updateExcel = jQuery.parseJSON(dato);
-				// console.log(updateExcel);
-				// return false;
-				window.open('helpers/updateCatalogo.php?name='+updateExcel["archivo"]+'/'+updateExcel["temp"]);
-				/*if(dato == 1){
-					Swal.fire({
-					  icon: 'error',
-					  title: 'Oops...',
-					  text: 'HA SUPERADO EL TIEMPO DE EJECIÓN',
-					  footer: 'llama al administrador para una revisión'
-					})
-				}else if(dato == 2){
-					Swal.fire(
-					  'DEBES SELECCIONAR UN ARCHIVO',
-					  'HAZ CLICK EN EL BOTON PARA REGRESAR',
-					  'warning'
-					)
-				}else if(dato == 3){
-					Swal.fire({
-					  position: 'top-end',
-					  icon: 'success',
-					  title: 'SE HA CARGADO EL ARCHIVO',
-					  showConfirmButton: false,
-					  timer: 1500
-					})
-				}else{
-					Swal.fire({
-					  icon: 'error',
-					  title: 'Oops...',
-					  text: 'SUBIMOS ALGÚNOS REGISTROS,PERO NO SE COMPLETO AL 100%',
-					  footer: 'llama al administrador para una revisión'
-					})
-				}*/
-			
-			 }
-		})
-	});
 
 /**********************************enviar checkbox******************************************************/
  $("#sendCheckbox").on("click", function(e){
@@ -390,49 +381,6 @@ $("#vaciar").on("click",function(e){
  	}else{
  		checks = {"chek":JSON.stringify(genera)};
  		window.open('../helpers/excel.php?dtos='+JSON.stringify(genera));
- 	// 	$.ajax({
-		// 	url: "../views/modules/ajax.php",
-		// 	method:"POST",
-		// 	data:checks,
-		// 	cache:false,
-		// 	beforeSend:function(){
-		// 	Swal.fire({
-	 //            title: 'INSERTANDO INFORMACION, ESPERE POR FAVOR',
-	 //            allowEscapeKey: false,
-	 //            allowOutsideClick: false,
-	 //            background: '#fff',
-	 //            showConfirmButton: false,
-	 //            onOpen: ()=>{
-	 //                Swal.showLoading();
-	 //            }
-	 //            ,
-  //            timer: 3000,
-  //            timerProgressBar: true
-  //       	});	
-		// 				// $('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
-		// 			},
-		// 	success:function(dato){
-		// 		console.log(dato);
-		// 		if(dato == 100){
-		// 			Swal.fire({
-		// 			  icon: 'error',
-		// 			  title: 'Error',
-		// 			  text: 'HAY UN ERROR EN LOS DATOS',
-		// 			  footer: 'llama al administrador para una revisión'
-		// 			})
-		// 		}else if(dato == 1){
-		// 			Swal.fire({
-		// 			  position: 'center',
-		// 			  icon: 'success',
-		// 			  title: 'SE HA DESCARGADO EL ARCHIVO EN TU CARPETA DE DESCARGAS',
-		// 			  showConfirmButton: false,
-		// 			  timer: 3500
-		// 			})
-		// 		}
-				
-			
-		// 	 }
-		// })
  	}
 
  });
@@ -445,7 +393,7 @@ $("#vaciar").on("click",function(e){
  	//window.open('generatePdf/micatalogo.php');
  	var nombre = empty($("#Inputname").val());
  	var correo = empty($("#inputEmail").val());
- 	var datos = new Array();
+ 	
 
  	var contador = false;
  	if(nombre != 1){
@@ -491,8 +439,8 @@ $("#vaciar").on("click",function(e){
  /****************************cancelar modal******************************************/
  $("#cancel").on("click",function(e){
  	e.preventDefault();
- 	var nombre = $("#Inputname").val("");
- 	var correo = $("#inputEmail").val("");
+ 	var nombre = empty($("#Inputname").val(""));
+ 	var correo = empty($("#inputEmail").val(""));
 	$("#Inputname").addClass("is-invalid");
  	$("#inputEmail").addClass("is-invalid");
  	$("#Inputname").addClass("is-valid");
@@ -501,10 +449,53 @@ $("#vaciar").on("click",function(e){
 	$(".emailError").html("i");
 
  })
+
+ /****************************login******************************************/
+ $("#sigin").on("click",function(e){
+ 	e.preventDefault();
+ 	var datos = new Array();
+ 	var nombre = $(".user").val();
+ 	var pass = $(".pass").val();
+
+ 	var contador = false;
+ 	if(nombre != 1){
+ 		var verNom = expRegular("nombre",$(".user").val());
+ 		if(verNom!=0){
+ 			contador = true;
+ 			$(".user").addClass("is-valid");
+ 			name = $(".user").val();
+ 		}else{
+ 			contador = false;
+ 			$(".user").addClass("is-invalid");
+ 			// $(".nameError").css("color","red");
+	 		// $(".nameError").html("ingresa un nombre valido");
+ 		}
+ 	}else{
+ 		contador = false;
+ 		$(".user").addClass("is-invalid");
+ 	}
+ 	if(pass != 1){
+ 		 var email = expRegular("email",$("#inputEmail").val());
+ 		if(email != 0){
+	 		contador = true;
+	 		//$("#print").attr("disabled", true);
+	 		$("#inputEmail").addClass("is-valid");	 		
+			
+	 		mailE = $("#inputEmail").val();
+ 		}else{ 	
+ 			contador = false;		
+ 			$("#inputEmail").addClass("is-invalid");
+	 		$(".emailError").css("color","red");
+	 		$(".emailError").html("ingresa un correo valido");
+ 		}
+ 	}else{
+ 		contador = false;
+ 		$("#inputEmail").addClass("is-invalid");
+ 	}
+
+ 	if(contador == false){
+ 		$(".emailError").html("LOS DATOS SON INCORRECTOS");
+ 		return false;
+ 	}
+ });
 });
-
-
-
-  function redireccionar() {
-    setTimeout("location.href='http://192.168.1.69/final-catalogo'", 5000);
-  }
