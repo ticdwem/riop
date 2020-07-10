@@ -2,6 +2,7 @@
 <?php if(isset($_SESSION['carrito'])){
 			$carrito = $_SESSION['carrito'];
 
+
 require_once '../config/parameters.php';
 require_once '../helpers/utils.php';
 		?>
@@ -38,10 +39,12 @@ require_once '../helpers/utils.php';
 		  	  <div class="imagen">
 		  	  	<img src="<?=$disponible?>" alt="">
 		  	  	<div class="description">
-		  	  		<p class="descr" id="name" style="border:1px solid red;margin:0px;"><?=$producto['nombreProducto']?></p>
-		  	  		<p class="descr" id="des" style="border:1px solid red;lmargin:0px"><?=$producto['descripcionProducto']?></p>
-		  	  		<p class="descr" id="modelo" style="border:1px solid red;margin:0px;">modelo: <?=$modelo?></p>
-		  	  		<p class="descr" id="marca" style="border:1px solid red;margin:0px;">marca: <?=$producto['nombreMarca']?></p>
+		  	  		<p class="descr" id="name" style="margin:0px;"><?=$producto['nombreProducto']?></p>
+		  	  		<p class="descr" id="des" style="lmargin:0px"><?=$producto['descripcionProducto']?></p>
+		  	  		<p class="descr" id="modelo" style="margin:0px;">modelo: <?=$modelo?></p>
+		  	  		<p class="descr" id="marca" style="margin:0px;">marca: <?=$producto['nombreMarca']?></p>
+		  	  		<p class="descr" id="marca" style="margin:0px;">marca: <?=$producto['nombreMarca']?></p>
+		  	  		<p class="descr" id="pz" style="margin:0px;">pz cotizar: <?=$elemento["unidades"]?></p>
 		  	  	</div>
 		  	  </div>
 		  	<?php } ?>
