@@ -181,7 +181,7 @@ $(document).ready(function(){
 						}).then((result) => {
 						  if (result.value) {
 						   
-						    window.location.href = "http://192.168.1.69/final-catalogo/catalogo";
+						    window.location.href = getAbsolutePath()+"catalogo";
 						  }
 						})
 					}else if(artUno == 4){
@@ -195,7 +195,7 @@ $(document).ready(function(){
 						  confirmButtonText: 'ACEPTAR'
 						}).then((result) => {
 						  if (result.value) {
-						    window.location.href = "http://192.168.1.69/final-catalogo/catalogo";
+						    window.location.href = getAbsolutePath()+"catalogo";
 						  }
 						})
 					}
@@ -235,9 +235,10 @@ $("body").on('click','.table .deletePr',function(e){
 					},
 			success:function(dato){
 				$("#catlist").empty();
-       			$("#catlist").load(location.href + " #catlist", "");
-				$("#circulo").empty();
-       			$("#circulo").load(location.href + " #circulo", "");			
+       			$("#catlist").load(location.href + " #catlist>", "");
+       			$("#circulo").empty();
+       			$("#circulo").load(location.href + " #circulo>", "");	
+				
 			
 			 }
 		})
@@ -272,7 +273,7 @@ $("body").on('click','.table .plus',function(e){
 			success:function(dato){
 
 				console.log(dato);
-					$("#catlist").empty();
+				//$("#catlist").empty();
        			$("#catlist").load(location.href + " #catlist>", "");
        			$("#circulo").empty();
        			$("#circulo").load(location.href + " #circulo>", "");	
@@ -303,7 +304,7 @@ $("body").on('click','.table .rest',function(e){
 			success:function(dato){
 
 				console.log(dato);
-					$("#catlist").empty();
+					//$("#catlist").empty();
        			$("#catlist").load(location.href + " #catlist>", "");
        			$("#circulo").empty();
        			$("#circulo").load(location.href + " #circulo>", "");	
@@ -452,50 +453,191 @@ $("#vaciar").on("click",function(e){
 
  /****************************login******************************************/
  $("#sigin").on("click",function(e){
- 	e.preventDefault();
+	 e.preventDefault();
+	 var name,password,logDatos;
  	var datos = new Array();
- 	var nombre = $(".user").val();
- 	var pass = $(".pass").val();
+ 	var nombre = empty($("#user").val());
+ 	var pass = empty($("#pass").val());
+
 
  	var contador = false;
  	if(nombre != 1){
- 		var verNom = expRegular("nombre",$(".user").val());
+ 		var verNom = expRegular("nombre",$("#user").val());
  		if(verNom!=0){
  			contador = true;
- 			$(".user").addClass("is-valid");
- 			name = $(".user").val();
+			 $("#user").addClass("is-valid");
+			 $("#user").css({"color":"green","border":"1px solid green"});
+			 name = $("#user").val();
  		}else{
- 			contador = false;
- 			$(".user").addClass("is-invalid");
- 			// $(".nameError").css("color","red");
+			 contador = false;
+ 			$("#user").addClass("is-invalid");
+ 			$("#user").css("color","red");
+ 			return false;
 	 		// $(".nameError").html("ingresa un nombre valido");
  		}
  	}else{
- 		contador = false;
- 		$(".user").addClass("is-invalid");
- 	}
+		 contador = false;
+		 $(".errorVacio").css({"color":"red","fontsize":"1.2em"});
+ 		$(".errorVacio").html("DEBES ESCRIBIR TU USUARIO Y CONTRASEÑA");
+ 		return false;
+	 }
+
+
  	if(pass != 1){
- 		 var email = expRegular("email",$("#inputEmail").val());
- 		if(email != 0){
+ 		 var pasword = expRegular("pass",$("#pass").val());
+ 		if(pasword != 0){
 	 		contador = true;
 	 		//$("#print").attr("disabled", true);
-	 		$("#inputEmail").addClass("is-valid");	 		
-			
-	 		mailE = $("#inputEmail").val();
+	 		$("#pass").css("color","green");
+	 		 $("#pass").css({"color":"green","border":"1px solid green"});		 
+			 password = $("#pass").val();
+			 
  		}else{ 	
- 			contador = false;		
- 			$("#inputEmail").addClass("is-invalid");
-	 		$(".emailError").css("color","red");
-	 		$(".emailError").html("ingresa un correo valido");
- 		}
+			 contador = false;	
+			 $("#pass").css("color","red");
+			 $(".error_validacion").css("color","red");
+ 			 $(".error_validacion").html("La contraseña debe tener entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula. NO puede tener otros símbolo");
+			 return false;
+		 }
  	}else{
  		contador = false;
- 		$("#inputEmail").addClass("is-invalid");
+		 $(".errorVacio").css({"color":"red","fontsize":"1.2em"});
+ 		$(".errorVacio").html("DEBES ESCRIBIR TU USUARIO Y CONTRASEÑA");
+ 		return false;
  	}
 
  	if(contador == false){
- 		$(".emailError").html("LOS DATOS SON INCORRECTOS");
+ 		$(".errorVacio").css("color","red");
+ 		$(".errorVacio").html("LOS DATOS SON INCORRECTOS");
  		return false;
- 	}
+ 	}else{
+		 datos.push({"name":name,"pass":password});
+		 logDatos = {"loginUser":JSON.stringify(datos)};
+		 
+		 $.ajax({
+			url: "views/modules/ajax.php",
+			method:"POST",
+			data:logDatos,
+			cache:false,
+			beforeSend:function(){
+			$('.logo').html('<i class="fas fa-sync fa-spin"></i>');
+					},
+			success:function(logUser){
+				if(logUser == 0 || logUser == 2 || logUser == 3){
+					$('.logo').html(' <figure><figcaption><h2>INICIAR SESSION</h2></figcaption><img src="'+getAbsolutePath()+'images/logo.png" alt="logotipo rio pisueña"></figure>');
+ 					$(".errorVacio").css("color","red");
+					$(".errorVacio").html("USUARIO O CONTRASEÑA SON INCORRECTOS");
+				}else if(logUser == 1){
+					 window.location.href = getAbsolutePath()+"downloadExcel";
+				}
+			 }
+		})
+		 		
+		 
+	 }
  });
+
+	 $("#user").on("keyup",function(e){
+	 	$(".errorVacio").html("");
+	 });
+	 $("#pass").on("keyup",function(e){
+	 	$("#pass").css("color","black");
+		$(".errorVacio").html("");
+ 		$(".error_validacion").html("");
+	});
+
+	$('[type=password]').keypress(function(e) {
+		  var password = $(this),
+		  tooltipVisible = $('.tooltip').is(':visible'),
+		  s = String.fromCharCode(e.which); 
+		  if ( s.toUpperCase() === s && s.toLowerCase() !== s && !e.shiftKey ) {
+		  if (!tooltipVisible)
+		    password.tooltip('show');
+		  } else {
+		  if (tooltipVisible)
+		    password.tooltip('hide');
+		  }
+		password.blur(function(e) {
+		password.tooltip('hide');
+		});
+	});
+
+	/*****************************verificar usuario********************************************/
+	$("#nameUser").on("change",function(){
+		var nameUser = $(this).val();
+		var usr = new FormData();
+		usr.append("user",nameUser);
+ 	$.ajax({
+			url: "views/modules/ajax.php",
+			method:"POST",
+			data:usr,
+			cache:false,
+			contentType:false,
+			processData:false,
+			beforeSend:function(){
+			$('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
+					},
+			success:function(exist){
+				if(exist == 1){
+					$("#message").removeClass("valid-feedback");
+					$("#nameUser").removeClass("is-valid");
+					$("#nameUser").addClass("is-invalid");
+					$("#message").addClass("invalid-feedback");
+					$("#message").html("NOMBRE DE USUARIO EN USO");
+					$(".save").attr("disabled","disabled");
+					$(".save").css("cursor","not-allowed");
+				}else if(exist == 0){
+					$("#message").removeClass("invalid-feedback");
+					$("#nameUser").removeClass("is-invalid");
+					$("#nameUser").addClass("is-valid");					
+					$("#message").addClass("valid-feedback");
+					$("#message").html("CORRECTO");
+					$(".save").css("cursor","default");
+					$('.save').removeAttr('disabled');
+				}
+			
+			 }
+		})
+	});
+
+	$("#close").on("click",function(e){
+		e.preventDefault();
+		var id = $(this).attr("data-id");
+		var sUs = new FormData();
+		sUs.append("close",id);
+			Swal.fire({
+	  title: 'SALIR',
+	  text: "CERRAR SESSION",
+	  icon: 'warning',
+	  showCancelButton: true,
+	  confirmButtonColor: '#3085d6',
+	  cancelButtonColor: '#d33',
+	  confirmButtonText: 'SI,SALIR'
+	}).then((result) => {
+		  if (result.value) {
+ 	$.ajax({
+			url: getAbsolutePath()+"views/modules/ajax.php",
+			method:"POST",
+			data:sUs,
+			cache:false,
+			contentType:false,
+			processData:false,
+			beforeSend:function(){
+			$('.spinnerWhite').html('<i class="fas fa-sync fa-spin"></i>');
+					},
+			success:function(exist){
+				if(exist == 0){
+					 window.location.href = getAbsolutePath()+"inicio";
+				}
+			
+			 }
+		})
+ 	Swal.fire(
+	      'BYE',
+	      'HASTA PRONTO CUIDATE',
+	      'success'
+	    )
+	  }
+	});
+})
 });
