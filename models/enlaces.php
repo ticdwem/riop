@@ -16,6 +16,7 @@ class EnlacesModels{
 		   $enlaces == "selectRowExcel"||
 		   $enlaces == "success"||
 		   $enlaces == "login"||
+		   $enlaces == "error404"||
 		   $enlaces == "contacto"){
 
 			$module = "views/modules/".$enlaces.".php";
@@ -24,8 +25,7 @@ class EnlacesModels{
 		else if($enlaces == "index"){
 			$module = "views/modules/inicio.php";
 		}else{
-			//$module = "views/modules/inicio.php";	
-			echo "nopo";	
+			$module = "views/modules/error404.php";		
 		}
 
 		return $module;
