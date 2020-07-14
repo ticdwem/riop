@@ -17,7 +17,25 @@ class Validacion
 		$trim = trim($texto);
 		$cambio = str_replace("-"," ",$trim);
 		
-		return $cambio;	}
+		return $cambio;	
+	}
+/**/
+	public function valUser($valor1){
+		$vacio = self::emptySpace($valor1);
+		if($vacio != 1 && preg_match("/^[a-zA-Z0-9ÁáÉéÍíÓóÚúÑñ .\/-]+$/", $valor1)){
+			return $valor1;
+		}else{
+			return 0;			 
+		}
+	}
+	public function valPassUser($valor1){
+		$vacio = self::emptySpace($valor1);
+		if($vacio != 1 && preg_match("/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/", $valor1)){
+			return $valor1;
+		}else{
+			return 0;			 
+		}
+	}
 	
 	public function pregmatchletras($valor1){
 		$vacio = self::emptySpace($valor1);
@@ -80,7 +98,7 @@ class Validacion
 	public function valornumerico($numero){
 		if($numero != "")
 		{
-			if (preg_match("/^[0-9a-zA-Z\/\-s]+$/", $numero)) {
+			if (preg_match("/^[0-9a-zA-Z\/_\-s]+$/", $numero)) {
 				return $numero;
 			} else {
 				return -1;
