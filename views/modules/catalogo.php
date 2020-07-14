@@ -6,8 +6,8 @@ require_once 'helpers/utils.php';
 	<div class="catlist" id="catlist">
 		<div id="tituloCatalogo"><h3>MI CATALOGO</h3></div>
 		<?php 
-		$contar = count($_SESSION['carrito']);
-		if(isset($_SESSION['carrito']) && $contar != 0 ): 
+		//$contar = count($_SESSION['carrito']);
+		if(isset($_SESSION['carrito']) && count($_SESSION['carrito']) != 0 ): 
 			$carrito = $_SESSION['carrito'];
 		?>
 
@@ -35,8 +35,8 @@ require_once 'helpers/utils.php';
  			  <td style="text-align: center;" class="">
 		     		<?=$elemento["unidades"]?>
 		     		<div class="updown">
-				      	<button class="btn btn-success plus" data-id="<?=$indice?>">+</button>
 				      	<button class="btn btn-success rest" data-id="<?=$indice?>">-</button>
+				      	<button class="btn btn-success plus" data-id="<?=$indice?>">+</button>
 		      		</div>
 			  </td>
 		      <td><button class="spinnerWhite deletePr" data-id="<?=$indice?>">ELIMINAR</button></td>
@@ -72,11 +72,6 @@ require_once 'helpers/utils.php';
 	</div>
 </div>
 <?php
-// if(isset($_POST["borrar"])){
-// 	$borrar = new CatalogoController();
-// 	$borrar->delete_all();
-
-//}
 include "views/modules/footer.php";
 ?>
 
