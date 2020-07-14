@@ -64,7 +64,7 @@ class CatalogoController{
     public function remove($idPrd){
         $validar = new Validacion();
         $veamos = $validar->validarNumero($idPrd);
-        if($veamos == '0'){
+        if($veamos == '-1'){
             echo 0; // este debe redirigir al inicio de la pagina, con un alert que diga que no fue agregado al carrito por que los datos estan mal
         }else{
             $producto_id = $veamos;
