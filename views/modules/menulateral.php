@@ -12,22 +12,16 @@
   </div>
   <ul class="list-unstyled components mb-5">
     <li>
-      <a href="<?=base_url?>downloadExcel"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> MODIFICAR POR CATEGORIA</a>
+      <a href="<?=base_url?>downloadExcel"><span class="fa fa-download mr-2"><small class="d-flex align-items-center justify-content-center"></small></span> MODIFICAR POR CATEGORIA</a>
     </li>
     <li>
-      <a href="<?=base_url?>updateDatos"><span class="fa fa-gift mr-3"></span>SUBIR CAMBIOS EXCEL</a>
+      <a href="<?=base_url?>updateDatos"><span class="fa fa-cloud-upload mr-2"></span>SUBIR CAMBIOS EXCEL</a>
     </li>
     <li>
-      <a href="<?=base_url?>registro"><span class="fa fa-trophy mr-3"></span>NUEVO USUARIO</a>
+      <a href="<?=base_url?>registro"><span class="fa fa-user-plus mr-2"></span>NUEVO USUARIO</a>
     </li>
     <li>
-      <a href="#"><span class="fa fa-cog mr-3"></span> Settings</a>
-    </li>
-    <li>
-      <a href="#"><span class="fa fa-support mr-3"></span> Support</a>
-    </li>
-    <li>
-      <a href="#"><span class="fa fa-sign-out mr-3"></span> Sign Out</a>
+      <a href="#" id="close" data-id="<?=SED::encryption('usuario');?>"><span class="fa fa-sign-out mr-2"></span>CERRAR SESSION</a>
     </li>
   </ul>
 
