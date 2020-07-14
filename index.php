@@ -7,6 +7,7 @@ require_once "models/productosModels.php";
 require_once "models/usuario.php";
 require_once 'models/crudProducto.php';
 require_once 'models/updateWithExcel.php';
+require_once 'models/crypt.php';
 
 require_once "controllers/enlaces.php";
 require_once "controllers/template.php";
