@@ -5,10 +5,12 @@ require_once "../../controllers/CatalogoController.php";
 require_once "../../controllers/updateCatalogo.php";
 require_once "../../controllers/categorias.php";
 require_once '../../controllers/validacion.php';
+require_once '../../controllers/usuario.php';
 require_once '../../models/catLineaSub.php';
 require_once '../../models/carrito.php';
 require_once '../../models/crudProducto.php';
 require_once '../../models/updateWithExcel.php';
+require_once '../../models/crypt.php';
 require_once '../../helpers/utils.php';
 require_once "../../config/parameters.php";
 // require_once "../../vendor/box/spout/src/Spout/Autoloader/autoload.php";
@@ -105,16 +107,35 @@ public function setDato($archivo)
 		$generarQuery->upPr($query);
 	}
 
-		public function restarPrProducto(){
+	public function restarPrProducto(){
 		$query = $this->getDato();
 
 		$generarQuery = new CatalogoController();
 		$generarQuery->downPr($query);
 	}
+	public function starSessionUser(){
+		$query = $this->getDato();
+
+		$generarQuery = new Saveuser();
+		$generarQuery->entrarSistema($query);
+	}
+	public function verifUser(){
+		$query = $this->getDato();
+
+		$generarQuery = new Saveuser();
+		$generarQuery->verifUsuario($query);
+	}
+	public function closeSession(){
+		$query = $this->getDato();
+		$sesion = SED::decryption($query);
+
+			Utls::deleteSession($sesion);
+			return 0;
+	}
 	
 }
 // echo "<pre>";
-// var_dump($_FILES["media"]["tmp_name"]);
+// var_dump($_POST);
 // echo "</pre>";
 // exit();
 
@@ -169,5 +190,22 @@ if(isset($_POST['valor'])){
  	$checks  = new Ajax();
  	$checks->setDato($_POST['restarPr']);
  	$checks->restarPrProducto();
+ }
+
+  if (isset($_POST['loginUser'])) {
+ 	$checks  = new Ajax();
+ 	$checks->setDato($_POST['loginUser']);
+ 	$checks->starSessionUser();
+ }  
+
+ if (isset($_POST['user'])) {
+ 	$checks  = new Ajax();
+ 	$checks->setDato($_POST['user']);
+ 	$checks->verifUser();
+ }
+  if (isset($_POST['close'])) {
+ 	$checks  = new Ajax();
+ 	$checks->setDato($_POST['close']);
+ 	$checks->closeSession();
  }
 ?>
