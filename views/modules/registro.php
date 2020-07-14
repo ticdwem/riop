@@ -1,4 +1,5 @@
 <?php
+include_once 'sesion_cehck.php';
 include "views/modules/menulateral.php";
 ?>
  <div id="content" class="p-4 p-md-5 pt-5">
@@ -20,6 +21,8 @@ include "views/modules/menulateral.php";
     <div class="form-group">
         <label for="street2_id" class="control-label">Nombre Usuario</label>
         <input type="text" class="form-control" id="nameUser" name="nameUser" placeholder="juan12">
+        <div class="valid-feedback" id="message">          
+        </div>
     </div>    
 
     <div class="form-group">
@@ -57,13 +60,6 @@ include "views/modules/menulateral.php";
 </div>
  </div>
 </div>
-
-
-
-
-
-
-
 <?php
 include "views/modules/footer.php";
 ?>

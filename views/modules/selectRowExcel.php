@@ -1,4 +1,5 @@
 <?php
+include_once 'sesion_cehck.php';
 include "views/modules/menulateral.php";
 ?>
  <div id="content" class="p-4 p-md-5 pt-5">

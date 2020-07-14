@@ -1,4 +1,5 @@
 <?php
+include_once 'sesion_cehck.php';
 include "views/modules/menulateral.php";
 include_once 'config/parameters.php';
 ?>
