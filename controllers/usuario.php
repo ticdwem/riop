@@ -30,8 +30,8 @@ class Saveuser{
                 if($insertar == "success"){
                     echo "<script>
                             Swal.fire({
-                                title: 'ERROR',
-                                text: 'ESTE PRODUCTO YA ESTA EN TU CARRITO',
+                                title: 'CORRECTO',
+                                text: 'USUARIO INGRESADO CORRECTAMENTE',
                                 icon: 'success',
                                 showCancelButton: false,
                                 confirmButtonColor: '#3085d6',
@@ -39,7 +39,7 @@ class Saveuser{
                                 confirmButtonText: 'ACEPTAR'
                             }).then((result) => {
                                 if (result.value) {
-                                 window.location.href = getAbsolutePath()+'catalogo';
+                                 window.location.href = getAbsolutePath()+'registro';
                                 }
                             })
                             </script>";
