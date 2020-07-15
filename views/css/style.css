@@ -632,6 +632,7 @@ strong {
 /*Estilo de PARALLAX*/
 .paral-sec{
 	padding-top: 3%;
+	border: 1px solid blue;
 }
 .parallax-window {
 	/* padding-top:50%; */
