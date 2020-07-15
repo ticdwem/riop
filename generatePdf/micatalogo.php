@@ -128,7 +128,7 @@ class Semail
 
                         $mail->send();
 
-                         header('Location:'.base_url.'success');
+                        header('Location:'.base_url.'success/email');
                 	} catch (Exception $e) {
                 	    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
                 	}
