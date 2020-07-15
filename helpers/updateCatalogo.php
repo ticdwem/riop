@@ -65,7 +65,7 @@ class datosBackIn
 			}
 			$reader->close();
 			unlink("../guardarExcel/copia_".$archivo);
-			header('Location:'.base_url.'success');
+			header('Location:'.base_url.'success/xlsx');
 		} else {
 			echo "no es un archivo excel";
 		}
