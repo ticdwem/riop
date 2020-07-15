@@ -4,24 +4,111 @@ include "views/modules/header.php";
 require_once 'helpers/utils.php';
 require_once 'config/parameters.php';
 
- Utls::deleteSession('carrito');
+
+ 
+if(!empty($_GET["n"])){
+    $n = $_GET["n"];
+    switch($n){
+        case 'registro':
 ?>
-<div class="container">
-	<div class="catlist" id="catlist">
-		<div class="enviado">
-			<figure>
-				<figcaption>
-					<h2>CORREO ENVIADO</h2>
-				</figcaption>
-				<img src="<?=base_url?>images/correoEnviado.png" alt="https://pixabay.com/es/vectors/correo-electr%C3%B3nico-r%C3%A1pido-servicio-1975010/">
-			</figure>
-		</div>
-	</div>
-</div>
+            <script type="text/javascript">
+                Swal.fire({
+                  title: 'SUCCESS',
+                  text: "USUARIO INGRESADO CORRECTAMENTE",
+                  icon: 'success',
+                  showCancelButton: false,
+                  confirmButtonColor: '#3085d6',
+                  cancelButtonColor: '#d33',
+                  confirmButtonText: 'ACEPTAR'
+                }).then((result) => {
+                  if (result.value) {
+                    window.location.href = getAbsolutePath()+"registro";
+                  }
+                })
+            </script>;
 <?php
+            break;
+        case 'email':
+             Utls::deleteSession('carrito');
+ ?>
+            <script type="text/javascript">
+                Swal.fire({
+                  title: 'SUCCESS',
+                  text: "CORREO ENVIADO CORRECTAMENTE",
+                  icon: 'success',
+                  showCancelButton: false,
+                  confirmButtonColor: '#3085d6',
+                  cancelButtonColor: '#d33',
+                  confirmButtonText: 'ACEPTAR'
+                }).then((result) => {
+                  if (result.value) {
+                    window.location.href = getAbsolutePath()+"inicio";
+                  }
+                })
+            </script>;
+<?php 
+            break;
+        case 'xlsx':
+             Utls::deleteSession('carrito');
+ ?>
+            <script type="text/javascript">
+                Swal.fire({
+                  title: 'SUCCESS',
+                  text: "SE HA MODIFICADO CORRECTAMENTE",
+                  icon: 'success',
+                  showCancelButton: false,
+                  confirmButtonColor: '#3085d6',
+                  cancelButtonColor: '#d33',
+                  confirmButtonText: 'ACEPTAR'
+                }).then((result) => {
+                  if (result.value) {
+                    window.location.href = getAbsolutePath()+"updateDatos";
+                  }
+                })
+            </script>;
+<?php 
+            break;
+        default:
+?>
+            <script type="text/javascript">
+                Swal.fire({
+                  title: '?',
+                  text: "ALGO PASO ...",
+                  icon: 'question',
+                  showCancelButton: false,
+                  confirmButtonColor: '#3085d6',
+                  cancelButtonColor: '#d33',
+                  confirmButtonText: 'ACEPTAR'
+                }).then((result) => {
+                  if (result.value) {
+                    window.location.href = getAbsolutePath()+"inicio";
+                  }
+                })
+            </script>;
+<?php 
+            break;
+            
+    }
+ 
+}else{
+ ?>
+            <script type="text/javascript">
+                Swal.fire({
+                  title: 'X',
+                  text: "PAGINA NO VÁLIDA",
+                  icon: 'error',
+                  showCancelButton: false,
+                  confirmButtonColor: '#3085d6',
+                  cancelButtonColor: '#d33',
+                  confirmButtonText: 'ACEPTAR'
+                }).then((result) => {
+                  if (result.value) {
+                    window.location.href = getAbsolutePath()+"inicio";
+                  }
+                })
+            </script>;
+<?php
+}
+
 include "views/modules/footer.php";
 
-?>
-<script type="text/javascript">
-             setTimeout("location.href='http://192.168.1.69/final-catalogo'", 3000);
-            </script>;
